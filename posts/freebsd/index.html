@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>FreeBSD | Sakamoto Kurome</title>
+<meta name="keywords" content="Unix" />
+<meta name="description" content="The goals of the FreeBSD Project are to provide software that may be used for any purpose and without strings attached. Many of us have a significant investment in the code (and project) and would certainly not mind a little financial compensation now and then, but we are definitely not prepared to insist on it. We believe that our first and foremost &ldquo;mission&rdquo; is to provide code to any and">
+<meta name="author" content="Sakamoto Kurome">
+<link rel="canonical" href="https://example.com/posts/freebsd/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://example.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://example.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://example.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://example.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://example.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.90.0" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+
+<link rel="stylesheet" href="https://example.com/custom.css"><meta property="og:title" content="FreeBSD" />
+<meta property="og:description" content="The goals of the FreeBSD Project are to provide software that may be used for any purpose and without strings attached. Many of us have a significant investment in the code (and project) and would certainly not mind a little financial compensation now and then, but we are definitely not prepared to insist on it. We believe that our first and foremost &ldquo;mission&rdquo; is to provide code to any and" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/freebsd/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-12T16:37:27&#43;08:00" />
+<meta property="article:modified_time" content="2021-12-12T16:37:27&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="FreeBSD"/>
+<meta name="twitter:description" content="The goals of the FreeBSD Project are to provide software that may be used for any purpose and without strings attached. Many of us have a significant investment in the code (and project) and would certainly not mind a little financial compensation now and then, but we are definitely not prepared to insist on it. We believe that our first and foremost &ldquo;mission&rdquo; is to provide code to any and"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://example.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "FreeBSD",
+      "item": "https://example.com/posts/freebsd/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "FreeBSD",
+  "name": "FreeBSD",
+  "description": "The goals of the FreeBSD Project are to provide software that may be used for any purpose and without strings attached. Many of us have a significant investment in the code (and project) and would certainly not mind a little financial compensation now and then, but we are definitely not prepared to insist on it. We believe that our first and foremost \u0026ldquo;mission\u0026rdquo; is to provide code to any and",
+  "keywords": [
+    "Unix"
+  ],
+  "articleBody": " The goals of the FreeBSD Project are to provide software that may be used for any purpose and without strings attached. Many of us have a significant investment in the code (and project) and would certainly not mind a little financial compensation now and then, but we are definitely not prepared to insist on it. We believe that our first and foremost “mission” is to provide code to any and all comers, and for whatever purpose, so that the code gets the widest possible use and provides the widest possible benefit. This is, I believe, one of the most fundamental goals of Free Software and one that we enthusiastically support.\nThat code in our source tree which falls under the GNU General Public License (GPL) or Library General Public License (LGPL) comes with slightly more strings attached, though at least on the side of enforced access rather than the usual opposite. Due to the additional complexities that can evolve in the commercial use of GPL software we do, however, prefer software submitted under the more relaxed BSD license when it is a reasonable option to do so.\nJordan Hubbard - FreeBSD Handbook\n Install FreeBSD BIOS Disable unused and unwanted options.\nInstall   To put the image on the pendrive we will use the dd tool available on almost any Mac OS X (macOS) and Linux system. For Windows You will have to download it from here – dd for windows( bs=1M on Linux/Windows ).（可用 Rufus 替代）\nsudo dd if=FreeBSD-11.1-RELEASE-amd64-memstick.img of=/dev/da1 bs=1m   When we have a new machine there is always a problem with new name for it. The RFC 1178 Choosing a Name for Your Computer from 1990 year tries to address that issue\n  We will use ZFS because we want to use Boot Environments with sysutils/beadm port.\n Hit [ENTER] on the Pool Type/Disks to select target disk to install FreeBSD on. Now (in FreeBSD 12.x) it is possible to install FreeBSD on GELI encrypted root on ZFS pool without any additional partitions or filesystems. You need to select is Yes for the Encryption part . I advice using GPT (BIOS+UEFI) as it will support both system types so when you are running BIOS system now and will move the disk to other system that boots with UEFI it will also just work out of the box. We will set SWAP size to 0 (no SWAP) as it will not be needed. If we will need SWAP in the future, then we will create ZVOL on ZFS and use it as a SWAP device.     Select services as shown below.   Enable all security hardening features as shown below.  X11 Window System X 最初設計是以網路為中心，採用 “client-server” 架構。在此架構下 “X 伺服器” 在有鍵盤、螢幕、滑鼠的電腦上運作。該伺服器負責的工作包含管理顯示、處理來自鍵盤、滑鼠的輸入及來自其他設備)的輸入或輸出。\n每個 X 應用程式，如 XTerm、Firefox 都是 “客戶端”。\n視窗管理程式規定螢幕上的視窗該長什麼樣、要如何移動滑鼠指標、 要用什麼鍵來在視窗切換、每個視窗的標題列長相，及是否該有關閉按鈕，等等。視窗管理程式負責滑鼠指標的聚焦政策。 聚焦政策指的是如何決定使用中及接收鍵盤輸入的視窗。通常較為人熟悉的聚焦政策叫做 “click-to-focus”，這個模式中，滑鼠點選到的視窗便會處於作用中 (Active) 的狀態。\nKDE 與 GNOME 會被稱作桌面環境是因為包含了完整常用桌面作業的應用程式。\nBIOS or UEFI If you find a device that is not supported by any ‘accelerated’driver like intel or nvidia. You would use vesa driver (Video Electronics Standards Association) while booting in BIOS mode and You will use scfb driver (System Console Frame Buffer) while booting on UEFI mode. This can be checked by\nsudo sysctl machdep.bootmethod Packages sudo pkg install xorg Xorg Configuration   顯示卡、顯示器以及輸入裝置會自動偵測，無須任何手動設置。除非自動設置失敗，否則請勿建立 xorg.conf 或執行 -configure 步驟。\n  加入要執行 Xorg 的使用者到 video 或 wheel 群組，以便在可用時能開啟 3D 加速。要加入使用者 jru 到任一個可用的群組：\nsudo pw groupmod video -m jru || pw groupmod wheel -m jru   Login Class(可解决中文乱码，powershell 字符显示方形)\nAdd this login class to the /etc/login.conf file.\nvideo:\\  :charset=UTF-8:\\  :lang=en_US.UTF-8:\\  :tc=default: Rebuild the login class database.\nsudo cap_mkdb /etc/login.conf Lets set the login class to video for the vuk user.\nsudo pw usermod -L video -n vuk How the account looks after setting the login class.\nsudo grep vuk /etc/master.passwd vuk:{REMOVED}:1000:1000:video:0:0:vuk:/home/vuk:/bin/sh Now logout and login again to make that work. View the changes through the locale command.\n  显卡驱动：使用多檔，每一個檔案只設定一個指定項目會較傳統使用單一 /etc/X11/xorg.conf 設定來的簡單。完整路徑為 /usr/local/etc/X11/xorg.conf.d/。（安装 intel 显卡驱动与 nvidia 驱动难，scfb 与 vesa 驱动无法调整分辨率）\nsudo vi /usr/local/etc/X11/xorg.conf.d/driver-intel.conf Section \"Device\" Identifier \"Card0\" Driver \"scfb\" BusID \"PCI:0:2:0\" EndSection 若有多張顯示卡，可取消註解 BusID identifier 然後設定為想要的顯示卡，顯示卡的 Bus ID 清單可以使用 pciconf -lv | grep -B3 display 取得。\n  手動設定\n  設定檔可由 Xorg 根據偵測到的硬體產生，這個檔案對一開始自訂設定很有幫助。\nXorg -configure   設定檔會儲存至 /root/xorg.conf.new，做任何需要的更改，然後使用以下指令測試該檔案：\nXorg -config /root/xorg.conf.new 在新設定檔調整與測試過後，便可分開成較小的檔案放置到正常的位置 /usr/local/etc/X11/xorg.conf.d/。\n    Install Desktop Enviroment   FreeBSD 桌面发行版\n GhostBSD 是 FreeBSD 桌面发行版，注意使用 Official 版本，不能直接使用 FreeBSD 源升级。 nomadbsd 是个非常漂亮的 FreeBSD 桌面发行版 ，德国产。 可以在虚拟机里面安装 FreeBSD 桌面发行版，然后找到自己想用的桌面工具，再定制自己的 FreeBSD 桌面。    Install Desktop Environment\nsudo pkg install gnome3 sudo pkg install gnome3-lite sudo pkg install x11/kde5 sudo pkg install xfce sudo pkg install mate   Install/Enable Display Manager: You have to decide how You want to start your X11 Window Server, you may login in plan text console and then type xinit or startx to read your ~/.xinitrc configuration and daemons (The difference between xinit and startx is that startx command executes xinit command with arguments.) or You may want to use X11 Login manager such as xdm/sddm/slim with ~/.xsession configuration to load after successful login.\nsudo pkg install xdm sudo pkg install slim\t# xfce,mate，slim 有个 slim-themes 软件包 sudo pkg install x11/sddm\t# kde While xinit run commands based on the ~/.xinitrc file the XDM login manager looks for the ~/.xsession file. As You will be loading same stuff regardless of the startup method we will create a link of ~/.xsession pointing to the ~/.xinitrc file. This way either method You choose You will always end with started X11 session.\nln -s ~/.xinitrc ~/.xsession One more case about the ~/.xinitrc (or ~/.xsession) file. It is interpreted as a shell script (and yes you can do if/then/else/fi and case/esac or for/while POSIX shell scripting in it) but it does not need to be executable. The last command in this file MUST NOT to be put in the background (must be without the \u0026 char at the end) because the X11 session will end.\n  Setting\nsudo vi /etc/ttys\t# xdm ttyv8 \"/usr/local/bin/xdm -nodaemon\" xterm on secure sudo vi /etc/fstab\t# gnome, kde proc /proc procfs rw 0 0 sudo vi /etc/rc.conf moused_enalbe=\"YES\" dbus_enable=\"YES\"\t# gnome, kde, xfce hald_enable=\"YES\"\t# gnome, kde, mate gdm_enalbe=\"YES\"\t# gnome 启动 sddm_enable=\"YES\"\t# kde 启动 slim_enable=\"YES\"\t# xfce,mate gnome_enable=\"YES\"\t# gnome 服务   slim Usage(Failed to execute login command)\nsudo vi ~/.xinitrc exec mate-session\t# mate exec xfce4-session\t# xfce   Components   Window Manager: Openbox…\n  Status Bar: Also known as information bar, the place on the screen that would provide You needed information such as current date and time, CPU, RAM and storage usage, current network information or battery status.\n  While Xmobar is nice solution it comes with about 2 GB of dependencies of Haskell and Haskell libraries.\n  While Polybar can look very nice on screenshots it is a lot more heavy on resources and is limited only to modules/features that were implemented in it.\n  I have used Conky for quite long time but after recent tests I made Dzen2 is a lot less on resources then Conky while doing the same thing.\n    Task Bar: A taskbar is an element of a graphical user interface which has various purposes. It typically shows which programs are currently running.\n  You can use classic taskbar like XFCE Panel used in the XFCE desktop environment.\n  You can also configure Tint2 that way. But it only shows applications that are active on the current desktop.\n  One of the greatest taskbars of all time was/is the Mac OS X Dock (now macOS Dock). It also has an indicator showing if application is launched. Currently the best and lightest solution for providing the dock-like functionality on open desktops seems to be Plank.\n    Application Launcher: While not being any crucial role of the desktop environment it have its uses and sometimes save time.\nLets start with resources, the Rofi implementation of application launcher uses almost 3 times more RAM then Dmenu solution.\n  Desktop with Dmenu launched and with alc characters inserted to ‘filter’ commands in the search of a calculator application.\n  The Rofi requires simple command.\nrofi -show run -theme solarized_alternate -font \"Monaco 8\"     Blue Light Spectrum Suppress: Automatically adjusts color temperature of the screen according to your current time in your location.\n  While F.lux (closed source) does not provide a native binary for FreeBSD it does offer such binary for Linux and as FreeBSD provides Linux Binary Compatibility its possible to use it on FreeBSD. To use F.lux just start it in the ~/.xinitrc or ~/.xsession file like that.\n~/path/to/bin/xflux -l 33.54321 -g 11.12345 \u0026 Of course 33.54321 is latitude and 11.12345 is longitude of your localization.\n  Redshift is the solution that I propose to use as open source blue light spectrum suppressor. Similarly like with the F.lux to start Redshift just put it in the ~/.xinitrc or ~/.xsession file like that.\nredshift -l 33.54321:11.12345 -g 0.9 \u0026   Someone else suggested trying sctd which is sct but rewritten/modified to be a daemon that will automatically change the color temperature during the day (or night). The sctd uses smaller about of RAM memory, uses less libraries and size of these libraries is smaller then what redshfit needs.\n    Binary 套件 搜寻软件：FreeBSD Ports、FreshPorts\n因編譯選項不同，有些 Port 會有多個版本可使用。\n  USTC Mirrors：注意使用 Latest 源，有很多流行软件。创建 /usr/local/etc/pkg/repos/FreeBSD.conf 覆盖官方源 /etc/pkg/FreeBSD.conf 配置\nsudo vi /usr/local/etc/pkg/repos/FreeBSD.conf FreeBSD: { url: \"pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest\", } sudo pkg update -f\t# 更新索引   163 Mirrors\n url: \"pkg+http://mirrors.163.com/freebsd-pkg/${ABI}/latest\",   要啟動 (Bootstrap) 系統，請執行\nsudo /usr/sbin/pkg   當升級原使用舊版 pkg_* 工具的既有系統時，必須將資料庫轉換成新的格式\nsudo pkg2ng   Update the available remote repositories as listed in pkg.conf\nsudo pkg update   Search for a package\nsudo pkg search perl   在指定要安裝的套件時，最好使用 Port 來源來指定該應用程式，Port 來源是指應用程式在 Port 樹中的路徑\nsudo pkg search -o perl   Install a package: Installing must specify a unique origin or version otherwise it will try installing all matches\nsudo pkg install perl-5.14   列出已經安裝的 Port 中有那些已過時\nsudo pkg version -l \"   Upgrade from remote repository\nsudo pkg upgrade   Delete an installed package\nsudo pkg delete perl-5.14   Remove unneeded dependencies\nsudo pkg autoremove   List installed packages\nsudo pkg info   Display information about installed packages\nsudo pkg info perl-5.14   Show the pkg-message of a package\nsudo pkg info -D perl-5.14   要查詢已安在系統上的軟體是否有任何已知的漏洞\nsudo pkg audit -F   因為相依所安裝的套件稱作自動 (Automatic) 套件，而非自動套件即套件被安裝的原因不是因為其他套件所相依\nsudo pkg prime-list\t# deprecated   Clean the local cache of fetched remote packages\nsudo pkg clean   Packages\nsudo pkg install linux-sublime3 sudo pkg install mysql180-server mysql180-client   Port 套件 優點：\n 可更改編譯選項 部份軟體的授權條款中禁止以 Binary 格式發佈。 這種軟體必須以原始碼發佈並由終端使用者編譯。 原始碼可套用自訂的修補。  Port 中並不含實際的原始碼，在編譯 Port 解壓縮時會自動下載的原始碼到 /usr/ports/distfiles。\n  USTC Mirrors：在 /etc/make.conf 中添加以下内容\nMASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/   163 Mirrors\nMASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBDIR}/   安裝 Port 套件集：下載壓縮後的 Port 套件集快照 (Snapshot) 到 /var/db/portsnap\nsudo portsnap fetch   第一次執行 Portsnap 時，要先解壓縮快照到 /usr/ports\nsudo portsnap extract   執行以下指令來更新 /usr/ports\nsudo portsnap fetch sudo portsnap update   要找到 Port 所在的分類\nsudo whereis lsof   使用 Port 套件集內建的搜尋機制來找軟體\nsudo cd /usr/ports sudo make search name=lsof sudo make quicksearch name=lsof\t# 不接受多資訊   若要進行更有深度的搜尋\nsudo make search key=string sudo make quicksearch key=string   一次設定所有Port 編譯選項\nsudo make config-recursive   重新進入 Port 的編譯選項清單\nsudo make config\t# or sudo make showconfig\t# or sudo make rmconfig   編譯並安裝 Port\nsudo cd /usr/ports/sysutils/lsof sudo make install   編譯在 /usr/ports Port 並安裝到 /usr/home/example/local\nsudo make WRKDIRPREFIX=../ports PREFIX=../local install   安裝過程中會建立工作用的子目錄用來儲存編譯時暫存的檔案。可移除此目錄來節省磁碟空間並漸少往後升級新版 Port 時造成問題\nsudo make clean   移除已安裝的 Port\nsudo cd /usr/ports/sysutils/lsof sudo make deinstall   Example\ncd /usr/ports/java/linux-oracle-jdk18 sudo make install   安裝後的注意事項：\n 大部份應用程式安裝會在 /usr/local/etc 安裝至少一個預設的設定檔。 應用程式提供的文件會安裝到 /usr/local/share/doc。 部份應用程式會以服務的方式執行，在啟動應用程式前前需要加入設定到 /etc/rc.conf。這些應用程式通常會安裝啟動 Script 到 /usr/local/etc/rc.d。  Linux® Binary 相容性 FreeBSD 提供 Linux® Binary 的相容性，允許使用者在 FreeBSD 系統上不需要修改就可以安裝和執行大部份的 Linux® Binary。\n最好不要直接安装 Linux 的软件，而使用 FreeBSD 源中的 Linux 软件，一般以 linux-package 命名。\n  載入 Linux® 核心模組\nsudo kldload linux   對 64-位元的相容性\nsudo kldload linux64   確認模組已載入\nsudo kldstat   安裝基本的 Linux® 程式庫和 Binary\nsudo pkg install emulators/linux_base-c7   Add the following line\nsudo vi /etc/fstab linprocfs /compat/linux/proc\tlinprocfs\trw\t0\t0 linsysfs /compat/linux/sys\tlinsysfs\trw\t0\t0 tmpfs /compat/linux/dev/shm\ttmpfs\trw,mode=1777\t0\t0   開機時開啟 Linux® 相容性\nsudo vi /etc/rc.conf linux_enable=\"YES\"   安裝 Linux® ELF Binary\nsudo brandelf -t Linux my-linux-elf-binary   安裝以 Linux® RPM 為基礎的應用程式,需先安裝 archivers/rpm4 套件或 Port\nsudo pkg install rpm4 sudo cd /compat/linux sudo rpm2cpio   手動安裝其他程式庫   在 Linux® 系統，可使用 ldd 來找出應用程式需要哪個共用程式庫\nldd linuxdoom libXt.so.3 (DLL Jump 3.1) = /usr/X11/lib/libXt.so.3.1.0   複製 Linux® 系統輸出結果中最後一欄需要的的檔案到 FreeBSD 系統的 /compat/linux。 複製完後，建立符號連結 (Symbolic link) 至輸出結果第一欄的名稱\n/compat/linux/usr/X11/lib/libXt.so.3.1.0 /compat/linux/usr/X11/lib/libXt.so.3 - libXt.so.3.1.0   自訂核心 為何要編譯自訂的核心? 自訂核心有許多項優點，如：\n 加速開機，因為自訂的核心只需要偵測您系統上存在的硬體，所以讓啟動所花的過程更流暢快速。 減少記憶體使用，自訂的核心通常會比 GENERIC 核心使用更少的記憶體，這很重要，因為核心必須一直存放在實體記憶體內。 支援額外的硬體，自訂的核心可以增加一些 GENERIC 核心沒有提供的硬體支援。  偵測系統硬體   dmesg or /var/run/dmesg.boot or /var/log/messages\n  pciconf -lv\n  在 man指令加上 -k 旗標可列出有包含指定裝置品牌或名稱的手冊頁面清單：man -k Intel\n  設定檔 /usr/src/sys 下子目錄代表著支援的硬體架構 (Architecture)，每個支援的硬體架構中會有 conf 子目錄，裡面含有供該架構使用的 GENERIC 核心設定檔。\n說明在GENERIC 同目錄的 NOTES 檔案中。所有架構通用選項，參考 /usr/src/sys/conf/NOTES。\n备份与恢复 dump \u0026 restore FreeBSD 系统的备份就是对系统文件的打包，然后放到一个安全的地方，使用的打包工具是 dump；FreeBSD 系统的恢复就是把你保存好的系统文件从安全的地方里面拿出来放到你的硬盘上去，使用的恢复工具是 restore；\n  需要备份的目录：\n / 这个目录存放很多基本工具，包括内核，需要备份； /home 用户数据，需要备份； /usr 很多工具以及系统的源代码都放在这里面，需要备份； /usr/local 所有安装的软件基本上都在这里，需要备份； /var 系统的日志，ports系统的数据库，需要备份；    备份方法：以 / 目录为例，把移动硬盘挂载在 /mnt/fender_01 目录，/ 目录对应硬盘上面的 /dev/ad12s1a 分区，备份整个目录的命令如下：\ndump -0Lauf /mnt/fender_01/dump/ad12sa1.dump /dev/ad12s1a  -0 备份所有的文件系统中的内容，也就是不使用增量备份； -f 指定备份结果存放的文件名； -a 告诉 dump 不考虑备份的介质的大小问题，早期备份使用磁带，dump 会预先计算一下需要的空间，使用这个选项告诉 dump 忽略这个问题； -u 告诉 dump 更新一下 /etc/dumpdates，这个文件记录了你在系统上搜有的备份活动； -L 备份已经挂载的文件系统时需要，这个选项会使用 UFS2 的 snapshot 功能来保证文件系统的一致性。    恢复方法\n  恢复 / 以外的目录：以恢复 /home 目录为例，重启系统进入单用户模式，挂载 /tmp 分区，挂载移动硬盘，这时备份生成的文件保存在 /mnt/01/dump/dev/ad12s1h.dump，格式化 /dev/ad12s1h：\nnewfs -U /dev/ad12s1h\t# -U 选型来打开 softupdate 挂载这个分区，例如 /mnt/02/，恢复目录：\ncd /mnt/02 restore -rf /mnt/01/dump/ad12s1h.dump   恢复 /：因为 restore 在 / 目录中，所以不能使用上面方法恢复 / 目录。解决办法是使用 freebsd_livefs_cd 启动系统。\n    备份 MBR\n  备份\ndd if=/dev/da0 of=/path/to/mbr.img bs=512 count=1   恢复\ndd if=/path/to/mbr.img of=/dev/da0 bs=512 count=1     参考：FreeBSD dump 备份\nrsync（remote sync） 可以在本地计算机与远程计算机之间，或者两个本地目录之间同步文件，且仅传输有变动的部分。\n  将源目录同步到目标目录\nrsync -r source1 source2 destination\t# -r 表示递归，即包含子目录 rsync -a source/ destination\t# -a 除了可以递归同步以外，还可以同步元信息（比如修改时间、权限等）   排除文件：同步时排除某些文件或目录，这时可以用 --exclude 参数指定排除模式，多个排除模式，可以用多个 --exclude 参数\nrsync -av --exclude dir source/ destination\t# 排除所有 TXT 文件   增量备份：除了源目录与目标目录直接比较，rsync 还支持使用基准目录，即将源目录与基准目录之间变动的部分，同步到目标目录。--link-dest 参数用来指定同步时的基准目录。\nrsync -a --delete --link-dest /compare/path /source/path /target/path   远程同步：rsync 默认使用 SSH 进行远程登录和数据传输\nrsync -av source/ username@remote_host:destination\t# 将本地内容同步到远程服务器 rsync -av username@remote_host:source/ destination\t# 将远程内容同步到本地   使用 rsync 来备份系统\nrsync -aH --delete --exclude dir --link-dest /compare/path source destination  -H 选项用来保持硬链接 默认情况下，rsync 只确保源目录的所有内容（明确排除的文件除外）都复制到目标目录。它不会使两个目录保持相同，并且不会删除文件。如果你想让那些在源目录里被删除的文件在目标目录里也被删除，那么你可以加上 --delete 选项来删除。--delete 参数会使得 destination 成为 source 的一个镜像。    参考：rsync 用法教程，使用 rsync 来备份 Linux 系统\nZ 檔案系統 (ZFS) ZFS 的設計目標主要有三個：\n 資料完整性：所有資料都會有一個資料的校驗碼 (checksum)，資料寫入時會計算校驗碼然後一併寫入，往後讀取資料時會再計算一次校驗碼，若校驗碼與當初寫入時不相符，便可偵測到資料錯誤，此時若有可用的資料備援 (Data redundancy)，ZFS 會嘗試自動修正錯誤。 儲存池：實體的儲存裝置都會先被加入到一個儲存池 (Pool)，這個共用的儲存池可用來配置儲存空間，儲存池的空間可被所有的檔案系統使用且透過加入新的儲存裝置來增加空間。 效能：提供多個快取機制來增加效能。先進、以記憶體為基礎的讀取快取可使用 ARC。第二層以磁碟為基礎的讀取快取可使用 L2ARC，以磁碟為基礎的同步寫入快取則可使用 ZIL。  Others Screen resolution on FreeBSD on VirtualBox 问题描述：在virtualbox虚拟机下，无法改变桌面分辨率为1366x768\nVBoxManage setextradata \"FreeBSD\" VBoxInternal2/EfiGraphicsResolution 1366x768 Disable the Forward/Back buttons on my mouse 问题描述：浏览网页时，鼠标滑轮滚动浏览器就会前进后退。\nSalved：\n  执行下面命令后，上下滑动鼠标滑轮，看看映射到那些button，一般是buttons 8 and 9\nsudo xev | grep -A2 ButtonPress   then disable button 8 and 9（前提是有上面的问题，否则就不要禁）\nsudo vi ~/.Xmodmap pointer = 1 2 3 4 5 6 7 0 0 0 0 0   test it with the command,command automatically when you log in; if yours doesn’t, arrange for it to run when X starts.\nsudo xmodmap ~/.Xmodmap   Install chinese font sudo pkg install zh-CJKUnifonts\t# CJK（中日韩统一表意文字） 设单使用模式为不安全 sudo vi /etc/ttys console none\tunknown off insecure No space left on device 问题描述：使用 pkg update 时提示这个问题。原因是 /tmp is too small。\nSalved:\nsudo vi /etc/fstab tmpfs\t/tmp\ttmpfs\trw,size=256000000\t0\t0\t# size 以Byte为单位 VirtualBox™ guest additions sudo cd /usr/ports/emulators/virtualbox-ose-additions \u0026\u0026 make install clean sudo vi /etc/rc.conf vboxguest_enable=\"YES\" vboxservice_enable=\"YES\" vboxservice_flags=\"--disable-timesync\"\t# 若有使用 ntpd或 ntpdate，便可關閉主機時間同步功能 Fish Fish 是\"the friendly interactive shell\"的简称，最大特点就是方便易用。\nFish 会自动在光标后面给出建议，表示可能的选项，颜色为灰色。如果采纳建议，可以按下→或Control + F。如果只采纳一部分，可以按下Alt + →。\n输入命令时，Fish 会自动显示匹配的上一条历史记录。如果没有匹配的历史记录，Fish 会猜测可能的结果，自动补全各种输入。\nHow to start things at boot time   主流的桌面环境都自带应用程序自启动设置程序。\n  These directories are defined in /etc/defaults/rc.conf（主要是运行脚本）\n  Default startup directory is /usr/local/etc/rc.d/. if you need the files to be executed in a specific order, try numbering the files. For example:\n000This.Will.Run.First.sh 020This.Will.Run.Next.sh 030And.Then.This.sh   deprecated: /etc/rc.local\n    DSBAutostart is a Qt program that allows you to add commands to be executed at session start.\n（本质就是在 .xinitrc 调用程序指令，GUI 程序开机启动都需放入 .xinitrc，在 Xorg 启动后运行）\n  Installation\ncd /usr/ports/x11/dsbautostart \u0026\u0026 make install distclean   Usage\n  Manual\n  Setup: Add the following command to your ~/.xinitrc, or to your window manager’s startup script (e.g. ~/.config/openbox/autostart.sh)\nsh ~/.config/DSB/autostart.sh\u0026   ~/.config/DSB/autostart.sh\nPlank\u0026     GUI: Setting - DSBAutostart - Add Command, example plank, then Save and Quit\n      FreeBSD Insall Oracle JDK  安装 Linux Compact 在 /usr/ports/java/linux-oracle-jdk18 运行 sudo make install 根据提示在 Oracle Java Archive 下载需要的 JDK 版本安装包，复制到 /usr/ports/distfiles 在 /usr/ports/java/linux-oracle-jdk18 运行 sudo make install，安装成功  FreeBSD Install Python and pip sudo pkg install python python --version Python 3.7.9 sudo pkg install py37-pip 简化启动 FreeBSD 默认启动过程相当详细，包含大量调试信息以及内核消息。\n Add the boot_mute=YES option to the /boot/loader.conf file. Add autoboot_delay=2 parameter to the /boot/loader.conf file. Add rc_startmsgs=\"NO\" to your /etc/rc.conf file.  连接网络 If You will have attached LAN cable and your interface is em0 (check ifconfig command output) then dhclient em0 command should grant You the working connection to the Internet – assuming that You have DHCP server on that network.\nifconfig em0 up dhclient em0 To test the network connectivity use the ping command.\nping -c 3 freebsd.org If You would like to connect to the World with wireless connection then here are the needed commands. First lets check what wireless card You have.\nsysctl net.wlan.devices We will now create wlan virtual device on top of our iwn0 device and bring it up.\nifconfig wlan0 create wlandev iwn0 ifconfig wlan0 up We can scan for existing nearby WiFi access points if needed.\nifconfig wlan0 scan Now we need to add the desired WiFi network to the /etc/wpa_supplicant.conf file as shown below.\nnetwork={ ssid=\"WIFI-NETWORK-NAME\" psk=\"PASSWORD\" } Then You may connect to it using the wpa_supplicant daemon. Hit the [CTRL]+[Z] key combination to put the process into suspended state. Then we type the bg command to put it back into running state, but in the background so we can continue to type next commands.\nwpa_supplicant -i wlan0 -c /etc/wpa_supplicant.conf Now we will request for the IP address from the access point DHCP server.\ndhclient wlan0 How To Add and Remove Users on FreeBSD   Add a User: adduser\n  Grant Sudo Privileges: On FreeBSD, users that are members of the wheel group are allowed to use sudo. This is due to the following line in the default sudoers file, /usr/local/etc/sudoers\n%wheel ALL=(ALL) NOPASSWD: ALL   Remove a User: rmuser\n  Lock a User Account: pw lock username\n  Unlock a User: pw unlock username\n  其他 NetBSD: huaweicloud、aliyun、tsinghua\nOpenBSD: huaweicloud、aliyun、tsinghua\n一篇好文：FreeBSD的现状和未来\nFreeBSD Desktop\nFreeBSD 使用手冊\n",
+  "wordCount" : "6672",
+  "inLanguage": "en",
+  "datePublished": "2021-12-12T16:37:27+08:00",
+  "dateModified": "2021-12-12T16:37:27+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "Sakamoto Kurome"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://example.com/posts/freebsd/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sakamoto Kurome",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://example.com" accesskey="h" title="Sakamoto Kurome (Alt + H)">Sakamoto Kurome</a>
+            <span class="logo-switches">
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://example.com/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.com/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.com/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      FreeBSD
+    </h1>
+    <div class="post-meta"><span title='2021-12-12 16:37:27 +0800 CST'>December 12, 2021</span>&nbsp;·&nbsp;14 min&nbsp;·&nbsp;Sakamoto Kurome
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#install-freebsd" aria-label="Install FreeBSD">Install FreeBSD</a><ul>
+                        
+                <li>
+                    <a href="#bios" aria-label="BIOS">BIOS</a></li>
+                <li>
+                    <a href="#install" aria-label="Install">Install</a></li></ul>
+                </li>
+                <li>
+                    <a href="#x11-window-system" aria-label="X11 Window System">X11 Window System</a><ul>
+                        
+                <li>
+                    <a href="#bios-or-uefi" aria-label="BIOS or UEFI">BIOS or UEFI</a></li>
+                <li>
+                    <a href="#packages" aria-label="Packages">Packages</a></li>
+                <li>
+                    <a href="#xorg-configuration" aria-label="Xorg Configuration">Xorg Configuration</a></li>
+                <li>
+                    <a href="#install-desktop-enviroment" aria-label="Install Desktop Enviroment">Install Desktop Enviroment</a></li>
+                <li>
+                    <a href="#components" aria-label="Components">Components</a></li></ul>
+                </li>
+                <li>
+                    <a href="#binary-%e5%a5%97%e4%bb%b6" aria-label="Binary 套件">Binary 套件</a></li>
+                <li>
+                    <a href="#port-%e5%a5%97%e4%bb%b6" aria-label="Port 套件">Port 套件</a></li>
+                <li>
+                    <a href="#linux-binary-%e7%9b%b8%e5%ae%b9%e6%80%a7" aria-label="Linux® Binary 相容性">Linux® Binary 相容性</a><ul>
+                        
+                <li>
+                    <a href="#%e6%89%8b%e5%8b%95%e5%ae%89%e8%a3%9d%e5%85%b6%e4%bb%96%e7%a8%8b%e5%bc%8f%e5%ba%ab" aria-label="手動安裝其他程式庫">手動安裝其他程式庫</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e8%87%aa%e8%a8%82%e6%a0%b8%e5%bf%83" aria-label="自訂核心">自訂核心</a><ul>
+                        
+                <li>
+                    <a href="#%e7%82%ba%e4%bd%95%e8%a6%81%e7%b7%a8%e8%ad%af%e8%87%aa%e8%a8%82%e7%9a%84%e6%a0%b8%e5%bf%83" aria-label="為何要編譯自訂的核心?">為何要編譯自訂的核心?</a></li>
+                <li>
+                    <a href="#%e5%81%b5%e6%b8%ac%e7%b3%bb%e7%b5%b1%e7%a1%ac%e9%ab%94" aria-label="偵測系統硬體">偵測系統硬體</a></li>
+                <li>
+                    <a href="#%e8%a8%ad%e5%ae%9a%e6%aa%94" aria-label="設定檔">設定檔</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%a4%87%e4%bb%bd%e4%b8%8e%e6%81%a2%e5%a4%8dhttpswwwfreebsdorgdochandbookbackup-basicshtml" aria-label="备份与恢复"><a href="https://www.freebsd.org/doc/handbook/backup-basics.html">备份与恢复</a></a><ul>
+                        
+                <li>
+                    <a href="#dump--restore" aria-label="dump &amp;amp; restore">dump &amp; restore</a></li>
+                <li>
+                    <a href="#rsyncremote-sync" aria-label="rsync（remote sync）">rsync（remote sync）</a></li></ul>
+                </li>
+                <li>
+                    <a href="#z-%e6%aa%94%e6%a1%88%e7%b3%bb%e7%b5%b1-zfs" aria-label="Z 檔案系統 (ZFS)">Z 檔案系統 (ZFS)</a></li>
+                <li>
+                    <a href="#others" aria-label="Others">Others</a><ul>
+                        
+                <li>
+                    <a href="#screen-resolution-on-freebsd-on-virtualbox" aria-label="Screen resolution on FreeBSD on VirtualBox">Screen resolution on FreeBSD on VirtualBox</a></li>
+                <li>
+                    <a href="#disable-the-forwardback-buttons-on-my-mouse" aria-label="Disable the Forward/Back buttons on my mouse">Disable the Forward/Back buttons on my mouse</a></li>
+                <li>
+                    <a href="#install-chinese-font" aria-label="Install chinese font">Install chinese font</a></li>
+                <li>
+                    <a href="#%e8%ae%be%e5%8d%95%e4%bd%bf%e7%94%a8%e6%a8%a1%e5%bc%8f%e4%b8%ba%e4%b8%8d%e5%ae%89%e5%85%a8" aria-label="设单使用模式为不安全">设单使用模式为不安全</a></li>
+                <li>
+                    <a href="#no-space-left-on-device" aria-label="No space left on device">No space left on device</a></li>
+                <li>
+                    <a href="#virtualbox-guest-additions" aria-label="VirtualBox™ guest additions">VirtualBox™ guest additions</a></li>
+                <li>
+                    <a href="#fish" aria-label="Fish">Fish</a></li>
+                <li>
+                    <a href="#how-to-start-things-at-boot-timehttpwwwfreebsddiaryorg" aria-label="How to start things at boot time"><a href="http://www.freebsddiary.org/">How to start things at boot time</a></a></li>
+                <li>
+                    <a href="#freebsd-insall-oracle-jdk" aria-label="FreeBSD Insall Oracle JDK">FreeBSD Insall Oracle JDK</a></li>
+                <li>
+                    <a href="#freebsd-install-python-and-pip" aria-label="FreeBSD Install Python and pip">FreeBSD Install Python and pip</a></li>
+                <li>
+                    <a href="#%e7%ae%80%e5%8c%96%e5%90%af%e5%8a%a8" aria-label="简化启动">简化启动</a></li>
+                <li>
+                    <a href="#%e8%bf%9e%e6%8e%a5%e7%bd%91%e7%bb%9c" aria-label="连接网络">连接网络</a></li>
+                <li>
+                    <a href="#how-to-add-and-remove-users-on-freebsd" aria-label="How To Add and Remove Users on FreeBSD">How To Add and Remove Users on FreeBSD</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%85%b6%e4%bb%96" aria-label="其他">其他</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><blockquote>
+<p>The goals of the FreeBSD Project are to provide software that may be used for any purpose and without strings attached. Many of us have a significant investment in the code (and project) and would certainly not mind a little financial compensation now and then, but we are definitely not prepared to insist on it. We believe that our first and foremost &ldquo;mission&rdquo; is to provide code to any and all comers, and for whatever purpose, so that the code gets the widest possible use and provides the widest possible benefit. This is, I believe, one of the most fundamental goals of Free Software and one that we enthusiastically support.</p>
+<p>That code in our source tree which falls under the GNU General Public License (GPL) or Library General Public License (LGPL) comes with slightly more strings attached, though at least on the side of enforced access rather than the usual opposite. Due to the additional complexities that can evolve in the commercial use of GPL software we do, however, prefer software submitted under the more relaxed BSD license when it is a reasonable option to do so.</p>
+<p>Jordan Hubbard - <a href="https://docs.freebsd.org/en/books/handbook/">FreeBSD Handbook</a></p>
+</blockquote>
+<h2 id="install-freebsd">Install FreeBSD<a hidden class="anchor" aria-hidden="true" href="#install-freebsd">#</a></h2>
+<h3 id="bios">BIOS<a hidden class="anchor" aria-hidden="true" href="#bios">#</a></h3>
+<p>Disable unused and unwanted options.</p>
+<h3 id="install">Install<a hidden class="anchor" aria-hidden="true" href="#install">#</a></h3>
+<ul>
+<li>
+<p>To put the image on the pendrive we will use the dd tool available on almost any Mac OS X (macOS) and Linux system. For Windows You will have to download it from here – <a href="http://www.chrysocome.net/dd">dd for windows</a>( bs=1M on Linux/Windows ).（可用 Rufus 替代）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>FreeBSD-11.1-RELEASE-amd64-memstick.img of<span style="color:#f92672">=</span>/dev/da1 bs<span style="color:#f92672">=</span>1m
+</code></pre></div></li>
+<li>
+<p>When we have a new machine there is always a problem with new name for it. The RFC 1178 <a href="https://tools.ietf.org/html/rfc1178">Choosing a Name for Your Computer</a> from 1990 year tries to address that issue</p>
+</li>
+<li>
+<p>We will use ZFS because we want to use Boot Environments with sysutils/beadm port.</p>
+<ul>
+<li>Hit [ENTER] on the <code>Pool Type/Disks</code> to select target disk to install FreeBSD on.</li>
+<li>Now (in FreeBSD 12.x) it is possible to install FreeBSD on GELI encrypted root on ZFS pool without any additional partitions or filesystems. You need to select is <code>Yes</code> for the <code>Encryption</code> part .</li>
+<li>I advice using <code>GPT (BIOS+UEFI)</code> as it will support both system types so when you are running BIOS system now and will move the disk to other system that boots with UEFI it will also just work out of the box.</li>
+<li>We will set SWAP size to <code>0</code> (no SWAP) as it will not be needed. If we will need SWAP in the future, then we will create ZVOL on ZFS and use it as a SWAP device.</li>
+</ul>
+</li>
+</ul>
+<p><img loading="lazy" src="/FreeBSD/freebsd-install-03.png" alt=""  />
+</p>
+<ul>
+<li>Select services as shown below.</li>
+</ul>
+<p><img loading="lazy" src="/FreeBSD/freebsd-11-1-laptop-install-23.png" alt=""  />
+</p>
+<ul>
+<li>Enable all security hardening features as shown below.</li>
+</ul>
+<p><img loading="lazy" src="/FreeBSD/freebsd-11-1-laptop-install-24.png" alt=""  />
+</p>
+<h2 id="x11-window-system">X11 Window System<a hidden class="anchor" aria-hidden="true" href="#x11-window-system">#</a></h2>
+<p>X 最初設計是以網路為中心，採用 “client-server” 架構。在此架構下 “X 伺服器” 在有鍵盤、螢幕、滑鼠的電腦上運作。該伺服器負責的工作包含管理顯示、處理來自鍵盤、滑鼠的輸入及來自其他設備)的輸入或輸出。</p>
+<p>每個 X 應用程式，如 XTerm、Firefox 都是 “客戶端”。</p>
+<p>視窗管理程式規定螢幕上的視窗該長什麼樣、要如何移動滑鼠指標、 要用什麼鍵來在視窗切換、每個視窗的標題列長相，及是否該有關閉按鈕，等等。視窗管理程式負責滑鼠指標的聚焦政策。 聚焦政策指的是如何決定使用中及接收鍵盤輸入的視窗。通常較為人熟悉的聚焦政策叫做 “click-to-focus”，這個模式中，滑鼠點選到的視窗便會處於作用中 (Active) 的狀態。</p>
+<p>KDE 與 GNOME 會被稱作桌面環境是因為包含了完整常用桌面作業的應用程式。</p>
+<h3 id="bios-or-uefi">BIOS or UEFI<a hidden class="anchor" aria-hidden="true" href="#bios-or-uefi">#</a></h3>
+<p>If you find a device that is not supported by any ‘accelerated’driver like <code>intel</code> or <code>nvidia</code>. You would use <code>vesa</code> driver (Video Electronics Standards Association) while booting in BIOS mode and You will use <code>scfb</code> driver (System Console Frame Buffer) while booting on UEFI mode. This can be checked by</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo sysctl machdep.bootmethod
+</code></pre></div><h3 id="packages">Packages<a hidden class="anchor" aria-hidden="true" href="#packages">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg install xorg
+</code></pre></div><h3 id="xorg-configuration">Xorg Configuration<a hidden class="anchor" aria-hidden="true" href="#xorg-configuration">#</a></h3>
+<ul>
+<li>
+<p>顯示卡、顯示器以及輸入裝置會自動偵測，無須任何手動設置。除非自動設置失敗，否則請勿建立 xorg.conf 或執行 -configure 步驟。</p>
+</li>
+<li>
+<p>加入要執行 Xorg 的使用者到 <code>video</code> 或 <code>wheel</code> 群組，以便在可用時能開啟 3D 加速。要加入使用者 <em><code>jru</code></em> 到任一個可用的群組：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pw groupmod video -m jru <span style="color:#f92672">||</span> pw groupmod wheel -m jru
+</code></pre></div></li>
+<li>
+<p>Login Class(可解决中文乱码，powershell 字符显示方形)</p>
+<p>Add this login class to the <code>/etc/login.conf</code> file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">video:<span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        :charset<span style="color:#f92672">=</span>UTF-8:<span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        :lang<span style="color:#f92672">=</span>en_US.UTF-8:<span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        :tc<span style="color:#f92672">=</span>default:
+</code></pre></div><p>Rebuild the login class database.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo cap_mkdb /etc/login.conf
+</code></pre></div><p>Lets set the login class to video for the vuk user.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pw usermod -L video -n vuk
+</code></pre></div><p>How the account looks after setting the login class.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo grep vuk /etc/master.passwd
+vuk:<span style="color:#f92672">{</span>REMOVED<span style="color:#f92672">}</span>:1000:1000:video:0:0:vuk:/home/vuk:/bin/sh
+</code></pre></div><p>Now logout and login again to make that work. View the changes through the <code>locale</code> command.</p>
+</li>
+<li>
+<p>显卡驱动：使用多檔，每一個檔案只設定一個指定項目會較傳統使用單一 <code>/etc/X11/xorg.conf</code> 設定來的簡單。完整路徑為 <code>/usr/local/etc/X11/xorg.conf.d/</code>。（安装 intel 显卡驱动与 nvidia 驱动难，scfb 与 vesa 驱动无法调整分辨率）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vi /usr/local/etc/X11/xorg.conf.d/driver-intel.conf
+Section <span style="color:#e6db74">&#34;Device&#34;</span>
+    Identifier <span style="color:#e6db74">&#34;Card0&#34;</span>
+    Driver     <span style="color:#e6db74">&#34;scfb&#34;</span>
+    BusID    <span style="color:#e6db74">&#34;PCI:0:2:0&#34;</span>
+EndSection
+</code></pre></div><p>若有多張顯示卡，可取消註解 <code>BusID</code> identifier 然後設定為想要的顯示卡，顯示卡的 Bus ID 清單可以使用 <code>pciconf -lv | grep -B3 display</code> 取得。</p>
+</li>
+<li>
+<p>手動設定</p>
+<ul>
+<li>
+<p>設定檔可由 Xorg 根據偵測到的硬體產生，這個檔案對一開始自訂設定很有幫助。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Xorg -configure
+</code></pre></div></li>
+<li>
+<p>設定檔會儲存至 <code>/root/xorg.conf.new</code>，做任何需要的更改，然後使用以下指令測試該檔案：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Xorg -config /root/xorg.conf.new
+</code></pre></div><p>在新設定檔調整與測試過後，便可分開成較小的檔案放置到正常的位置 <code>/usr/local/etc/X11/xorg.conf.d/</code>。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="install-desktop-enviroment">Install Desktop Enviroment<a hidden class="anchor" aria-hidden="true" href="#install-desktop-enviroment">#</a></h3>
+<ul>
+<li>
+<p>FreeBSD 桌面发行版</p>
+<ul>
+<li><a href="https://www.ghostbsd.org/">GhostBSD</a> 是 FreeBSD 桌面发行版，注意使用 Official 版本，不能直接使用 FreeBSD 源升级。</li>
+<li><a href="https://nomadbsd.org/">nomadbsd</a> 是个非常漂亮的 FreeBSD 桌面发行版 ，德国产。</li>
+<li>可以在虚拟机里面安装 FreeBSD 桌面发行版，然后找到自己想用的桌面工具，再定制自己的 FreeBSD 桌面。</li>
+</ul>
+</li>
+<li>
+<p>Install Desktop Environment</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg install gnome3
+sudo pkg install gnome3-lite
+sudo pkg install x11/kde5
+sudo pkg install xfce
+sudo pkg install mate
+</code></pre></div></li>
+<li>
+<p>Install/Enable Display Manager: You have to decide how You want to start your X11 Window Server, you may login in plan text console and then type <code>xinit</code> or <code>startx</code> to read your <code>~/.xinitrc</code> configuration and daemons (The difference between <code>xinit</code> and <code>startx</code> is that <code>startx</code> command executes <code>xinit</code> command with arguments.) or You may want to use X11 Login manager such as <code>xdm/sddm/slim</code> with <code>~/.xsession</code> configuration to load after successful login.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg install xdm
+sudo pkg install slim			<span style="color:#75715e"># xfce,mate，slim 有个 slim-themes 软件包</span>
+sudo pkg install x11/sddm		<span style="color:#75715e"># kde</span>
+</code></pre></div><p>While <code>xinit</code> run commands based on the <code>~/.xinitrc</code> file the XDM login manager looks for the <code>~/.xsession</code> file. As You will be loading same stuff regardless of the startup method we will create a link of <code>~/.xsession</code> pointing to the <code>~/.xinitrc</code> file. This way either method You choose You will always end with started X11 session.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ln -s ~/.xinitrc ~/.xsession
+</code></pre></div><p>One more case about the <code>~/.xinitrc</code> (or <code>~/.xsession</code>) file. It is interpreted as a shell script (and yes you can do <code>if/then/else/fi</code> and <code>case/esac</code> or <code>for/while</code> POSIX shell scripting in it) but it does not need to be executable. The last command in this file MUST NOT to be put in the background (must be without the <code>&amp;</code> char at the end) because the X11 session will end.</p>
+</li>
+<li>
+<p>Setting</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vi /etc/ttys		<span style="color:#75715e"># xdm</span>
+ttyv8   <span style="color:#e6db74">&#34;/usr/local/bin/xdm -nodaemon&#34;</span>  xterm  on secure
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vi /etc/fstab		<span style="color:#75715e"># gnome, kde</span>
+proc           /proc       procfs  rw  <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vi /etc/rc.conf
+moused_enalbe<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YES&#34;</span>
+dbus_enable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YES&#34;</span>		<span style="color:#75715e"># gnome, kde, xfce</span>
+hald_enable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YES&#34;</span>		<span style="color:#75715e"># gnome, kde, mate</span>
+gdm_enalbe<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YES&#34;</span>		<span style="color:#75715e"># gnome 启动</span>
+sddm_enable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YES&#34;</span>		<span style="color:#75715e"># kde 启动</span>
+slim_enable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YES&#34;</span>		<span style="color:#75715e"># xfce,mate</span>
+gnome_enable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YES&#34;</span>		<span style="color:#75715e"># gnome 服务</span>
+</code></pre></div></li>
+<li>
+<p>slim Usage(Failed to execute login command)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vi ~/.xinitrc
+exec mate-session		<span style="color:#75715e"># mate</span>
+exec xfce4-session		<span style="color:#75715e"># xfce</span>
+</code></pre></div></li>
+</ul>
+<h3 id="components">Components<a hidden class="anchor" aria-hidden="true" href="#components">#</a></h3>
+<ul>
+<li>
+<p>Window Manager: <a href="http://openbox.org/wiki/Main_Page">Openbox</a>&hellip;</p>
+</li>
+<li>
+<p>Status Bar: Also known as information bar, the place on the screen that would provide You needed information such as current date and time, CPU, RAM and storage usage, current network information or battery status.</p>
+<ul>
+<li>
+<p>While <code>Xmobar</code> is nice solution it comes with about 2 GB of dependencies of Haskell and Haskell libraries.</p>
+</li>
+<li>
+<p>While <code>Polybar</code> can look very nice on screenshots it is a lot more heavy on resources and is limited only to modules/features that were implemented in it.</p>
+<p><img loading="lazy" src="/FreeBSD/openbox-polybar.jpg" alt=""  />
+</p>
+</li>
+<li>
+<p>I have used <code>Conky</code> for quite long time but after recent tests I made <code>Dzen2</code> is a lot less on resources then Conky while doing the same thing.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Task Bar: A taskbar is an element of a graphical user interface which has various purposes. It typically shows which programs are currently running.</p>
+<ul>
+<li>
+<p>You can use classic taskbar like <code>XFCE Panel</code> used in the XFCE desktop environment.</p>
+<p><img loading="lazy" src="/FreeBSD/taskbar-xfce.png" alt=""  />
+</p>
+</li>
+<li>
+<p>You can also configure <code>Tint2</code> that way. But it only shows applications that are active on the current desktop.</p>
+<p><img loading="lazy" src="/FreeBSD/taskbar-tint-classic.jpg" alt=""  />
+</p>
+</li>
+<li>
+<p>One of the greatest taskbars of all time was/is the Mac OS X Dock (now macOS Dock).  It also has an indicator showing if application is launched. Currently the best and lightest solution for providing the dock-like functionality on open desktops seems to be <code>Plank</code>.</p>
+<p><img loading="lazy" src="/FreeBSD/taskbar-plank-eos.png" alt=""  />
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Application Launcher: While not being any crucial role of the desktop environment it have its uses and sometimes save time.</p>
+<p>Lets start with resources, the <code>Rofi</code> implementation of application launcher uses almost 3 times more RAM  then <code>Dmenu</code> solution.</p>
+<ul>
+<li>
+<p>Desktop with Dmenu launched and with <code>alc</code> characters inserted to ‘filter’ commands in the search of a calculator application.</p>
+<p><img loading="lazy" src="/FreeBSD/launcher-dmenu-run.jpg" alt=""  />
+</p>
+</li>
+<li>
+<p>The Rofi requires simple command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rofi -show run -theme solarized_alternate -font <span style="color:#e6db74">&#34;Monaco 8&#34;</span>
+</code></pre></div><p><img loading="lazy" src="/FreeBSD/launcher-rofi.jpg" alt=""  />
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Blue Light Spectrum Suppress: Automatically adjusts color temperature of the screen according to your current time in your location.</p>
+<ul>
+<li>
+<p>While <a href="https://justgetflux.com/">F.lux</a>  (closed source) does not provide a native binary for FreeBSD it does offer such binary for Linux and as FreeBSD provides Linux Binary Compatibility its possible to use it on FreeBSD. To use F.lux just start it in the <code>~/.xinitrc</code> or <code>~/.xsession</code> file like that.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">~/path/to/bin/xflux -l 33.54321 -g 11.12345 &amp;
+</code></pre></div><p>Of course 33.54321 is latitude and 11.12345 is longitude of your localization.</p>
+</li>
+<li>
+<p><code>Redshift</code> is the solution that I propose to use as open source blue light spectrum suppressor. Similarly like with the F.lux to start Redshift just put it in the <code>~/.xinitrc</code> or <code>~/.xsession</code> file like that.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">redshift -l 33.54321:11.12345 -g 0.9 &amp;
+</code></pre></div></li>
+<li>
+<p>Someone else suggested trying <a href="https://github.com/amir/sctd">sctd</a> which is sct but rewritten/modified to be a daemon that will automatically change the color temperature during the day (or night). The sctd uses smaller about of RAM memory, uses less libraries and size of these libraries is smaller then what redshfit needs.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="binary-套件">Binary 套件<a hidden class="anchor" aria-hidden="true" href="#binary-套件">#</a></h2>
+<p>搜寻软件：<a href="https://www.freebsd.org/ports/index.html">FreeBSD Ports</a>、<a href="https://www.freshports.org/">FreshPorts</a></p>
+<p>因編譯選項不同，有些 Port 會有多個版本可使用。</p>
+<ul>
+<li>
+<p><a href="https://mirrors.ustc.edu.cn/help/freebsd-pkg.html">USTC Mirrors</a>：注意使用 Latest 源，有很多流行软件。创建 <code>/usr/local/etc/pkg/repos/FreeBSD.conf</code> 覆盖官方源 <code>/etc/pkg/FreeBSD.conf</code> 配置</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vi /usr/local/etc/pkg/repos/FreeBSD.conf
+FreeBSD: <span style="color:#f92672">{</span>
+  url: <span style="color:#e6db74">&#34;pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/</span><span style="color:#e6db74">${</span>ABI<span style="color:#e6db74">}</span><span style="color:#e6db74">/latest&#34;</span>,
+<span style="color:#f92672">}</span>
+
+sudo pkg update -f		<span style="color:#75715e"># 更新索引</span>
+</code></pre></div></li>
+<li>
+<p><a href="http://mirrors.163.com/freebsd-pkg/FreeBSD%3a12%3aamd64/latest/">163 Mirrors</a></p>
+<pre tabindex="0"><code>  url: &quot;pkg+http://mirrors.163.com/freebsd-pkg/${ABI}/latest&quot;,
+</code></pre></li>
+<li>
+<p>要啟動 (Bootstrap) 系統，請執行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo /usr/sbin/pkg
+</code></pre></div></li>
+<li>
+<p>當升級原使用舊版 pkg_* 工具的既有系統時，必須將資料庫轉換成新的格式</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg2ng
+</code></pre></div></li>
+<li>
+<p>Update the available remote repositories as listed in pkg.conf</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg update
+</code></pre></div></li>
+<li>
+<p>Search for a package</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg search perl
+</code></pre></div></li>
+<li>
+<p>在指定要安裝的套件時，最好使用 Port 來源來指定該應用程式，Port 來源是指應用程式在 Port 樹中的路徑</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg search -o perl
+</code></pre></div></li>
+<li>
+<p>Install a package: Installing must specify a unique origin or version otherwise it will try installing all matches</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg install perl-5.14
+</code></pre></div></li>
+<li>
+<p>列出已經安裝的 Port 中有那些已過時</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg version -l <span style="color:#e6db74">&#34;&lt;&#34;</span>
+</code></pre></div></li>
+<li>
+<p>Upgrade from remote repository</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg upgrade
+</code></pre></div></li>
+<li>
+<p>Delete an installed package</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg delete perl-5.14
+</code></pre></div></li>
+<li>
+<p>Remove unneeded dependencies</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg autoremove
+</code></pre></div></li>
+<li>
+<p>List installed packages</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg info
+</code></pre></div></li>
+<li>
+<p>Display information about installed packages</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg info perl-5.14
+</code></pre></div></li>
+<li>
+<p>Show the pkg-message of a package</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg info -D perl-5.14
+</code></pre></div></li>
+<li>
+<p>要查詢已安在系統上的軟體是否有任何已知的漏洞</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg audit -F
+</code></pre></div></li>
+<li>
+<p>因為相依所安裝的套件稱作自動 (Automatic) 套件，而非自動套件即套件被安裝的原因不是因為其他套件所相依</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg prime-list		<span style="color:#75715e"># deprecated</span>
+</code></pre></div></li>
+<li>
+<p>Clean the local cache of fetched remote packages</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg clean
+</code></pre></div></li>
+<li>
+<p>Packages</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg install linux-sublime3
+sudo pkg install mysql180-server mysql180-client
+</code></pre></div></li>
+</ul>
+<h2 id="port-套件">Port 套件<a hidden class="anchor" aria-hidden="true" href="#port-套件">#</a></h2>
+<p>優點：</p>
+<ul>
+<li>可更改編譯選項</li>
+<li>部份軟體的授權條款中禁止以 Binary 格式發佈。 這種軟體必須以原始碼發佈並由終端使用者編譯。</li>
+<li>原始碼可套用自訂的修補。</li>
+</ul>
+<p>Port 中並不含實際的原始碼，在編譯 Port 解壓縮時會自動下載的原始碼到 <code>/usr/ports/distfiles</code>。</p>
+<ul>
+<li>
+<p><a href="https://mirrors.ustc.edu.cn/help/freebsd-ports.html">USTC Mirrors</a>：在 <code>/etc/make.conf</code> 中添加以下内容</p>
+<pre tabindex="0"><code>MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
+</code></pre></li>
+<li>
+<p><a href="http://mirrors.163.com/freebsd-ports/distfiles/">163 Mirrors</a></p>
+<pre tabindex="0"><code>MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBDIR}/
+</code></pre></li>
+<li>
+<p>安裝 Port 套件集：下載壓縮後的 Port 套件集快照 (Snapshot) 到 /var/db/portsnap</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo portsnap fetch
+</code></pre></div></li>
+<li>
+<p>第一次執行 Portsnap 時，要先解壓縮快照到 /usr/ports</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo portsnap extract
+</code></pre></div></li>
+<li>
+<p>執行以下指令來更新 /usr/ports</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo portsnap fetch
+sudo portsnap update
+</code></pre></div></li>
+<li>
+<p>要找到 Port 所在的分類</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo whereis lsof
+</code></pre></div></li>
+<li>
+<p>使用 Port 套件集內建的搜尋機制來找軟體</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo cd /usr/ports
+sudo make search name<span style="color:#f92672">=</span>lsof
+sudo make quicksearch name<span style="color:#f92672">=</span>lsof		<span style="color:#75715e"># 不接受多資訊</span>
+</code></pre></div></li>
+<li>
+<p>若要進行更有深度的搜尋</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo make search key<span style="color:#f92672">=</span>string
+sudo make quicksearch key<span style="color:#f92672">=</span>string
+</code></pre></div></li>
+<li>
+<p>一次設定所有Port 編譯選項</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo make config-recursive
+</code></pre></div></li>
+<li>
+<p>重新進入 Port 的編譯選項清單</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo make config			<span style="color:#75715e"># or</span>
+sudo make showconfig		<span style="color:#75715e"># or</span>
+sudo make rmconfig
+</code></pre></div></li>
+<li>
+<p>編譯並安裝 Port</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo cd /usr/ports/sysutils/lsof
+sudo make install
+</code></pre></div></li>
+<li>
+<p>編譯在 /usr/ports Port 並安裝到 /usr/home/example/local</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo make WRKDIRPREFIX<span style="color:#f92672">=</span>../ports PREFIX<span style="color:#f92672">=</span>../local install
+</code></pre></div></li>
+<li>
+<p>安裝過程中會建立工作用的子目錄用來儲存編譯時暫存的檔案。可移除此目錄來節省磁碟空間並漸少往後升級新版 Port 時造成問題</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo make clean
+</code></pre></div></li>
+<li>
+<p>移除已安裝的 Port</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo cd /usr/ports/sysutils/lsof
+sudo make deinstall
+</code></pre></div></li>
+<li>
+<p>Example</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd /usr/ports/java/linux-oracle-jdk18
+sudo make install
+</code></pre></div></li>
+</ul>
+<p>安裝後的注意事項：</p>
+<ul>
+<li>大部份應用程式安裝會在 <code>/usr/local/etc</code> 安裝至少一個預設的設定檔。</li>
+<li>應用程式提供的文件會安裝到 <code>/usr/local/share/doc</code>。</li>
+<li>部份應用程式會以服務的方式執行，在啟動應用程式前前需要加入設定到 <code>/etc/rc.conf</code>。這些應用程式通常會安裝啟動 Script 到 <code>/usr/local/etc/rc.d</code>。</li>
+</ul>
+<h2 id="linux-binary-相容性">Linux® Binary 相容性<a hidden class="anchor" aria-hidden="true" href="#linux-binary-相容性">#</a></h2>
+<p>FreeBSD 提供 Linux® Binary 的相容性，允許使用者在 FreeBSD 系統上不需要修改就可以安裝和執行大部份的 Linux® Binary。</p>
+<p>最好不要直接安装 Linux 的软件，而使用 FreeBSD 源中的 Linux 软件，一般以 <code>linux-package</code> 命名。</p>
+<ul>
+<li>
+<p>載入 Linux® 核心模組</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo kldload linux
+</code></pre></div></li>
+<li>
+<p>對 64-位元的相容性</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo kldload linux64
+</code></pre></div></li>
+<li>
+<p>確認模組已載入</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo kldstat
+</code></pre></div></li>
+<li>
+<p>安裝基本的 Linux® 程式庫和 Binary</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg install emulators/linux_base-c7
+</code></pre></div></li>
+<li>
+<p>Add the following line</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vi /etc/fstab
+linprocfs   /compat/linux/proc	linprocfs	rw	0	<span style="color:#ae81ff">0</span>
+linsysfs    /compat/linux/sys	linsysfs	rw	0	<span style="color:#ae81ff">0</span>
+tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode<span style="color:#f92672">=</span>1777	0	<span style="color:#ae81ff">0</span>
+</code></pre></div></li>
+<li>
+<p>開機時開啟 Linux® 相容性</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vi /etc/rc.conf
+linux_enable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YES&#34;</span>
+</code></pre></div></li>
+<li>
+<p>安裝 Linux® ELF Binary</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo brandelf -t Linux my-linux-elf-binary
+</code></pre></div></li>
+<li>
+<p>安裝以 Linux® RPM 為基礎的應用程式,需先安裝 archivers/rpm4 套件或 Port</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg install rpm4
+sudo cd /compat/linux
+sudo rpm2cpio &lt; /path/to/linux.archive.rpm | cpio -id
+</code></pre></div></li>
+</ul>
+<h3 id="手動安裝其他程式庫">手動安裝其他程式庫<a hidden class="anchor" aria-hidden="true" href="#手動安裝其他程式庫">#</a></h3>
+<ul>
+<li>
+<p>在 Linux® 系統，可使用 ldd 來找出應用程式需要哪個共用程式庫</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ldd linuxdoom
+libXt.so.3 <span style="color:#f92672">(</span>DLL Jump 3.1<span style="color:#f92672">)</span> <span style="color:#f92672">=</span>&gt; /usr/X11/lib/libXt.so.3.1.0
+</code></pre></div></li>
+<li>
+<p>複製 Linux® 系統輸出結果中最後一欄需要的的檔案到 FreeBSD 系統的 /compat/linux。 複製完後，建立符號連結 (Symbolic link) 至輸出結果第一欄的名稱</p>
+<pre tabindex="0"><code>/compat/linux/usr/X11/lib/libXt.so.3.1.0
+/compat/linux/usr/X11/lib/libXt.so.3 -&gt; libXt.so.3.1.0
+</code></pre></li>
+</ul>
+<h2 id="自訂核心">自訂核心<a hidden class="anchor" aria-hidden="true" href="#自訂核心">#</a></h2>
+<h3 id="為何要編譯自訂的核心">為何要編譯自訂的核心?<a hidden class="anchor" aria-hidden="true" href="#為何要編譯自訂的核心">#</a></h3>
+<p>自訂核心有許多項優點，如：</p>
+<ul>
+<li>加速開機，因為自訂的核心只需要偵測您系統上存在的硬體，所以讓啟動所花的過程更流暢快速。</li>
+<li>減少記憶體使用，自訂的核心通常會比 <code>GENERIC</code> 核心使用更少的記憶體，這很重要，因為核心必須一直存放在實體記憶體內。</li>
+<li>支援額外的硬體，自訂的核心可以增加一些 <code>GENERIC</code> 核心沒有提供的硬體支援。</li>
+</ul>
+<h3 id="偵測系統硬體">偵測系統硬體<a hidden class="anchor" aria-hidden="true" href="#偵測系統硬體">#</a></h3>
+<ul>
+<li>
+<p><code>dmesg</code>  or <code>/var/run/dmesg.boot</code> or <code>/var/log/messages</code></p>
+</li>
+<li>
+<p><code>pciconf -lv</code></p>
+</li>
+<li>
+<p>在 man指令加上 -k 旗標可列出有包含指定裝置品牌或名稱的手冊頁面清單：<code>man -k Intel</code></p>
+</li>
+</ul>
+<h3 id="設定檔">設定檔<a hidden class="anchor" aria-hidden="true" href="#設定檔">#</a></h3>
+<p><code>/usr/src/sys</code> 下子目錄代表著支援的硬體架構 (Architecture)，每個支援的硬體架構中會有 <code>conf</code> 子目錄，裡面含有供該架構使用的 <code>GENERIC</code> 核心設定檔。</p>
+<p>說明在<code>GENERIC</code> 同目錄的 <code>NOTES</code> 檔案中。所有架構通用選項，參考 <code>/usr/src/sys/conf/NOTES</code>。</p>
+<h2 id="备份与恢复httpswwwfreebsdorgdochandbookbackup-basicshtml"><a href="https://www.freebsd.org/doc/handbook/backup-basics.html">备份与恢复</a><a hidden class="anchor" aria-hidden="true" href="#备份与恢复httpswwwfreebsdorgdochandbookbackup-basicshtml">#</a></h2>
+<h3 id="dump--restore">dump &amp; restore<a hidden class="anchor" aria-hidden="true" href="#dump--restore">#</a></h3>
+<p>FreeBSD 系统的备份就是对系统文件的打包，然后放到一个安全的地方，使用的打包工具是 <code>dump</code>；FreeBSD 系统的恢复就是把你保存好的系统文件从安全的地方里面拿出来放到你的硬盘上去，使用的恢复工具是 <code>restore</code>；</p>
+<ul>
+<li>
+<p>需要备份的目录：</p>
+<ul>
+<li><code>/</code> 这个目录存放很多基本工具，包括内核，需要备份；</li>
+<li><code>/home</code> 用户数据，需要备份；</li>
+<li><code>/usr</code> 很多工具以及系统的源代码都放在这里面，需要备份；</li>
+<li><code>/usr/local</code> 所有安装的软件基本上都在这里，需要备份；</li>
+<li><code>/var</code> 系统的日志，ports系统的数据库，需要备份；</li>
+</ul>
+</li>
+<li>
+<p>备份方法：以 <code>/</code> 目录为例，把移动硬盘挂载在 <code>/mnt/fender_01</code> 目录，<code>/</code> 目录对应硬盘上面的 <code>/dev/ad12s1a</code> 分区，备份整个目录的命令如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">dump -0Lauf /mnt/fender_01/dump/ad12sa1.dump /dev/ad12s1a
+</code></pre></div><ul>
+<li>-0 备份所有的文件系统中的内容，也就是不使用增量备份；</li>
+<li>-f 指定备份结果存放的文件名；</li>
+<li>-a 告诉 dump 不考虑备份的介质的大小问题，早期备份使用磁带，dump 会预先计算一下需要的空间，使用这个选项告诉 dump 忽略这个问题；</li>
+<li>-u 告诉 dump 更新一下 /etc/dumpdates，这个文件记录了你在系统上搜有的备份活动；</li>
+<li>-L 备份已经挂载的文件系统时需要，这个选项会使用 UFS2 的 snapshot 功能来保证文件系统的一致性。</li>
+</ul>
+</li>
+<li>
+<p>恢复方法</p>
+<ul>
+<li>
+<p>恢复 <code>/</code> 以外的目录：以恢复  <code>/home</code> 目录为例，重启系统进入单用户模式，挂载 <code>/tmp</code> 分区，挂载移动硬盘，这时备份生成的文件保存在 <code>/mnt/01/dump/dev/ad12s1h.dump</code>，格式化 <code>/dev/ad12s1h</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">newfs -U /dev/ad12s1h		<span style="color:#75715e"># -U 选型来打开 softupdate</span>
+</code></pre></div><p>挂载这个分区，例如 <code>/mnt/02/</code>，恢复目录：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd /mnt/02
+restore -rf /mnt/01/dump/ad12s1h.dump
+</code></pre></div></li>
+<li>
+<p>恢复 <code>/</code>：因为 restore 在 <code>/</code> 目录中，所以不能使用上面方法恢复 <code>/</code> 目录。解决办法是使用 freebsd_livefs_cd 启动系统。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>备份 MBR</p>
+<ul>
+<li>
+<p>备份</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/da0 of<span style="color:#f92672">=</span>/path/to/mbr.img bs<span style="color:#f92672">=</span><span style="color:#ae81ff">512</span> count<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</code></pre></div></li>
+<li>
+<p>恢复</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/path/to/mbr.img of<span style="color:#f92672">=</span>/dev/da0 bs<span style="color:#f92672">=</span><span style="color:#ae81ff">512</span> count<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<p>参考：<a href="http://blog.chinaunix.net/uid-20306166-id-316037.html">FreeBSD dump 备份</a></p>
+<h3 id="rsyncremote-sync">rsync（remote sync）<a hidden class="anchor" aria-hidden="true" href="#rsyncremote-sync">#</a></h3>
+<p>可以在本地计算机与远程计算机之间，或者两个本地目录之间同步文件，且仅传输有变动的部分。</p>
+<ul>
+<li>
+<p>将源目录同步到目标目录</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rsync -r source1 source2 destination		<span style="color:#75715e"># -r 表示递归，即包含子目录</span>
+rsync -a source/ destination		<span style="color:#75715e"># -a 除了可以递归同步以外，还可以同步元信息（比如修改时间、权限等）</span>
+</code></pre></div></li>
+<li>
+<p>排除文件：同步时排除某些文件或目录，这时可以用 <code>--exclude</code> 参数指定排除模式，多个排除模式，可以用多个 <code>--exclude</code> 参数</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rsync -av --exclude dir source/ destination		<span style="color:#75715e"># 排除所有 TXT 文件</span>
+</code></pre></div></li>
+<li>
+<p>增量备份：除了源目录与目标目录直接比较，rsync 还支持使用基准目录，即将源目录与基准目录之间变动的部分，同步到目标目录。<code>--link-dest</code> 参数用来指定同步时的基准目录。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rsync -a --delete --link-dest /compare/path /source/path /target/path
+</code></pre></div></li>
+<li>
+<p>远程同步：rsync 默认使用 SSH 进行远程登录和数据传输</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rsync -av source/ username@remote_host:destination		<span style="color:#75715e"># 将本地内容同步到远程服务器</span>
+rsync -av username@remote_host:source/ destination		<span style="color:#75715e"># 将远程内容同步到本地</span>
+</code></pre></div></li>
+<li>
+<p>使用 rsync 来备份系统</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rsync -aH --delete --exclude dir --link-dest /compare/path source destination
+</code></pre></div><ul>
+<li><code>-H</code> 选项用来保持硬链接</li>
+<li>默认情况下，rsync 只确保源目录的所有内容（明确排除的文件除外）都复制到目标目录。它不会使两个目录保持相同，并且不会删除文件。如果你想让那些在源目录里被删除的文件在目标目录里也被删除，那么你可以加上 <code>--delete</code> 选项来删除。<code>--delete</code> 参数会使得 <code>destination</code> 成为 <code>source</code> 的一个镜像。</li>
+</ul>
+</li>
+</ul>
+<p>参考：<a href="http://www.ruanyifeng.com/blog/2020/08/rsync.html">rsync 用法教程</a>，<a href="https://linux.cn/article-8237-1.html">使用 rsync 来备份 Linux 系统</a></p>
+<h2 id="z-檔案系統-zfs">Z 檔案系統 (ZFS)<a hidden class="anchor" aria-hidden="true" href="#z-檔案系統-zfs">#</a></h2>
+<p>ZFS 的設計目標主要有三個：</p>
+<ul>
+<li>資料完整性：所有資料都會有一個資料的校驗碼 (checksum)，資料寫入時會計算校驗碼然後一併寫入，往後讀取資料時會再計算一次校驗碼，若校驗碼與當初寫入時不相符，便可偵測到資料錯誤，此時若有可用的資料備援 (Data redundancy)，ZFS 會嘗試自動修正錯誤。</li>
+<li>儲存池：實體的儲存裝置都會先被加入到一個儲存池 (Pool)，這個共用的儲存池可用來配置儲存空間，儲存池的空間可被所有的檔案系統使用且透過加入新的儲存裝置來增加空間。</li>
+<li>效能：提供多個快取機制來增加效能。先進、以記憶體為基礎的讀取快取可使用 ARC。第二層以磁碟為基礎的讀取快取可使用 L2ARC，以磁碟為基礎的同步寫入快取則可使用 ZIL。</li>
+</ul>
+<h2 id="others">Others<a hidden class="anchor" aria-hidden="true" href="#others">#</a></h2>
+<h3 id="screen-resolution-on-freebsd-on-virtualbox">Screen resolution on FreeBSD on VirtualBox<a hidden class="anchor" aria-hidden="true" href="#screen-resolution-on-freebsd-on-virtualbox">#</a></h3>
+<p>问题描述：在virtualbox虚拟机下，无法改变桌面分辨率为1366x768</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">VBoxManage setextradata <span style="color:#e6db74">&#34;FreeBSD&#34;</span> VBoxInternal2/EfiGraphicsResolution 1366x768
+</code></pre></div><h3 id="disable-the-forwardback-buttons-on-my-mouse">Disable the Forward/Back buttons on my mouse<a hidden class="anchor" aria-hidden="true" href="#disable-the-forwardback-buttons-on-my-mouse">#</a></h3>
+<p>问题描述：浏览网页时，鼠标滑轮滚动浏览器就会前进后退。</p>
+<p><a href="https://unix.stackexchange.com/questions/20550/how-to-disable-the-forward-back-buttons-on-my-mouse">Salved</a>：</p>
+<ul>
+<li>
+<p>执行下面命令后，上下滑动鼠标滑轮，看看映射到那些button，一般是buttons 8 and 9</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo xev | grep -A2 ButtonPress
+</code></pre></div></li>
+<li>
+<p>then disable button 8 and 9（前提是有上面的问题，否则就不要禁）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vi ~/.Xmodmap
+pointer <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>
+</code></pre></div></li>
+<li>
+<p>test it with the command,command automatically when you log in; if yours doesn&rsquo;t, arrange for it to run when X starts.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo xmodmap ~/.Xmodmap
+</code></pre></div></li>
+</ul>
+<h3 id="install-chinese-font">Install chinese font<a hidden class="anchor" aria-hidden="true" href="#install-chinese-font">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pkg install zh-CJKUnifonts		<span style="color:#75715e"># CJK（中日韩统一表意文字）</span>
+</code></pre></div><h3 id="设单使用模式为不安全">设单使用模式为不安全<a hidden class="anchor" aria-hidden="true" href="#设单使用模式为不安全">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vi /etc/ttys
+console none	unknown off insecure
+</code></pre></div><h3 id="no-space-left-on-device">No space left on device<a hidden class="anchor" aria-hidden="true" href="#no-space-left-on-device">#</a></h3>
+<p>问题描述：使用 pkg update 时提示这个问题。原因是 /tmp is too small。</p>
+<p><a href="https://forums.freebsd.org/threads/no-space-left-on-device.61232/">Salved</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vi /etc/fstab
+tmpfs	/tmp	tmpfs	rw,size<span style="color:#f92672">=</span>256000000	0	0		<span style="color:#75715e"># size 以Byte为单位</span>
+</code></pre></div><h3 id="virtualbox-guest-additions">VirtualBox™ guest additions<a hidden class="anchor" aria-hidden="true" href="#virtualbox-guest-additions">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo cd /usr/ports/emulators/virtualbox-ose-additions <span style="color:#f92672">&amp;&amp;</span> make install clean
+
+sudo vi /etc/rc.conf
+vboxguest_enable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YES&#34;</span>
+vboxservice_enable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YES&#34;</span>
+vboxservice_flags<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--disable-timesync&#34;</span>		<span style="color:#75715e"># 若有使用 ntpd或 ntpdate，便可關閉主機時間同步功能</span>
+</code></pre></div><h3 id="fish">Fish<a hidden class="anchor" aria-hidden="true" href="#fish">#</a></h3>
+<p>Fish 是&quot;the <strong>f</strong>riendly <strong>i</strong>nteractive <strong>sh</strong>ell&quot;的简称，最大特点就是方便易用。</p>
+<p>Fish 会自动在光标后面给出建议，表示可能的选项，颜色为灰色。如果采纳建议，可以按下<code>→</code>或<code>Control + F</code>。如果只采纳一部分，可以按下<code>Alt + →</code>。</p>
+<p>输入命令时，Fish 会自动显示匹配的上一条历史记录。如果没有匹配的历史记录，Fish 会猜测可能的结果，自动补全各种输入。</p>
+<h3 id="how-to-start-things-at-boot-timehttpwwwfreebsddiaryorg"><a href="http://www.freebsddiary.org/">How to start things at boot time</a><a hidden class="anchor" aria-hidden="true" href="#how-to-start-things-at-boot-timehttpwwwfreebsddiaryorg">#</a></h3>
+<ul>
+<li>
+<p>主流的桌面环境都自带应用程序自启动设置程序。</p>
+</li>
+<li>
+<p>These directories are defined in <code>/etc/defaults/rc.conf</code>（主要是运行脚本）</p>
+<ul>
+<li>
+<p>Default startup directory is <code>/usr/local/etc/rc.d/</code>. if you need the files to be executed in a specific order, try numbering the files. For example:</p>
+<pre tabindex="0"><code>000This.Will.Run.First.sh
+020This.Will.Run.Next.sh
+030And.Then.This.sh
+</code></pre></li>
+<li>
+<p>deprecated: <code>/etc/rc.local</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>DSBAutostart is a Qt program that allows you to add commands to be executed at session start.</p>
+<p>（本质就是在 <code>.xinitrc</code> 调用程序指令，GUI 程序开机启动都需放入 <code>.xinitrc</code>，在 Xorg 启动后运行）</p>
+<ul>
+<li>
+<p>Installation</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd /usr/ports/x11/dsbautostart <span style="color:#f92672">&amp;&amp;</span> make install distclean
+</code></pre></div></li>
+<li>
+<p>Usage</p>
+<ul>
+<li>
+<p>Manual</p>
+<ul>
+<li>
+<p>Setup: Add the following command to your <code>~/.xinitrc</code>, or to your window manager&rsquo;s startup script (e.g. <code>~/.config/openbox/autostart.sh</code>)</p>
+<pre tabindex="0"><code>sh ~/.config/DSB/autostart.sh&amp;
+</code></pre></li>
+<li>
+<p><code>~/.config/DSB/autostart.sh</code></p>
+<pre tabindex="0"><code>Plank&amp;
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>GUI: <code>Setting -&gt; DSBAutostart -&gt; Add Command</code>, example <code>plank</code>, then <code>Save</code> and <code>Quit</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="freebsd-insall-oracle-jdk">FreeBSD Insall Oracle JDK<a hidden class="anchor" aria-hidden="true" href="#freebsd-insall-oracle-jdk">#</a></h3>
+<ul>
+<li>安装 Linux Compact</li>
+<li>在 <code>/usr/ports/java/linux-oracle-jdk18</code> 运行 <code>sudo make install</code></li>
+<li>根据提示在 <a href="https://www.oracle.com/java/technologies/oracle-java-archive-downloads.html">Oracle Java Archive</a> 下载需要的 JDK 版本安装包，复制到 <code>/usr/ports/distfiles</code></li>
+<li>在 <code>/usr/ports/java/linux-oracle-jdk18</code> 运行 <code>sudo make install</code>，安装成功</li>
+</ul>
+<h3 id="freebsd-install-python-and-pip">FreeBSD Install Python and pip<a hidden class="anchor" aria-hidden="true" href="#freebsd-install-python-and-pip">#</a></h3>
+<pre tabindex="0"><code>sudo pkg install python
+
+python --version
+Python 3.7.9
+
+sudo pkg install py37-pip
+</code></pre><h3 id="简化启动">简化启动<a hidden class="anchor" aria-hidden="true" href="#简化启动">#</a></h3>
+<p>FreeBSD 默认启动过程相当详细，包含大量调试信息以及内核消息。</p>
+<ul>
+<li>Add the <code>boot_mute=YES</code> option to the <code>/boot/loader.conf</code> file.</li>
+<li>Add <code>autoboot_delay=2</code> parameter to the <code>/boot/loader.conf</code> file.</li>
+<li>Add <code>rc_startmsgs=&quot;NO&quot;</code> to your <code>/etc/rc.conf</code> file.</li>
+</ul>
+<h3 id="连接网络">连接网络<a hidden class="anchor" aria-hidden="true" href="#连接网络">#</a></h3>
+<p>If You will have attached LAN cable and your interface is <code>em0</code> (check <code>ifconfig</code> command output) then <code>dhclient em0</code> command should grant You the working connection to the Internet – assuming that You have DHCP server on that network.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ifconfig em0 up
+dhclient em0
+</code></pre></div><p>To test the network connectivity use the <code>ping</code> command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ping -c <span style="color:#ae81ff">3</span> freebsd.org
+</code></pre></div><p>If You would like to connect to the World with wireless connection then here are the needed commands. First lets check what wireless card You have.</p>
+<pre tabindex="0"><code>sysctl net.wlan.devices
+</code></pre><p>We will now create <code>wlan</code> virtual device on top of our <code>iwn0</code> device and bring it up.</p>
+<pre tabindex="0"><code>ifconfig wlan0 create wlandev iwn0
+ifconfig wlan0 up
+</code></pre><p>We can scan for existing nearby WiFi access points if needed.</p>
+<pre tabindex="0"><code>ifconfig wlan0 scan
+</code></pre><p>Now we need to add the desired WiFi network to the <code>/etc/wpa_supplicant.conf</code> file as shown below.</p>
+<pre tabindex="0"><code>network={
+  ssid=&quot;WIFI-NETWORK-NAME&quot;
+  psk=&quot;PASSWORD&quot;
+}
+</code></pre><p>Then You may connect to it using the <code>wpa_supplicant</code> daemon. Hit the <code>[CTRL]+[Z]</code> key combination to put the process into suspended state. Then we type the <code>bg</code> command to put it back into running state, but in the background so we can continue to type next commands.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wpa_supplicant -i wlan0 -c /etc/wpa_supplicant.conf
+</code></pre></div><p>Now we will request for the IP address from the access point DHCP server.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">dhclient wlan0
+</code></pre></div><h3 id="how-to-add-and-remove-users-on-freebsd">How To Add and Remove Users on FreeBSD<a hidden class="anchor" aria-hidden="true" href="#how-to-add-and-remove-users-on-freebsd">#</a></h3>
+<ul>
+<li>
+<p>Add a User: <code>adduser</code></p>
+</li>
+<li>
+<p>Grant Sudo Privileges: On FreeBSD, users that are members of the <code>wheel</code> group are allowed to use <code>sudo</code>. This is due to the following line in the default <strong>sudoers</strong> file, <code>/usr/local/etc/sudoers</code></p>
+<pre tabindex="0"><code>%wheel ALL=(ALL) NOPASSWD: ALL
+</code></pre></li>
+<li>
+<p>Remove a User: <code>rmuser</code></p>
+</li>
+<li>
+<p>Lock a User Account: <code>pw lock username</code></p>
+</li>
+<li>
+<p>Unlock a User: <code>pw unlock username</code></p>
+</li>
+</ul>
+<h2 id="其他">其他<a hidden class="anchor" aria-hidden="true" href="#其他">#</a></h2>
+<p>NetBSD: <a href="https://mirrors.huaweicloud.com/NetBSD/">huaweicloud</a>、<a href="https://mirrors.aliyun.com/netbsd/?spm=a2c6h.13651104.0.0.4d843bf4AzJYTX">aliyun</a>、<a href="https://mirrors.tuna.tsinghua.edu.cn/">tsinghua</a></p>
+<p>OpenBSD: <a href="https://mirrors.huaweicloud.com/OpenBSD/">huaweicloud</a>、<a href="https://mirrors.aliyun.com/openbsd/?spm=a2c6h.13651104.0.0.14db5a50qFnXl6">aliyun</a>、<a href="https://mirrors.tuna.tsinghua.edu.cn/">tsinghua</a></p>
+<p>一篇好文：<a href="https://my.oschina.net/qihh/blog/78743">FreeBSD的现状和未来</a></p>
+<p><a href="https://vermaden.wordpress.com/freebsd-desktop/">FreeBSD Desktop</a></p>
+<p><a href="https://www.freebsd.org/doc/zh_TW/books/handbook/">FreeBSD 使用手冊</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://example.com/tags/unix/">Unix</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://example.com/posts/distributions/">
+    <span class="title">« Prev Page</span>
+    <br>
+    <span>Distributions</span>
+  </a>
+  <a class="next" href="https://example.com/posts/conversation/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span>Conversation</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+
+<div class="disqus-container">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    this.page.identifier = '7e693b';
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "sakamotokurome" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2021 <a href="https://example.com">Sakamoto Kurome</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+</body>
+
+</html>
