@@ -2,44 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/posts/</loc>
+    <loc>https://sakamotokurome.github.io/posts/</loc>
     <lastmod>2021-12-12T16:52:44+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/</loc>
+    <loc>https://sakamotokurome.github.io/</loc>
     <lastmod>2021-12-12T16:52:44+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://sakamotokurome.github.io/tags/</loc>
     <lastmod>2021-12-12T16:52:44+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/posts/ubuntu/</loc>
+    <loc>https://sakamotokurome.github.io/posts/ubuntu/</loc>
     <lastmod>2021-12-12T16:52:44+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/unix/</loc>
+    <loc>https://sakamotokurome.github.io/tags/unix/</loc>
     <lastmod>2021-12-12T16:52:44+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/blog/</loc>
+    <loc>https://sakamotokurome.github.io/tags/blog/</loc>
     <lastmod>2021-12-12T16:49:36+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/posts/hexo/</loc>
+    <loc>https://sakamotokurome.github.io/posts/hexo/</loc>
     <lastmod>2021-12-12T16:49:36+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/posts/git/</loc>
+    <loc>https://sakamotokurome.github.io/posts/git/</loc>
     <lastmod>2021-12-12T16:46:08+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/posts/distributions/</loc>
+    <loc>https://sakamotokurome.github.io/posts/distributions/</loc>
     <lastmod>2021-12-12T16:43:24+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/posts/freebsd/</loc>
+    <loc>https://sakamotokurome.github.io/posts/freebsd/</loc>
     <lastmod>2021-12-12T16:37:27+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/posts/conversation/</loc>
+    <loc>https://sakamotokurome.github.io/posts/conversation/</loc>
     <lastmod>2021-12-12T16:26:26+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/lyrics/</loc>
+    <loc>https://sakamotokurome.github.io/tags/lyrics/</loc>
     <lastmod>2021-12-12T16:26:26+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/archives/</loc>
+    <loc>https://sakamotokurome.github.io/archives/</loc>
   </url><url>
-    <loc>https://example.com/search/</loc>
+    <loc>https://sakamotokurome.github.io/search/</loc>
   </url>
 </urlset>
