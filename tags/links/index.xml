@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Links on Sakamoto Kurome</title>
+    <link>https://sakamotokurome.github.io/tags/links/</link>
+    <description>Recent content in Links on Sakamoto Kurome</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 13 Dec 2021 14:01:02 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/links/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Links</title>
+      <link>https://sakamotokurome.github.io/posts/links/</link>
+      <pubDate>Mon, 13 Dec 2021 14:01:02 +0800</pubDate>
+      
+      <guid>https://sakamotokurome.github.io/posts/links/</guid>
+      <description>Portal 信息生产者主要是企业。 OSCHINA：开源资讯 少数派：软硬件使用技巧 Linux 中国：Linux 相关 Distrowatch：Linxu 发行版排行 FreeBSDNews LWN.net:</description>
+    </item>
+    
+  </channel>
+</rss>
