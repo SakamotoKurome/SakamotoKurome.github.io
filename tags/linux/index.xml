@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linux on Sakamoto Kurome</title>
+    <link>https://sakamotokurome.github.io/tags/linux/</link>
+    <description>Recent content in Linux on Sakamoto Kurome</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 12 Dec 2021 16:52:44 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu</title>
+      <link>https://sakamotokurome.github.io/posts/ubuntu/</link>
+      <pubDate>Sun, 12 Dec 2021 16:52:44 +0800</pubDate>
+      
+      <guid>https://sakamotokurome.github.io/posts/ubuntu/</guid>
+      <description>友邦拓 乌班图 During the first ten years of this HOWTO&amp;rsquo;s life, I reported that from a new user&amp;rsquo;s point of view, all Linux distributions are almost equivalent. But in 2006-2007, an actual best choice emerged: Ubuntu. While other distros have their own areas of strength, Ubuntu is far and away the most accessible to Linux newbies. Beware, though, of the hideous and nigh-unusable &amp;ldquo;Unity&amp;rdquo; desktop interface</description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://sakamotokurome.github.io/posts/git/</link>
+      <pubDate>Sun, 12 Dec 2021 16:46:08 +0800</pubDate>
+      
+      <guid>https://sakamotokurome.github.io/posts/git/</guid>
+      <description>Workspace：工作区，Index / Stage：暂存区，Repository：仓库区（或本地仓库），Remote：远程仓库 远程仓库 安装，</description>
+    </item>
+    
+  </channel>
+</rss>

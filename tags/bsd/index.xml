@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>BSD on Sakamoto Kurome</title>
+    <link>https://sakamotokurome.github.io/tags/bsd/</link>
+    <description>Recent content in BSD on Sakamoto Kurome</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 12 Dec 2021 16:37:27 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/bsd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FreeBSD</title>
+      <link>https://sakamotokurome.github.io/posts/freebsd/</link>
+      <pubDate>Sun, 12 Dec 2021 16:37:27 +0800</pubDate>
+      
+      <guid>https://sakamotokurome.github.io/posts/freebsd/</guid>
+      <description>The goals of the FreeBSD Project are to provide software that may be used for any purpose and without strings attached. Many of us have a significant investment in the code (and project) and would certainly not mind a little financial compensation now and then, but we are definitely not prepared to insist on it. We believe that our first and foremost &amp;ldquo;mission&amp;rdquo; is to provide code to any and</description>
+    </item>
+    
+  </channel>
+</rss>

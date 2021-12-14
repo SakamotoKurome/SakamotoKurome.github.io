@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hexo on Sakamoto Kurome</title>
+    <link>https://sakamotokurome.github.io/tags/hexo/</link>
+    <description>Recent content in Hexo on Sakamoto Kurome</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 12 Dec 2021 16:49:36 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hexo</title>
+      <link>https://sakamotokurome.github.io/posts/hexo/</link>
+      <pubDate>Sun, 12 Dec 2021 16:49:36 +0800</pubDate>
+      
+      <guid>https://sakamotokurome.github.io/posts/hexo/</guid>
+      <description>Hexo Hexo 是一个快速、简洁且高效的博客框架。 安装 安装 Git： Windows: Download &amp;amp; install git. Mac: Install it with Homebrew, MacPorts or installer. Linux (Ubuntu, Debian): sudo apt-get install git-core Linux (Fedora, Red Hat, CentOS): sudo yum install git-core 安装 node.js： Windows: Install it with</description>
+    </item>
+    
+  </channel>
+</rss>
