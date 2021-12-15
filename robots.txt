@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://sakamotokurome.github.io/sitemap.xml
