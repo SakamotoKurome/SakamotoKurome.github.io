@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Zpix";
+    font-weight: normal;
+    font-style: normal;
+    src: url("fonts/zpix.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Press Start 2P";
+    font-weight: normal;
+    font-style: normal;
+    /* https://example.com/fonts/PressStart2P-Regular.ttf */
+    src: url("fonts/PressStart2P-Regular.ttf") format("truetype");
+}
+
+
+body {
+    /* set font */
+    font-family: "Zpix", "Press Start 2P";
+}
+
+body code {
+    /* set code font */
+    font-family: "Zpix", "Press Start 2P";
+    /* set the code block to wrap automatically  */
+    white-space: pre-wrap;
+}
+
+/* reset default css, align code blocks in the list */
+.post-content ul pre {
+    margin-inline-start: inherit;
+}
