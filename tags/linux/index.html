@@ -88,14 +88,50 @@ if (!doNotTrack) {
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>Ubuntu
+    <h2>Gentoo
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Gentoo 群推荐安装教程： https://bitbili.net/gentoo-linux-installation-and-usage-tutorial.html https://www.yafa.moe/post/install-gentoo-on-mac/ https://litterhougelangley.life/blog/2021/05/21/gentoo/ https://blog.bugsur.xyz/gentoo-handbook-installation/ 群内如果要贴长文本，可以使用网络粘贴板： &lt;输出命令&gt; | curl -F &#34;c=@-&#34; &#34;https://fars.ee/&#34; 并且将输出里的 url: http://far.se/xxxx 这行贴出来。使用的时候...</p>
+  </section>
+  <footer class="entry-footer"><span title='2022-03-08 17:03:39 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;242 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <a class="entry-link" aria-label="post link to Gentoo" href="https://sakamotokurome.github.io/posts/gentoo/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Ubuntu Tips
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>TIPS BackupYourSystem Rsync 目的在于恢复系统出现的错误，类似于虚拟机的快照。 备份 #!/bin/bash set -o errexit set -o nounset set -o pipefail readonly SOURCE_DIR=/ readonly BACKUP_DIR=/home/kurome/DataBackup readonly DATETIME=&#34;$(date &#39;&#43;%Y-%m-%d_%H:%M:%S&#39;)&#34; readonly BACKUP_PATH=&#34;${BACKUP_DIR}/${DATETIME}&#34; readonly LATEST_LINK=&#34;${BACKUP_DIR}/latest&#34; rsync -av \ --delete &#34;${SOURCE_DIR}/&#34; \ --link-dest &#34;${LATEST_LINK}&#34; \ --exclude={&#34;dev&#34;,&#34;proc&#34;,&#34;sys&#34;,&#34;tmp&#34;,&#34;run&#34;,&#34;mnt&#34;,&#34;media&#34;,&#34;lost&#43;found&#34;,&#34;Trash&#34;,&#34;Downloads/*&#34;,&#34;DataBackup/*&#34;,&#34;DataPool/*&#34;} \ &#34;${BACKUP_PATH}&#34; rm -rf &#34;${LATEST_LINK}&#34; ln -s &#34;${BACKUP_PATH}&#34; &#34;${LATEST_LINK}&#34; 注...</p>
+  </section>
+  <footer class="entry-footer"><span title='2022-03-08 15:33:09 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;48 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <a class="entry-link" aria-label="post link to Ubuntu Tips" href="https://sakamotokurome.github.io/posts/ubuntutips/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Ubuntu System
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Wine 简介 Wine 是在x86、x86-64容许类Unix操作系统在X Window System运行Microsoft Windows程序的软件。另外，Wine也提供...</p>
+  </section>
+  <footer class="entry-footer"><span title='2022-03-08 15:32:32 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;262 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <a class="entry-link" aria-label="post link to Ubuntu System" href="https://sakamotokurome.github.io/posts/ubuntusystem/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Ubuntu Desktop
     </h2>
   </header>
   <section class="entry-content">
     <p>友邦拓 乌班图 During the first ten years of this HOWTO’s life, I reported that from a new user’s point of view, all Linux distributions are almost equivalent. But in 2006-2007, an actual best choice emerged: Ubuntu. While other distros have their own areas of strength, Ubuntu is far and away the most accessible to Linux newbies. Beware, though, of the hideous and nigh-unusable “Unity” desktop interface...</p>
   </section>
-  <footer class="entry-footer"><span title='2021-12-12 16:52:44 +0800 CST'>December 12, 2021</span>&nbsp;·&nbsp;580 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
-  <a class="entry-link" aria-label="post link to Ubuntu" href="https://sakamotokurome.github.io/posts/ubuntu/"></a>
+  <footer class="entry-footer"><span title='2022-03-08 15:32:08 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;265 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <a class="entry-link" aria-label="post link to Ubuntu Desktop" href="https://sakamotokurome.github.io/posts/ubuntudesktop/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -111,18 +147,11 @@ if (!doNotTrack) {
   <footer class="entry-footer"><span title='2021-12-12 16:46:08 +0800 CST'>December 12, 2021</span>&nbsp;·&nbsp;29 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
   <a class="entry-link" aria-label="post link to Git" href="https://sakamotokurome.github.io/posts/git/"></a>
 </article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>Distributions
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Fedora [fəˈdɔrə] 费多拉 Fedora 定制版 为什么 Linus Torvalds 用 Fedora 2008：linus对发行版的要求是&#34;易安装，比较贴近上游&#34;即可。 201...</p>
-  </section>
-  <footer class="entry-footer"><span title='2021-12-12 16:43:24 +0800 CST'>December 12, 2021</span>&nbsp;·&nbsp;93 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
-  <a class="entry-link" aria-label="post link to Distributions" href="https://sakamotokurome.github.io/posts/distributions/"></a>
-</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://sakamotokurome.github.io/tags/linux/page/2/">Next Page »</a>
+  </nav>
+</footer>
     </main>
     
 <footer class="footer">

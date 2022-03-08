@@ -6,23 +6,23 @@
     <description>Recent content in Unix on Sakamoto Kurome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 12 Dec 2021 16:52:44 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 17:03:39 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/unix/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Ubuntu</title>
-      <link>https://sakamotokurome.github.io/posts/ubuntu/</link>
-      <pubDate>Sun, 12 Dec 2021 16:52:44 +0800</pubDate>
+      <title>Gentoo</title>
+      <link>https://sakamotokurome.github.io/posts/gentoo/</link>
+      <pubDate>Tue, 08 Mar 2022 17:03:39 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/ubuntu/</guid>
-      <description>友邦拓 乌班图 During the first ten years of this HOWTO&amp;rsquo;s life, I reported that from a new user&amp;rsquo;s point of view, all Linux distributions are almost equivalent. But in 2006-2007, an actual best choice emerged: Ubuntu. While other distros have their own areas of strength, Ubuntu is far and away the most accessible to Linux newbies. Beware, though, of the hideous and nigh-unusable &amp;ldquo;Unity&amp;rdquo; desktop interface</description>
+      <guid>https://sakamotokurome.github.io/posts/gentoo/</guid>
+      <description>Gentoo 群推荐安装教程： https://bitbili.net/gentoo-linux-installation-and-usage-tutorial.html https://www.yafa.moe/post/install-gentoo-on-mac/ https://litterhougelangley.life/blog/2021/05/21/gentoo/ https://blog.bugsur.xyz/gentoo-handbook-installation/ 群内如果要贴长文本，可以使用网络粘贴板： &amp;lt;输出命令&amp;gt; | curl -F &amp;#34;c=@-&amp;#34; &amp;#34;https://fars.ee/&amp;#34; 并且将输出里的 url: http://far.se/xxxx 这行贴出来。使用的时候</description>
     </item>
     
     <item>
-      <title>Git</title>
-      <link>https://sakamotokurome.github.io/posts/git/</link>
-      <pubDate>Sun, 12 Dec 2021 16:46:08 +0800</pubDate>
+      <title>Ubuntu Tips</title>
+      <link>https://sakamotokurome.github.io/posts/ubuntutips/</link>
+      <pubDate>Tue, 08 Mar 2022 15:33:09 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/git/</guid>
-      <description>Workspace：工作区，Index / Stage：暂存区，Repository：仓库区（或本地仓库），Remote：远程仓库 远程仓库 安装，</description>
+      <guid>https://sakamotokurome.github.io/posts/ubuntutips/</guid>
+      <description>TIPS BackupYourSystem Rsync 目的在于恢复系统出现的错误，类似于虚拟机的快照。 备份 #!/bin/bash set -o errexit set -o nounset set -o pipefail readonly SOURCE_DIR=/ readonly BACKUP_DIR=/home/kurome/DataBackup readonly DATETIME=&amp;#34;$(date &amp;#39;+%Y-%m-%d_%H:%M:%S&amp;#39;)&amp;#34; readonly BACKUP_PATH=&amp;#34;${BACKUP_DIR}/${DATETIME}&amp;#34; readonly LATEST_LINK=&amp;#34;${BACKUP_DIR}/latest&amp;#34; rsync -av \ --delete &amp;#34;${SOURCE_DIR}/&amp;#34; \ --link-dest &amp;#34;${LATEST_LINK}&amp;#34; \ --exclude={&amp;#34;dev&amp;#34;,&amp;#34;proc&amp;#34;,&amp;#34;sys&amp;#34;,&amp;#34;tmp&amp;#34;,&amp;#34;run&amp;#34;,&amp;#34;mnt&amp;#34;,&amp;#34;media&amp;#34;,&amp;#34;lost+found&amp;#34;,&amp;#34;Trash&amp;#34;,&amp;#34;Downloads/*&amp;#34;,&amp;#34;DataBackup/*&amp;#34;,&amp;#34;DataPool/*&amp;#34;} \ &amp;#34;${BACKUP_PATH}&amp;#34; rm -rf &amp;#34;${LATEST_LINK}&amp;#34; ln -s &amp;#34;${BACKUP_PATH}&amp;#34; &amp;#34;${LATEST_LINK}&amp;#34; 注</description>
     </item>
     
   </channel>
