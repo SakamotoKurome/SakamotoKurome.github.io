@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Fedora | Sakamoto Kurome</title>
+<meta name="keywords" content="Unix, Linux, Fedora, CentOS, Linux Deploy" />
+<meta name="description" content="Fedora [fəˈdɔrə] 费多拉 Fedora 定制版 为什么 Linus Torvalds 用 Fedora 2008：linus对发行版的要求是&quot;易安装，比较贴近上游&quot;即可。 201">
+<meta name="author" content="Sakamoto Kurome">
+<link rel="canonical" href="https://sakamotokurome.github.io/posts/fedora/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://sakamotokurome.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sakamotokurome.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sakamotokurome.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sakamotokurome.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sakamotokurome.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.90.0" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+
+<link rel="stylesheet" href="https://sakamotokurome.github.io/custom.css">
+<meta name="google-site-verification" content="i2r403EffR8m-KBf7EHi6AYg7tfnMshaXTAynoYPnpE" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K2Y212LPQ2"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-K2Y212LPQ2', { 'anonymize_ip': false });
+}
+</script>
+<meta property="og:title" content="Fedora" />
+<meta property="og:description" content="Fedora [fəˈdɔrə] 费多拉 Fedora 定制版 为什么 Linus Torvalds 用 Fedora 2008：linus对发行版的要求是&quot;易安装，比较贴近上游&quot;即可。 201" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sakamotokurome.github.io/posts/fedora/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-09T11:39:38&#43;08:00" />
+<meta property="article:modified_time" content="2022-03-09T11:39:38&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fedora"/>
+<meta name="twitter:description" content="Fedora [fəˈdɔrə] 费多拉 Fedora 定制版 为什么 Linus Torvalds 用 Fedora 2008：linus对发行版的要求是&quot;易安装，比较贴近上游&quot;即可。 201"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://sakamotokurome.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Fedora",
+      "item": "https://sakamotokurome.github.io/posts/fedora/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Fedora",
+  "name": "Fedora",
+  "description": "Fedora [fəˈdɔrə] 费多拉 Fedora 定制版 为什么 Linus Torvalds 用 Fedora 2008：linus对发行版的要求是\u0026quot;易安装，比较贴近上游\u0026quot;即可。 201",
+  "keywords": [
+    "Unix", "Linux", "Fedora", "CentOS", "Linux Deploy"
+  ],
+  "articleBody": "Fedora [fəˈdɔrə] 费多拉\nFedora 定制版 为什么 Linus Torvalds 用 Fedora  2008：linus对发行版的要求是\"易安装，比较贴近上游\"即可。 2010年的时候，他指出了Fedora 14的一个bug。 2011年Fedora 15换Gnome3作为默认DE了，Linus直言\"unholy mess\" ，然后转投XFCE。 2011年末，Linus提出并修补了openSUSE中Xorg的一个严重bug。 2013年5月：Linus尝试将自己手头的MacBook Air装上Linux，把几个大的发行版全部都试了一遍。发现只有Fedora能正常工作。 之后的所有消息就是各种fedora了  SELinux 长久以来，每当遇到授权问题或者新安装的主机，我的第一反应是通过setenforce 0命令禁用SELinux，来减少产生的权限问题，但是这并不是一个良好的习惯。这篇文章尝试对SELinux的基本概念和用法进行简单介绍，并且提供一些更深入的资料。\nLinux下默认的接入控制是DAC，其特点是资源的拥有者可以对他进行任何操作（读、写、执行）。当一个进程准备操作资源时，Linux内核会比较进程和资源的UID和GID，如果权限允许，就可以进行相应的操作。此种方式往往会带来一些问题，如果一个进程是以root的身份运行，也就意味着他能够对系统的任何资源进行操作，而且不被限制。 假如我们的软件存在漏洞呢？这个往往是一个灾难性的问题。因此，就引出了另外的一种安全接入控制机制MAC，Linux下的一种现实是SELinux，也就是我们将要讨论的内容。\n基本概念 Mandatory Access Control (MAC) SELinux 属于MAC的具体实现，增强了Linux系统的安全性。MAC机制的特点在于，资源的拥有者，并不能决定谁可以接入到资源。具体决定是否可以接入到资源，是基于安全策略。而安全策略则是有一系列的接入规则组成，并仅有特定权限的用户有权限操作安全策略。\n一个简单的例子，则是一个程序如果要写入某个目录下的文件，在写入之前，一个特定的系统代码，将会依据进程的Context和资源的Context查询安全策略，并且根据安全策略决定是否允许写入文件。\nFlask Security Architecture SELinux的软件设计架构是参照Flask，Flask是一种灵活的操作系统安全架构，并且在Fluke research operating system中得到了实现。Flask的主要特点是把安全策略执行代码和安全策略决策代码，划分成了两个组件。安全策略决策代码在Flask架构中称作Security Server。除了这两个组件以外，另外一个组件Vector Cache(AVC), 主要提供策略决策结果的缓存，以此提高Security Server的性能。其具体执行流程为，安全策略执行代码通过AVC查询Security Server的安全策略决策结果，并将其缓存以备下次使用。\nLinux Security Module 前面两部分介绍了MAC机制和Flask架构，最终SELinux的实现是依赖于Linux提供的Linux Security Module框架简称为LSM。其实LSM的名字并不是特别准确，因为他并不是Linux模块，而是一些列的hook，同样也不提供任何的安全机制。LSM的的重要目标是提供对linux接入控制模块的支持。\nLSM 在内核数据结构中增加了安全字段，并且在重要的内核代码（系统调用）中增加了hook。可以在hook中注册回调函数对安全字段进行管理，以及执行接入控制。\nSELinux Security Enhanced Linux(SELinux) 为Linux 提供了一种增强的安全机制，其本质就是回答了一个“Subject是否可以对Object做Action?”的问题，例如 Web服务可以写入到用户目录下面的文件吗？其中Web服务就是Subject而文件就是Object，写入对应的就是Action。\n依照上面的例子，我们引入了几个概念，分别是Subject、Object、Action、以及例子没有体现出来的Context：\n Subject: 在SELinux里指的就是进程，也就是操作的主体。 Object： 操作的目标对象，例如 文件 Action： 对Object做的动作，例如 读取、写入或者执行等等 Context： Subject和Object都有属于自己的Context，也可以称作为Label。Context有几个部分组成，分别是SELinux User、SELinux Role、SELinux Type、SELinux Level。  用户程序执行的系统调用（例如读取文件），都要被SELinux依据安全策略进行检查。如果安全策略允许操作，则继续，否则将会抛出错误信息给应用程序。SELinux决策的同时还需要Subject和Object的Context信息，确定所属的User、Role和Type等信息，以此查询对应的安全策略进行决策。SELinux同样也使用了AVC机制用于缓存决策结果，以此来提高性能。\nSELinux Context 进程和文件都有属于自己的Context信息，Context分为几个部分，分别是 SELinux User、Role、Type 和一个可选的Level信息。SELinux在运行过程中将使用这些信息查询安全策略进行决策。\n SELinux User：每一个Linux用户都会映射到SELinux用户，每一个SELinux User都会对应相应的Role。 SELinux Role：每个Role也对应几种SELinux Type，并且充当了User和Type的‘中间人’ SELinux Type：安全策略使用SELinux Type制定规则，定义何种Domian（Type）的Subject，可以接入何种Type的Object。  显示进程的Context\n# ps -Z LABEL PID TTY TIME CMD unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 9509 pts/1 00:00:00 sudo unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 9515 pts/1 00:00:00 su unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 9516 pts/1 00:00:00 bash unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 9544 pts/1 00:00:00 ps 显示文件的Context信息\n# ls -Z system_u:object_r:admin_home_t:s0 anaconda-ks.cfg 临时修改文件的 SELinux Type\n# chcon -t httpd_sys_content_t file-name 恢复Context信息\n# restorecon [选项] [...]    选项 功能     -v 打印操作过程   -R 递归操作    添加目录的默认安全上下文\n如果提示找不到命令的话请安装 policycoreutils-python 软件包\n# semanage fcontext -a -t  \"(/.*)?\" 注：目录或文件的默认安全上下文可以通过 semanage fcontext -l 命令配合 grep 过滤查看。\n为 Nginx 新增一个网站目录 /usr/share/nginx/html2 之后，需要为其设置与原目录相同的默认安全上下文。\n# semanage fcontext -a -t httpd_sys_content_t \"/usr/share/nginx/html2(/.*)?\" 添加某类进程允许访问的端口\n# semanage port -a -t  -p   注：各种服务类型所允许的端口号可以通过 semanage port -l 命令配合 grep 过滤查看。\n为 Nginx 需要使用 10080 的端口用于 HTTP 服务。\nsemanage port -a -t http_port_t -p tcp 10080 SELinux 的运行状态 SELinux 有三个运行状态，分别是disabled, permissive 和 enforcing\n Disable： 禁用SELinux，不会给任何新资源打Label，如果重新启用的话，将会给资源重新打上Lable，过程会比较缓慢。 Permissive：如果违反安全策略，并不会真正的执行拒绝操作，替代的方式是记录一条log信息。 Enforcing: 默认模式，SELinux的正常状态，会实际禁用违反策略的操作  查看当前的运行状态\n# getenforceEnforcing 临时改变运行状态为Permissive\n# setenforce 0# getenforcePermissive 临时改变运行状态为 Enforcing\n# setenforce 1# getenforceEnforcing 使用sestatus可以查看完整的状态信息\n# sestatusSELinux status: enabledSELinuxfs mount: /sys/fs/selinuxSELinux root directory: /etc/selinuxLoaded policy name: targetedCurrent mode: enforcingMode from config file: enforcingPolicy MLS status: enabledPolicy deny_unknown status: allowedMax kernel policy version: 30 怎么启用SELinux 如果您的环境中禁用了 SELinux，则可以通过编辑 /etc/selinux/config 并设置 SELINUX=permissive 来启用 SElinux。由于 SELinux 当前尚未启用，因此最好不要将其设为立即强制执行，因为此时系统可能会出现误标记的事件，它会妨碍系统的正常启动。\n您可以在根目录中创建名为 .autorelabel 的空文件，然后重新启动，以此来强制系统自动为整个文件系统重新标记SELinux。如果系统中错误过多，应在允许模式下重新启动，以确保启动成功。重新标记所有内容后，利用 /etc/selinux/config 将 SELinux 设置为强制模式并重新启动，或运行 setenforce 1。\n如果系统管理员不太熟悉命令行，还可以选择用于管理 SELinux 的图形工具。\n针对 Linux 发行版中内置的系统，SELinux 提供了一道额外的防护层。保持开启 SELinux，就能在系统遭到破坏时保护您的系统。\nSELinux Log SELinux 的Log日志默认记录在/var/log/audit/audit.log\n# cat /var/log/audit/audit.logtype=AVC msg=audit(1223024155.684:49): avc: denied { getattr } for pid=2000 comm=\"httpd\" path=\"/var/www/html/file1\" dev=dm-0 ino=399185 scontext=unconfined_u:system_r:httpd_t:s0 tcontext=system_u:object_r:samba_share_t:s0 tclass=file /var/log/message 也会记录相应的信息，例如：\nMay 7 18:55:56 localhost setroubleshoot: SELinux is preventing httpd (httpd_t) \"getattr\" to /var/www/html/file1 (samba_share_t). For complete SELinux messages. run sealert -l de7e30d6-5488-466d-a606-92c9f40d316d SELinux 配置文件 SELinux的配置文件位于/etc/selinux/config。默认配置文件主要两部分，一个是SELinux的运行状态和SELinuxType。直接在配置文件中修改SELinux将会在下次启动时生效。\n# This file controls the state of SELinux on the system. # SELINUX= can take one of these three values: # enforcing - SELinux security policy is enforced. # permissive - SELinux prints warnings instead of enforcing. # disabled - No SELinux policy is loaded. SELINUX=enforcing # SELINUXTYPE= can take one of these two values: # targeted - Targeted processes are protected, # mls - Multi Level Security protection. SELINUXTYPE=targeted SELinux Booleans Booleans允许在运行时修改SELinux安全策略。\n列出所有的Booleans选项\n# semanage boolean -l SELinux boolean State Default Description smartmon_3ware (off , off) Determine whether smartmon can... mpd_enable_homedirs (off , off) Determine whether mpd can traverse... 您可以通过运行 getsebool -a，找出系统中已设置的布尔值。\n临时修改httpd_can_network_connect_db状态为开启\n# setsebool [选项]   # setsebool httpd_can_network_connect_db on    选项 功能     -P 重启依然生效    Tips Speed Up DNF 尝试更改参数\n$ sudo vi /etc/dnf/dnf.conf fastestmirror=true max_parallel_downloads=10 metadata_expire=2d  fastermirror 选择最快的镜像 max_parallel_downloads 一次下载多个包  尝试更换为清华源。\n如果在更新过程中某个小包下载不了，导致无法更新，尝试只使用 ipv4\n$ sudo dnf update -4 -v -y 第三方源 rpmfusion 第一步下载基础包(开源和闭源)， 这里我们使用bfsu来下载，以避免网络问题，终端输入:\nsudo yum install --nogpgcheck https://mirrors.bfsu.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.bfsu.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 第二步，使用bfsu镜像\nsudo sed -e 's/metalink/#metalink/g' -e 's|#baseurl=http://download1.rpmfusion.org/|baseurl Fedorafun 这里有一些国内常用软件，以及一些开源软件,终端输入：\nsudo sh -c \"echo '[fedorafun] name=fedorafun baseurl=https://repo.fedora.fun/ enabled=1 countme=1 metadata_expire=7d repo_gpgcheck=0 type=rpm gpgcheck=0 skip_if_unavailable=False'  /etc/yum.repos.d/fedorafun.repo\" 代理与 ping 问题：\n设置了http_proxy和https_proxy在.bashrc文件里，firefox可以上网了。ping外网能够解析域名，但ping不通\n解答：\n首先提一个问题，为什么我们要用代理服务器上网？\n那是因为如果不用代理服务器，我们访问的website 被blocked，最简单的方式就是在一个大型防火墙上执行： deny website IP。\n而使用代理服务器，无非是用代理服务器的IP作为目的IP，把用户的HTTP、HTTPS封装在TCP上，这样途径防火墙时，由于目的IP不在blocked IP 之列，所以被放行，这样我们就可以浏览一些被blocked 的网页。\n但是一般代理服务器并不为UDP/ICMP服务，最多为TCP服务，所以你ping website 时，代理服务器并没有介入，因为Ping是ICMP报文，那就意味着你的ping包的目的IP就是被blocked IP地址，很显然无法正常通过，全被丢了。\nQuestions flatpak Cannot install apps. - Error: Failed to read commit it works for me:\nsudo flatpak repair Cannot open acess to console, the root account is locked… 先是添加一个 LV 到 /etc/fstab，结果开机报错，原因是写错了：\nTime out ...Dependency failed for ... 结束后就 Cannot open acess to console, the root account is locked，什么也干不了，只能强制关机。\n解决方案是重启进入 Fedora Live CD，挂载 root，修改 /etc/fstab。但是无法挂载，挂载的是 Fedora Live CD 的 root，我 TM 佛了，原因应该是这两个名一模一样，Live CD 覆盖了 root。最后是用 Ubntu Live CD 解决。\n这告诉我们，不要只有一个 Live CD。这还告诉我们，先找自己的原因才能有耐心去解决问题。\ndmesg-x86/cpu: SGX disabled by BIOS SGX技术的分析和研究\nsnd_hda_codec_hdmi hdaudioC0D2: Monitor plugged-in, Failed to power up codec ret=[-13] set Kernel parameters，要使改变在重启后仍生效，您可以手动编辑 /boot/grub/grub.cfg。对于初学者，建议编辑 /etc/default/grub 并将您的内核选项添加至 GRUB_CMDLINE_LINUX_DEFAULT 行：\nGRUB_CMDLINE_LINUX_DEFAULT=\"snd_hda_codec_hdmi.enable_silent_stream=0\" 然后重新生成 grub.cfg 文件：\n# grub2grub-mkconfig2 -o /boot/grub2/grub.cfg CentOS Red Hat Enterprise Linux Developer Subscription Need to log in to download RHEL.\n怎样使用 Red Hat Subscription Manager (RHSM) 将系统注册到红帽客户门户网站？\n# subscription-manager register --username  --password  --auto-attach 配置 Red Hat Enterprise Linux 8 中基本系统设置的指南\nFrey’s Blog\n 所有文章 分类   关于多线程 概述 每个正在系统上运行的程序都是一个进程。每个进程包含一到N个线程。进程也可能是整个程序或者是部分程序的动态执行。线程是一组指令的集合，或者是程序的特殊段，它可以在程序里独立执行。也可以把它理解为代码运行的上下文。所以线程基本上是轻量级的进程，它负责在单个程序里执行多任务。通常由操作系统负责多个线程的调度和执行。线程是程序中一个单一的顺序控制流程。在单个程序中同时运行多个线程完成不同的工作,称为多线程。\n线程和进程的区别在于,子进程和父进程有不同的代码和数据空间,而多个线程则共享数据空间,每个线程有自己的执行堆栈和程序计数器为其执行上下文.多线程主要是为了节约CPU时间,发挥利用,根据具体情况而定. 线程的运行中需要使用计算机的内存资源和CPU。\n同步多线程（SMT）是一种在一个CPU 的时钟周期内能够执行来自多个线程的指令的硬件多线程技术。本质上，同步多线程是一种将线程级并行处理（多CPU）转化为指令级并行处理（同一CPU）的方法。 同步多线程是单个物理处理器从多个硬件线程上下文同时分派指令的能力。同步多线程用于在商用环境中及为周期/指令（CPI）计数较高的工作负载创造性能优势。 处理器采用超标量结构，最适于以并行方式读取及运行指令。同步多线程使您可在同一处理器上同时调度两个应用程序，从而利用处理器的超标量结构性质。\n超线程（HT, Hyper-Threading）是英特尔研发的一种技术，于2002年发布。通过此技术，英特尔实现在一个实体CPU中，提供两个逻辑线程。\n其实可以将SMT和HT理解为一个技术。\n Hyper-threading (officially called Hyper- ThreadingTechnology or HT Technology, and abbreviated as HTT orHT) is Intel’s proprietary simultaneous multithreading (SMT) implementation used to improve parallelization ofcomputations (doing multiple tasks at once) performed onx86 microprocessors.\n来自 https://cn.bing.com/search?q=intel+ht\u0026go=%E6%8F%90%E4%BA%A4\u0026qs=ds\u0026form=QBLHCN\n 与多进程的区别  “进程——资源分配的最小单位，线程——程序执行的最小单位”\n 实际应用中基本上都是“进程+线程”的结合方式，千万不要真的陷入一种非此即彼的误区。\n   对比维度 多进程 多线程 总结     数据共享、同步 数据共享复杂，需要用IPC；数据是分开的，同步简单 因为共享进程数据，数据共享简单，但也是因为这个原因导致同步复杂 各有优势   内存、CPU 占用内存多，切换复杂，CPU利用率低 占用内存少，切换简单，CPU利用率高 线程占优   创建销毁、切换 创建销毁、切换复杂，速度慢 创建销毁、切换简单，速度很快 线程占优   编程、调试 编程简单，调试简单 编程复杂，调试复杂 进程占优   可靠性 进程间不会互相影响 一个线程挂掉将导致整个进程挂掉 进程占优   分布式 适应于多核、多机分布式；如果一台机器不够，扩展到多台机器比较简单 适应于多核分布式 进程占优     需要注意：   1）需要频繁创建销毁的优先用线程\n2）需要进行大量计算的优先使用线程\n3）强相关的处理用线程，弱相关的处理用进程\n一般的Server需要完成如下任务：消息收发、消息处理。“消息收发”和“消息处理”就是弱相关的任务，而“消息处理”里面可能又分为“消息解码”、“业务处理”，这两个任务相对来说相关性就要强多了。因此“消息收发”和“消息处理”可以分进程设计，“消息解码”、“业务处理”可以分线程设计。当然这种划分方式不是一成不变的，也可以根据实际情况进行调整。\n4）可能要扩展到多机分布的用进程，多核分布的用线程\n5）都满足需求的情况下，用你最熟悉、最拿手的方式\n来自 https://blog.csdn.net/lishenglong666/article/details/8557215\n 如何使用？ 需要CPU、BIOS、操作系统、应用软件都支持多线程技术才可以。\n支持多线程的CPU Power CPU 支持的SMT技术：\n Simultaneous multithreading (SMT) is a processor technology that allows multiple instruction streams (threads) to run concurrently on the same physical processor, improving overall throughput. To the operating system, each hardware thread is treated as an independent logical processor. Single-threaded (ST) execution mode is also supported.\n来自 https://www.ibm.com/support/knowledgecenter/SSFHY8_6.2/reference/am5gr_f0106.html?view=embed\n Intel CPU 支持的HT技术：\n Intel® Hyper-Threading Technology (Intel® HT Technology) uses processor resources more efficiently, enabling multiple threads to run on each core. As a performance feature, it also increases processor throughput, improving overall performance on threaded software. Intel® HT Technology is available on the latest Intel® Core™ vPro™ processors, the Intel® Core™ processor family, the Intel® Core™ M processor family, and the Intel® Xeon® processor family. By combining one of these Intel® processors and chipsets with an operating system and BIOS supporting Intel® HT Technology.\n来自 https://www.intel.com/content/www/us/en/architecture-and-technology/hyper-threading/hyper-threading-technology.html\n SMT/HT支持情况  Intel CPU : 2 Thread/Core Power9 CPU： 8 Thread /Core Sparc: 8 Thread /Core  RHEL7/CentOS7 \u0026 Intel CPU BIOS 中修改SMT/HT 的设置，使用这种方式Enable或者Disable后，将永久生效，需要重启。\nHyper-Threading Technology BIOS Setup Options For Intel® Desktop/Server Boards setup option location is the main menu of the BIOS setup program. • Located on the same menu screen that already had Processor Type, Processor Speed, System Bus Speed, and other related processor fields. • Setup Option Text ○ The field is called Hyper-Threading Technology. • Setup Option Values ○ The setup option values are Enabled and Disabled. • Setup Option Help Text 来自  RHEL/CentOS操作系统中查看多线程情况：（更多信息：https://access.redhat.com/solutions/rhel-smt）\n# lscpu | grep -e Socket -e Core -e Thread Thread(s) per core: 2 # 线程数 Core(s) per socket: 6 # core 数量 Socket(s): 2 或者\n# grep -H . /sys/devices/system/cpu/cpu*/topology/thread_siblings_list | sort -n -t ':' -k 2 -u # 显示 /sys/devices/system/cpu/cpu0/topology/thread_siblings_list:0 # 表示HT关闭 # 显示 /sys/devices/system/cpu/cpu0/topology/thread_siblings_list:0-1 # 表示 HT 启用 操作系统层关闭多线程有几种办法：\n 方法一：使用nosmt启动参数，需要新的x86 CPU，需要重启  # grubby --args=nosmt --update-kernel=DEFAULT # grub2-mkconfig -o /boot/grub/grub.conf # 创建新的grub.conf # reboot #重启  方法二：临时关闭，重启后失效  # echo off  /sys/devices/system/cpu/smt/control /sys/devices/system/cpu/smt/control: This file allows to read out the SMT control state and provides the ability to disable or (re)enable SMT. The possible states are: ============== =================================================== on SMT is supported by the CPU and enabled. All logical CPUs can be onlined and offlined without restrictions. off SMT is supported by the CPU and disabled. Only the so called primary SMT threads can be onlined and offlined without restrictions. An attempt to online a non-primary sibling is rejected forceoff Same as 'off' but the state cannot be controlled. Attempts to write to the control file are rejected. notsupported The processor does not support SMT. It's therefore not affected by the SMT implications of L1TF. Attempts to write to the control file are rejected. ============== =================================================== The possible states which can be written into this file to control SMT state are: - on - off - forceoff /sys/devices/system/cpu/smt/active: This file reports whether SMT is enabled and active, i.e. if on any physical core two or more sibling threads are online. AIX \u0026 Power Power9 CPU默认支持8线程，使用smtctl命令可以查看和修改 smt级别。更多内容查看https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.cmds5/smtctl.htm\n 查看 SMT level  smtctl  临时修改 SMT level, # 可以是 1, 2, 4 or 8，重启后将恢复原来的smt level  smtctl -t 2 -w now  修改 SMT level永久生效，# 可以是 1, 2, 4 or 8，完成后需要使用bosboot创建启动设备   smtctl -t 4 -w boot bosboot -a # Creates complete boot image and device. RHEL7 \u0026 Power OpenPower CPU 默认支持4线程，安装RHEL后可以使用开源的工具 ppc64_cpu进行查看和修改多线程（更多查看 https://github.com/ibm-power-utilities/powerpc-utils）。\nppc64_cpu --------- This allows users to set the smt state, smt-snooze-delay and other settings on ppc64 processors. It also allows users to control the number of processor cores which are online (not in the sleep state). 来自  1，查看 SMT level\nppc64_cpu --smt 2，修改 SMT 级别， # is 1, 2, 4 or on\nppc64_cpu --smt=# 3， 关闭 smt支持\nppc64_cpu --smt=off 其他 oracle数据库 Oracle Database 在12c之前windows平台下支持多线程，Unix和Linux只支持多进程模式。在Oracle Database 12c中，Oracle引入了多线程模式，允许在Windows平台之外的Unix、Linux系统使用多线程模式，结合多进程与多线程模式，Oracle可以改进进程管理与性能。\n通过设置初始化参数threaded_execution，可以启用或关闭多线程模式，该参数缺省值为False，设置为TRUE启用12c的这个新特性：\nSQL show parameter threaded_exec NAME TYPE VALUE --- threaded_execution boolean FALSE SQL alter system set threaded_execution=true scope=spfile; System altered. 该参数重新启动数据库后生效，但是注意，多线程模式，不支持操作系统认证，不能直接启动数据库，需要提供SYS的密码认证后方能启动数据库：\nSQL shutdown immediate; SQL startup ORA-01017: invalid username/password; logon denied # 需要通过用户名和密码登录数据库。 用ps -ef 检查一下进程/线程：\n[oracle@enmocoredb dbs]$ ps -ef|grep ora_ oracle 27404 1 0 17:00 ? 00:00:00 ora_pmon_core oracle 27406 1 0 17:00 ? 00:00:00 ora_psp0_core oracle 27408 1 3 17:00 ? 00:00:05 ora_vktm_core oracle 27412 1 0 17:00 ? 00:00:00 ora_u004_core oracle 27418 1 0 17:00 ? 00:00:00 ora_u005_core oracle 27424 1 0 17:00 ? 00:00:00 ora_dbw0_core 其中U进程是共享线程的\"容器进程\"，每个进程可以容纳100个线程。 来自 https://www.eygle.com/archives/2013/07/oracle_database_12c_multithreaded_model.html 连接热点   打开WIFI\nifconfig interface up   查看所有可用的无线网络信号\niw wlp2s0 scan | grep SSID   连接无线网\nwpa_supplicant -B -i wlp2s0 -c (wpa_passphrase \"SSID\" \"passwd\")   分配IP地址\ndhclient interface   查看无线网卡地址信息，有ip地址表示网络连接成功\nifconfig interface   PPPOE （ADSL）拨号上网   安装拨号软件\ndnf install rp-pppoe* ppp*   设定\npppoe-setup   拨号上网\npppoe-stoppppoe-start   安装中文输入法   安装 fcitx\ndnf install fcitx-im fcitx-configtool fcitx-googlepinyin   配置\n$ nano ~/.xprofile # or ~/.bashrc export GTK_MODULE=fcitx export QT_IM_MODULE=fcitx export XMODIFIERS=\"@im=fcitx\"   fcitx 没图标：重装fcitx，在fcitx配置里关掉Kimpanel\n  关闭触摸板 $ dnf install xorg-x11-apps synclient TouchpadOff=1 # 关闭 synclient TouchpadOff=0 # 开启 用 MTP 挂载手机   安装jmtpfs\ndnf install jmtpfs   查看手机 “busnum”和“devnum”\njmptfs -l   建立挂载点\nmkdir /media/dir   挂载手机\njmtpfs -device=busnum,devnum /media/dir/   查找依赖 $ yum whatprovide package $ dnf provides package 默认字体 CentOS 默认字体目录 /lib/kbd/consolefonts\n纯命令行是不能使用系统之外的字体的。\nCentOS Minimal + Xfce base 源与 epel 源，使用用阿里镜像: https://developer.aliyun.com/mirror/\n  安装Xfce4，先安装 Xfce 可以保证不安装多余的包\ndnf group listdnf groupinstall Xfce   安装 X Window system\ndnf groupinstall \"X Window system\"   验证\nsystemctl isolate graphical.target   设置\n# 设置成命令模式systemctl set-default multi-user.target # 设置成图形模式systemctl set-default graphical.target    安装中文字体和中文输入法楷体字体\ndnf install cjkuni-ukai-fonts   输入法需要安装如下包：\n ibus， 这个包里有ibus-daemon这个平台服务器程序和ibus这个配置助手。 ibus-libpinyin， 这个是ibus平台下具体的拼音输入法。 im-chooser,这个是输入法平台选择助手程序。 执行im-chooser，选择输入法平台和输入法。重新登录系统。    xfce 主题\n 网站：xfce-look.org 主题目录： /usr/share/themes 或 ~/.themes 图标鼠标目录： /usr/share/icons 或 ~/.icons 壁纸： /usr/share/background , /usr/share/wallpapers Plank    EPEL EPEL的全称叫 Extra Packages for Enterprise Linux 。EPEL是由 Fedora 社区打造，为 RHEL 及衍生发行版如 CentOS、Scientific Linux 等提供高质量软件包的项目。装上了 EPEL之后，就相当于添加了一个第三方源。\n如果你知道rpmfusion.org的话，拿 rpmfusion 做比较还是很恰当的，rpmfusion 主要为桌面发行版提供大量rpm包（只有开源驱动才能进官方源，想要闭源驱动装rpmfusion），而EPEL则为服务器版本提供大量的rpm包，而且大多数rpm包在官方 repository 中是找不到的。\nLinux Deploy 准备 一个 Root 了的 Android 手机\nBusy Box：Linux Deploy 支撑软件。\nLinux deploy：Linux 系统支撑软件。\n安装 Busy Box 点击安装，等待程序自行运行，在界面中输出 ## END 后退出程序。\nLinux deploy  点击左图左上角部分，选择 设置，在设置界面中找到PATH变量，赋予其值 /system/xbin。 建议开启 锁定Wifi 功能。 接着退回主界面，点击右下角部分。 发行版 看个人喜好选择，Debian 系（Debian，Kaili，Ubuntu）较热门。 架构 默认。 源 默认。如果下的慢的话，就仿照默认的源换为国内的源，如 USTC MIRRORS，但是不要特意去换源，官方的源用的了的话官方的源最好。 安装路径 ：安装在手机自带的存储空间中，则在路径开头加上${ENV_DIR}；安装在 sdcard 中，加上${EXTERNAL_STORAGE}。 文件系统 ：推荐 ext4。 用户名 和 密码 自定义。 DNS 默认。 本地化 ：简体中文可以选择 zh_CN.UTF-8，建议选择 en_US.UTF-8 。 挂载列表：添加访问手机内容的目录，手机目录：挂载点，如 /sdcard:/mnt，之后会自动挂载。 开启SSH。 图形界面功能，需要的话就选 XFce 为桌面，XFce`是轻量级桌面环境。 退出系统设置界面，点击主界面右上角，选择安装。 等待程序自行安装Linux系统，开始时会自动创造一个4G左右大小的img文件，这个是默认的大小，你可以根据你手机的容量自定义，创造文件需要一点时间，屏幕会很安静，再然后会安装各种东西，屏幕会输出很多信息，根据你的源的速度，等待时间不等，看到  则安装完毕。如果中间没有 failed 则安装成功。安装失败的话就需要重新安装，换个快一点的网，或者好一点的源。 注意：安装完毕后要先点击停止按钮，再按启动按钮。这个很重要，不然你就得重装了。  使用   Andorid 端用 ConnectBox\n  Windows用 putty ，图形界面用 VNC Viewer。VNC Viewer 直接搜主机IP就行，VNC Server 在你选择安装图形界面功能时就自动安装了，不需要再安装 vnc4server。\n  Linux 输入ssh username@hostname就行。\n  其他   安装后如果用 vnc viewer 只有一个点的话，可以换一个发行版，我尝试的 CentOS 有这个问题。\n  Linux连的时候出现 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!：\nssh-keygen -R + 输入服务器的IP   altarch 架构的手机 CentOS 系统换源\ncp CentOS-7-armhfp.repo CentOS-Base.repo mv CentOS-7-armhfp.repo CentOS-7-armhfp.repo.backup vi CentOS-Base.repo baseurl=https://mirrors.ustc.edu.cn/centos-altarch/7.6.1810/os/armhfp/ yum makecache yum update   如果你之前没有安装VNC的话，现在又想装：\nyum -y install tigervnc-server   ",
+  "wordCount" : "9416",
+  "inLanguage": "en",
+  "datePublished": "2022-03-09T11:39:38+08:00",
+  "dateModified": "2022-03-09T11:39:38+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "Sakamoto Kurome"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sakamotokurome.github.io/posts/fedora/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sakamoto Kurome",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sakamotokurome.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sakamotokurome.github.io/" accesskey="h" title="Sakamoto Kurome (Alt + H)">Sakamoto Kurome</a>
+            <span class="logo-switches">
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://sakamotokurome.github.io/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sakamotokurome.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://sakamotokurome.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Fedora
+    </h1>
+    <div class="post-meta"><span title='2022-03-09 11:39:38 +0800 CST'>March 9, 2022</span>&nbsp;·&nbsp;19 min&nbsp;·&nbsp;Sakamoto Kurome
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#fedora" aria-label="Fedora">Fedora</a><ul>
+                        
+                <li>
+                    <a href="#fedora-%e5%ae%9a%e5%88%b6%e7%89%88httpsspinsfedoraprojectorgzh_hans_cn" aria-label="Fedora 定制版"><a href="https://spins.fedoraproject.org/zh_Hans_CN/">Fedora 定制版</a></a></li>
+                <li>
+                    <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88-linus-torvalds-%e7%94%a8-fedorahttpswwwzhihucomquestion36863290" aria-label="为什么 Linus Torvalds 用 Fedora"><a href="https://www.zhihu.com/question/36863290">为什么 Linus Torvalds 用 Fedora</a></a></li>
+                <li>
+                    <a href="#selinuxhttpszhuanlanzhihucomp86813709" aria-label="SELinux"><a href="https://zhuanlan.zhihu.com/p/86813709">SELinux</a></a><ul>
+                        
+                <li>
+                    <a href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" aria-label="基本概念">基本概念</a><ul>
+                        
+                <li>
+                    <a href="#mandatory-access-control-mac" aria-label="Mandatory Access Control (MAC)">Mandatory Access Control (MAC)</a></li>
+                <li>
+                    <a href="#flask-security-architecture" aria-label="Flask Security Architecture">Flask Security Architecture</a></li>
+                <li>
+                    <a href="#linux-security-module" aria-label="Linux Security Module">Linux Security Module</a></li></ul>
+                </li>
+                <li>
+                    <a href="#selinux" aria-label="SELinux">SELinux</a><ul>
+                        
+                <li>
+                    <a href="#selinux-context" aria-label="SELinux Context">SELinux Context</a></li>
+                <li>
+                    <a href="#selinux-%e7%9a%84%e8%bf%90%e8%a1%8c%e7%8a%b6%e6%80%81" aria-label="SELinux 的运行状态">SELinux 的运行状态</a></li>
+                <li>
+                    <a href="#%e6%80%8e%e4%b9%88%e5%90%af%e7%94%a8selinuxhttpswwwredhatcomzhtopicslinuxwhat-is-selinux" aria-label="怎么启用SELinux"><a href="https://www.redhat.com/zh/topics/linux/what-is-selinux">怎么启用SELinux</a></a></li>
+                <li>
+                    <a href="#selinux-log" aria-label="SELinux Log">SELinux Log</a></li>
+                <li>
+                    <a href="#selinux-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" aria-label="SELinux 配置文件">SELinux 配置文件</a></li>
+                <li>
+                    <a href="#selinux-booleans" aria-label="SELinux Booleans">SELinux Booleans</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#tips" aria-label="Tips">Tips</a><ul>
+                        
+                <li>
+                    <a href="#speed-up-dnfhttpsostechnixcomhow-to-speed-up-dnf-package-manager-in-fedora" aria-label="Speed Up DNF"><a href="https://ostechnix.com/how-to-speed-up-dnf-package-manager-in-fedora/">Speed Up DNF</a></a></li>
+                <li>
+                    <a href="#%e7%ac%ac%e4%b8%89%e6%96%b9%e6%ba%90" aria-label="第三方源">第三方源</a><ul>
+                        
+                <li>
+                    <a href="#rpmfusion" aria-label="rpmfusion">rpmfusion</a></li>
+                <li>
+                    <a href="#fedorafun" aria-label="Fedorafun">Fedorafun</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e4%bb%a3%e7%90%86%e4%b8%8e-pinghttpswwwzhihucomquestion20053991" aria-label="代理与 ping"><a href="https://www.zhihu.com/question/20053991">代理与 ping</a></a></li></ul>
+                </li>
+                <li>
+                    <a href="#questions" aria-label="Questions">Questions</a><ul>
+                        
+                <li>
+                    <a href="#flatpak-cannot-install-apps---error-failed-to-read-commithttpsgithubcomflatpakflatpakissues3479" aria-label="flatpak Cannot install apps. - Error: Failed to read commit"><a href="https://github.com/flatpak/flatpak/issues/3479">flatpak Cannot install apps. - Error: Failed to read commit</a></a></li>
+                <li>
+                    <a href="#cannot-open-acess-to-console-the-root-account-is-locked" aria-label="Cannot open acess to console, the root account is locked&amp;hellip;">Cannot open acess to console, the root account is locked&hellip;</a></li>
+                <li>
+                    <a href="#dmesg-x86cpu-sgx-disabled-by-bios" aria-label="dmesg-x86/cpu: SGX disabled by BIOS">dmesg-x86/cpu: SGX disabled by BIOS</a></li>
+                <li>
+                    <a href="#snd_hda_codec_hdmi-hdaudioc0d2-monitor-plugged-in-failed-to-power-up-codec-ret-13httpsbbsarchlinuxorgviewtopicphpid261225" aria-label="snd_hda_codec_hdmi hdaudioC0D2: Monitor plugged-in, Failed to power up codec ret=[-13]"><a href="https://bbs.archlinux.org/viewtopic.php?id=261225">snd_hda_codec_hdmi hdaudioC0D2: Monitor plugged-in, Failed to power up codec ret=[-13]</a></a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#centos" aria-label="CentOS">CentOS</a><ul>
+                        
+                <li>
+                    <a href="#red-hat-enterprise-linux-developer-subscriptionhttpsdevelopersredhatcomproductsrheldownload" aria-label="Red Hat Enterprise Linux Developer Subscription"><a href="https://developers.redhat.com/products/rhel/download">Red Hat Enterprise Linux Developer Subscription</a></a></li>
+                <li>
+                    <a href="#%e5%85%b3%e4%ba%8e%e5%a4%9a%e7%ba%bf%e7%a8%8bhttpsyangfeiffeigithubiopublic20190706multitheading-concepthtml" aria-label="关于多线程"><a href="https://yangfeiffei.github.io/public/2019/07/06/multitheading-concept.html">关于多线程</a></a><ul>
+                        
+                <li>
+                    <a href="#%e6%a6%82%e8%bf%b0" aria-label="概述">概述</a></li>
+                <li>
+                    <a href="#%e4%b8%8e%e5%a4%9a%e8%bf%9b%e7%a8%8b%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="与多进程的区别">与多进程的区别</a></li>
+                <li>
+                    <a href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8" aria-label="如何使用？">如何使用？</a></li>
+                <li>
+                    <a href="#%e6%94%af%e6%8c%81%e5%a4%9a%e7%ba%bf%e7%a8%8b%e7%9a%84cpu" aria-label="支持多线程的CPU">支持多线程的<code>CPU</code></a></li>
+                <li>
+                    <a href="#smtht%e6%94%af%e6%8c%81%e6%83%85%e5%86%b5" aria-label="SMT/HT支持情况"><code>SMT/HT</code>支持情况</a><ul>
+                        
+                <li>
+                    <a href="#rhel7centos7--intel-cpu" aria-label="RHEL7/CentOS7 &amp;amp; Intel CPU"><code>RHEL7/CentOS7 &amp; Intel CPU</code></a></li>
+                <li>
+                    <a href="#aix--power" aria-label="AIX &amp;amp; Power">AIX &amp; Power</a></li>
+                <li>
+                    <a href="#rhel7--power" aria-label="RHEL7 &amp;amp; Power">RHEL7 &amp; Power</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%85%b6%e4%bb%96" aria-label="其他">其他</a><ul>
+                        
+                <li>
+                    <a href="#oracle%e6%95%b0%e6%8d%ae%e5%ba%93" aria-label="oracle数据库"><code>oracle</code>数据库</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#%e8%bf%9e%e6%8e%a5%e7%83%ad%e7%82%b9" aria-label="连接热点">连接热点</a></li>
+                <li>
+                    <a href="#pppoe-adsl%e6%8b%a8%e5%8f%b7%e4%b8%8a%e7%bd%91" aria-label="PPPOE （ADSL）拨号上网">PPPOE （ADSL）拨号上网</a></li>
+                <li>
+                    <a href="#%e5%ae%89%e8%a3%85%e4%b8%ad%e6%96%87%e8%be%93%e5%85%a5%e6%b3%95" aria-label="安装中文输入法">安装中文输入法</a></li>
+                <li>
+                    <a href="#%e5%85%b3%e9%97%ad%e8%a7%a6%e6%91%b8%e6%9d%bf" aria-label="关闭触摸板">关闭触摸板</a></li>
+                <li>
+                    <a href="#%e7%94%a8-mtp-%e6%8c%82%e8%bd%bd%e6%89%8b%e6%9c%ba" aria-label="用 MTP 挂载手机">用 MTP 挂载手机</a></li>
+                <li>
+                    <a href="#%e6%9f%a5%e6%89%be%e4%be%9d%e8%b5%96" aria-label="查找依赖">查找依赖</a></li>
+                <li>
+                    <a href="#%e9%bb%98%e8%ae%a4%e5%ad%97%e4%bd%93" aria-label="默认字体">默认字体</a></li>
+                <li>
+                    <a href="#centos-minimal--xfce" aria-label="CentOS Minimal &#43; Xfce">CentOS Minimal + Xfce</a></li>
+                <li>
+                    <a href="#epelhttpswwwjianshucomp4f4c0897075f" aria-label="EPEL"><a href="https://www.jianshu.com/p/4f4c0897075f">EPEL</a></a></li></ul>
+                </li>
+                <li>
+                    <a href="#linux-deploy" aria-label="Linux Deploy">Linux Deploy</a><ul>
+                        
+                <li>
+                    <a href="#%e5%87%86%e5%a4%87" aria-label="准备">准备</a><ul>
+                        
+                <li>
+                    <a href="#%e5%ae%89%e8%a3%85-busy-box" aria-label="安装 Busy Box">安装 Busy Box</a></li>
+                <li>
+                    <a href="#linux-deploy-1" aria-label="Linux deploy">Linux deploy</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e4%bd%bf%e7%94%a8" aria-label="使用">使用</a></li>
+                <li>
+                    <a href="#%e5%85%b6%e4%bb%96-1" aria-label="其他">其他</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="fedora">Fedora<a hidden class="anchor" aria-hidden="true" href="#fedora">#</a></h2>
+<p><code>[fəˈdɔrə]</code> <code>费多拉</code></p>
+<h3 id="fedora-定制版httpsspinsfedoraprojectorgzh_hans_cn"><a href="https://spins.fedoraproject.org/zh_Hans_CN/">Fedora 定制版</a><a hidden class="anchor" aria-hidden="true" href="#fedora-定制版httpsspinsfedoraprojectorgzh_hans_cn">#</a></h3>
+<h3 id="为什么-linus-torvalds-用-fedorahttpswwwzhihucomquestion36863290"><a href="https://www.zhihu.com/question/36863290">为什么 Linus Torvalds 用 Fedora</a><a hidden class="anchor" aria-hidden="true" href="#为什么-linus-torvalds-用-fedorahttpswwwzhihucomquestion36863290">#</a></h3>
+<ul>
+<li>2008：linus对发行版的要求是&quot;易安装，比较贴近上游&quot;即可。</li>
+<li>2010年的时候，他指出了Fedora 14的一个bug。</li>
+<li>2011年Fedora 15换Gnome3作为默认DE了，Linus直言&quot;unholy mess&quot; ，然后转投XFCE。</li>
+<li>2011年末，Linus提出并修补了openSUSE中Xorg的一个严重bug。</li>
+<li>2013年5月：Linus尝试将自己手头的MacBook Air装上Linux，把几个大的发行版全部都试了一遍。发现只有Fedora能正常工作。</li>
+<li>之后的所有消息就是各种fedora了</li>
+</ul>
+<h3 id="selinuxhttpszhuanlanzhihucomp86813709"><a href="https://zhuanlan.zhihu.com/p/86813709">SELinux</a><a hidden class="anchor" aria-hidden="true" href="#selinuxhttpszhuanlanzhihucomp86813709">#</a></h3>
+<p>长久以来，每当遇到授权问题或者新安装的主机，我的第一反应是通过<code>setenforce 0</code>命令禁用SELinux，来减少产生的权限问题，但是这并不是一个良好的习惯。这篇文章尝试对SELinux的基本概念和用法进行简单介绍，并且提供一些更深入的资料。</p>
+<p>Linux下默认的接入控制是DAC，其特点是资源的拥有者可以对他进行任何操作（读、写、执行）。当一个进程准备操作资源时，Linux内核会比较进程和资源的UID和GID，如果权限允许，就可以进行相应的操作。此种方式往往会带来一些问题，如果一个进程是以<code>root</code>的身份运行，也就意味着他能够对系统的任何资源进行操作，而且不被限制。 假如我们的软件存在漏洞呢？这个往往是一个灾难性的问题。因此，就引出了另外的一种安全接入控制机制MAC，Linux下的一种现实是SELinux，也就是我们将要讨论的内容。</p>
+<h4 id="基本概念">基本概念<a hidden class="anchor" aria-hidden="true" href="#基本概念">#</a></h4>
+<h5 id="mandatory-access-control-mac">Mandatory Access Control (MAC)<a hidden class="anchor" aria-hidden="true" href="#mandatory-access-control-mac">#</a></h5>
+<p>SELinux 属于MAC的具体实现，增强了Linux系统的安全性。MAC机制的特点在于，资源的拥有者，并不能决定谁可以接入到资源。具体决定是否可以接入到资源，是基于安全策略。而安全策略则是有一系列的接入规则组成，并仅有特定权限的用户有权限操作安全策略。</p>
+<p>一个简单的例子，则是一个程序如果要写入某个目录下的文件，在写入之前，一个特定的系统代码，将会依据进程的Context和资源的Context查询安全策略，并且根据安全策略决定是否允许写入文件。</p>
+<h5 id="flask-security-architecture">Flask Security Architecture<a hidden class="anchor" aria-hidden="true" href="#flask-security-architecture">#</a></h5>
+<p>SELinux的软件设计架构是参照Flask，Flask是一种灵活的操作系统安全架构，并且在Fluke research operating system中得到了实现。Flask的主要特点是把安全策略执行代码和安全策略决策代码，划分成了两个组件。安全策略决策代码在Flask架构中称作Security Server。除了这两个组件以外，另外一个组件Vector Cache(AVC), 主要提供策略决策结果的缓存，以此提高Security Server的性能。其具体执行流程为，安全策略执行代码通过AVC查询Security Server的安全策略决策结果，并将其缓存以备下次使用。</p>
+<p><img loading="lazy" src="/Distributions/FlaskSecurityArchitecture.jpg" alt=""  />
+</p>
+<h5 id="linux-security-module">Linux Security Module<a hidden class="anchor" aria-hidden="true" href="#linux-security-module">#</a></h5>
+<p>前面两部分介绍了MAC机制和Flask架构，最终SELinux的实现是依赖于Linux提供的Linux Security Module框架简称为LSM。其实LSM的名字并不是特别准确，因为他并不是Linux模块，而是一些列的hook，同样也不提供任何的安全机制。LSM的的重要目标是提供对linux接入控制模块的支持。</p>
+<p><img loading="lazy" src="/Distributions/LinuxSecurityModule.jpg" alt=""  />
+</p>
+<p>LSM 在内核数据结构中增加了安全字段，并且在重要的内核代码（系统调用）中增加了hook。可以在hook中注册回调函数对安全字段进行管理，以及执行接入控制。</p>
+<h4 id="selinux">SELinux<a hidden class="anchor" aria-hidden="true" href="#selinux">#</a></h4>
+<p>Security Enhanced Linux(SELinux) 为Linux 提供了一种增强的安全机制，其本质就是回答了一个“Subject是否可以对Object做Action?”的问题，例如 Web服务可以写入到用户目录下面的文件吗？其中Web服务就是Subject而文件就是Object，写入对应的就是Action。</p>
+<p>依照上面的例子，我们引入了几个概念，分别是Subject、Object、Action、以及例子没有体现出来的Context：</p>
+<ul>
+<li>Subject: 在SELinux里指的就是进程，也就是操作的主体。</li>
+<li>Object： 操作的目标对象，例如 文件</li>
+<li>Action： 对Object做的动作，例如 读取、写入或者执行等等</li>
+<li>Context： Subject和Object都有属于自己的Context，也可以称作为Label。Context有几个部分组成，分别是SELinux User、SELinux Role、SELinux Type、SELinux Level。</li>
+</ul>
+<p>用户程序执行的系统调用（例如读取文件），都要被SELinux依据安全策略进行检查。如果安全策略允许操作，则继续，否则将会抛出错误信息给应用程序。SELinux决策的同时还需要Subject和Object的Context信息，确定所属的User、Role和Type等信息，以此查询对应的安全策略进行决策。SELinux同样也使用了AVC机制用于缓存决策结果，以此来提高性能。</p>
+<h5 id="selinux-context">SELinux Context<a hidden class="anchor" aria-hidden="true" href="#selinux-context">#</a></h5>
+<p>进程和文件都有属于自己的Context信息，Context分为几个部分，分别是 SELinux User、Role、Type 和一个可选的Level信息。SELinux在运行过程中将使用这些信息查询安全策略进行决策。</p>
+<ul>
+<li>SELinux User：每一个Linux用户都会映射到SELinux用户，每一个SELinux User都会对应相应的Role。</li>
+<li>SELinux Role：每个Role也对应几种SELinux Type，并且充当了User和Type的‘中间人’</li>
+<li>SELinux Type：安全策略使用SELinux Type制定规则，定义何种Domian（Type）的Subject，可以接入何种Type的Object。</li>
+</ul>
+<p><img loading="lazy" src="/Distributions/SELinuxContext.jpg" alt=""  />
+</p>
+<p><strong>显示进程的Context</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># ps -Z</span>
+LABEL                             PID TTY          TIME CMD
+unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 <span style="color:#ae81ff">9509</span> pts/1 00:00:00 sudo
+unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 <span style="color:#ae81ff">9515</span> pts/1 00:00:00 su
+unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 <span style="color:#ae81ff">9516</span> pts/1 00:00:00 bash
+unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 <span style="color:#ae81ff">9544</span> pts/1 00:00:00 ps
+</code></pre></div><p><strong>显示文件的Context信息</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># ls -Z</span>
+system_u:object_r:admin_home_t:s0 anaconda-ks.cfg
+</code></pre></div><p><strong>临时修改文件的 SELinux Type</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># chcon -t httpd_sys_content_t file-name</span>
+</code></pre></div><p><img loading="lazy" src="/Distributions/chcon.jpg" alt=""  />
+</p>
+<p><strong><a href="https://zhuanlan.zhihu.com/p/30483108">恢复Context信息</a></strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># restorecon [选项] &lt;文件或目录 1&gt; [&lt;文件或目录 2&gt;...]</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-v</td>
+<td>打印操作过程</td>
+</tr>
+<tr>
+<td>-R</td>
+<td>递归操作</td>
+</tr>
+</tbody>
+</table>
+<p><strong>添加目录的默认安全上下文</strong></p>
+<p>如果提示找不到命令的话请安装 <code>policycoreutils-python</code> 软件包</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># semanage fcontext -a -t &lt;文件安全上下文中的类型字段&gt; &#34;&lt;目录（后面不加斜杠）&gt;(/.*)?&#34;</span>
+</code></pre></div><p>注：目录或文件的默认安全上下文可以通过 <code>semanage fcontext -l</code> 命令配合 <code>grep</code> 过滤查看。</p>
+<p>为 Nginx 新增一个网站目录 <code>/usr/share/nginx/html2</code> 之后，需要为其设置与原目录相同的默认安全上下文。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># semanage fcontext -a -t httpd_sys_content_t &#34;/usr/share/nginx/html2(/.*)?&#34;</span>
+</code></pre></div><p><strong>添加某类进程允许访问的端口</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># semanage port -a -t &lt;服务类型&gt; -p &lt;协议&gt; &lt;端口号&gt;</span>
+</code></pre></div><p>注：各种服务类型所允许的端口号可以通过 <code>semanage port -l</code> 命令配合 <code>grep</code> 过滤查看。</p>
+<p>为 Nginx 需要使用 <code>10080</code> 的端口用于 HTTP 服务。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">semanage port -a -t http_port_t -p tcp 10080
+</code></pre></div><h5 id="selinux-的运行状态">SELinux 的运行状态<a hidden class="anchor" aria-hidden="true" href="#selinux-的运行状态">#</a></h5>
+<p>SELinux 有三个运行状态，分别是disabled, permissive 和 enforcing</p>
+<ul>
+<li>Disable： 禁用SELinux，不会给任何新资源打Label，如果重新启用的话，将会给资源重新打上Lable，过程会比较缓慢。</li>
+<li>Permissive：如果违反安全策略，并不会真正的执行拒绝操作，替代的方式是记录一条log信息。</li>
+<li>Enforcing: 默认模式，SELinux的正常状态，会实际禁用违反策略的操作</li>
+</ul>
+<p>查看当前的运行状态</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># getenforceEnforcing</span>
+</code></pre></div><p>临时改变运行状态为Permissive</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># setenforce 0# getenforcePermissive</span>
+</code></pre></div><p>临时改变运行状态为 Enforcing</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># setenforce 1# getenforceEnforcing</span>
+</code></pre></div><p>使用<code>sestatus</code>可以查看完整的状态信息</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># sestatusSELinux status:                 enabledSELinuxfs mount:                /sys/fs/selinuxSELinux root directory:         /etc/selinuxLoaded policy name:             targetedCurrent mode:                   enforcingMode from config file:          enforcingPolicy MLS status:              enabledPolicy deny_unknown status:     allowedMax kernel policy version:      30</span>
+</code></pre></div><h5 id="怎么启用selinuxhttpswwwredhatcomzhtopicslinuxwhat-is-selinux"><a href="https://www.redhat.com/zh/topics/linux/what-is-selinux">怎么启用SELinux</a><a hidden class="anchor" aria-hidden="true" href="#怎么启用selinuxhttpswwwredhatcomzhtopicslinuxwhat-is-selinux">#</a></h5>
+<p>如果您的环境中禁用了 SELinux，则可以通过编辑 /etc/selinux/config 并设置 SELINUX=permissive 来启用 SElinux。由于 SELinux 当前尚未启用，因此最好不要将其设为立即强制执行，因为此时系统可能会出现误标记的事件，它会妨碍系统的正常启动。</p>
+<p>您可以在根目录中创建名为 .autorelabel 的空文件，然后重新启动，以此来强制系统自动为整个文件系统重新标记SELinux。如果系统中错误过多，应在允许模式下重新启动，以确保启动成功。重新标记所有内容后，利用 /etc/selinux/config 将 SELinux 设置为强制模式并重新启动，或运行 setenforce 1。</p>
+<p>如果系统管理员不太熟悉命令行，还可以选择用于管理 SELinux 的图形工具。</p>
+<p>针对 Linux 发行版中内置的系统，SELinux 提供了一道额外的防护层。保持开启 SELinux，就能在系统遭到破坏时保护您的系统。</p>
+<h5 id="selinux-log">SELinux Log<a hidden class="anchor" aria-hidden="true" href="#selinux-log">#</a></h5>
+<p>SELinux 的Log日志默认记录在<code>/var/log/audit/audit.log</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># cat /var/log/audit/audit.logtype=AVC msg=audit(1223024155.684:49): avc:  denied  { getattr } for  pid=2000 comm=&#34;httpd&#34; path=&#34;/var/www/html/file1&#34; dev=dm-0 ino=399185 scontext=unconfined_u:system_r:httpd_t:s0 tcontext=system_u:object_r:samba_share_t:s0 tclass=file</span>
+</code></pre></div><p><code>/var/log/message</code> 也会记录相应的信息，例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">May <span style="color:#ae81ff">7</span> 18:55:56 localhost setroubleshoot: SELinux is preventing httpd <span style="color:#f92672">(</span>httpd_t<span style="color:#f92672">)</span> <span style="color:#e6db74">&#34;getattr&#34;</span> to /var/www/html/file1 <span style="color:#f92672">(</span>samba_share_t<span style="color:#f92672">)</span>. For complete SELinux messages. run sealert -l de7e30d6-5488-466d-a606-92c9f40d316d
+</code></pre></div><h5 id="selinux-配置文件">SELinux 配置文件<a hidden class="anchor" aria-hidden="true" href="#selinux-配置文件">#</a></h5>
+<p>SELinux的配置文件位于<code>/etc/selinux/config</code>。默认配置文件主要两部分，一个是SELinux的运行状态和SELinuxType。直接在配置文件中修改SELinux将会在下次启动时生效。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># This file controls the state of SELinux on the system.</span>
+<span style="color:#75715e"># SELINUX= can take one of these three values:</span>
+<span style="color:#75715e">#       enforcing - SELinux security policy is enforced.</span>
+<span style="color:#75715e">#       permissive - SELinux prints warnings instead of enforcing.</span>
+<span style="color:#75715e">#       disabled - No SELinux policy is loaded.</span>
+SELINUX<span style="color:#f92672">=</span>enforcing
+<span style="color:#75715e"># SELINUXTYPE= can take one of these two values:</span>
+<span style="color:#75715e">#       targeted - Targeted processes are protected,</span>
+<span style="color:#75715e">#       mls - Multi Level Security protection.</span>
+SELINUXTYPE<span style="color:#f92672">=</span>targeted
+</code></pre></div><h5 id="selinux-booleans">SELinux Booleans<a hidden class="anchor" aria-hidden="true" href="#selinux-booleans">#</a></h5>
+<p>Booleans允许在运行时修改SELinux安全策略。</p>
+<p>列出所有的Booleans选项</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># semanage boolean -l</span>
+SELinux boolean                State  Default Description
+
+smartmon_3ware                 <span style="color:#f92672">(</span>off  ,  off<span style="color:#f92672">)</span>  Determine whether smartmon can...
+mpd_enable_homedirs            <span style="color:#f92672">(</span>off  ,  off<span style="color:#f92672">)</span>  Determine whether mpd can traverse...
+</code></pre></div><p>您可以通过运行 <code>getsebool -a</code>，找出系统中已设置的布尔值。</p>
+<p>临时修改<code>httpd_can_network_connect_db</code>状态为开启</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># setsebool [选项] &lt;规则名称&gt; &lt;on|off&gt;</span>
+<span style="color:#75715e"># setsebool httpd_can_network_connect_db on</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-P</td>
+<td>重启依然生效</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tips">Tips<a hidden class="anchor" aria-hidden="true" href="#tips">#</a></h3>
+<h4 id="speed-up-dnfhttpsostechnixcomhow-to-speed-up-dnf-package-manager-in-fedora"><a href="https://ostechnix.com/how-to-speed-up-dnf-package-manager-in-fedora/">Speed Up DNF</a><a hidden class="anchor" aria-hidden="true" href="#speed-up-dnfhttpsostechnixcomhow-to-speed-up-dnf-package-manager-in-fedora">#</a></h4>
+<p>尝试更改参数</p>
+<pre tabindex="0"><code>$ sudo vi /etc/dnf/dnf.conf
+fastestmirror=true
+max_parallel_downloads=10
+metadata_expire=2d
+</code></pre><ul>
+<li>fastermirror 选择最快的镜像</li>
+<li>max_parallel_downloads 一次下载多个包</li>
+</ul>
+<p>尝试<a href="https://mirrors.tuna.tsinghua.edu.cn/help/fedora/">更换为清华源</a>。</p>
+<p>如果在更新过程中某个小包下载不了，导致无法更新，尝试只使用 ipv4</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo dnf update -4 -v -y
+</code></pre></div><h4 id="第三方源">第三方源<a hidden class="anchor" aria-hidden="true" href="#第三方源">#</a></h4>
+<h5 id="rpmfusion">rpmfusion<a hidden class="anchor" aria-hidden="true" href="#rpmfusion">#</a></h5>
+<p>第一步下载基础包(开源和闭源)， 这里我们使用bfsu来下载，以避免网络问题，终端输入:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum install --nogpgcheck https://mirrors.bfsu.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-<span style="color:#66d9ef">$(</span>rpm -E %fedora<span style="color:#66d9ef">)</span>.noarch.rpm https://mirrors.bfsu.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-<span style="color:#66d9ef">$(</span>rpm -E %fedora<span style="color:#66d9ef">)</span>.noarch.rpm
+</code></pre></div><p>第二步，使用bfsu镜像</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo sed -e <span style="color:#e6db74">&#39;s/metalink/#metalink/g&#39;</span> -e <span style="color:#960050;background-color:#1e0010">&#39;</span>s|<span style="color:#75715e">#baseurl=http://download1.rpmfusion.org/|baseurl</span>
+</code></pre></div><h5 id="fedorafun">Fedorafun<a hidden class="anchor" aria-hidden="true" href="#fedorafun">#</a></h5>
+<p>这里有一些国内常用软件，以及一些开源软件,终端输入：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo sh -c <span style="color:#e6db74">&#34;echo &#39;[fedorafun]
+</span><span style="color:#e6db74">name=fedorafun
+</span><span style="color:#e6db74">baseurl=https://repo.fedora.fun/
+</span><span style="color:#e6db74">enabled=1
+</span><span style="color:#e6db74">countme=1
+</span><span style="color:#e6db74">metadata_expire=7d
+</span><span style="color:#e6db74">repo_gpgcheck=0
+</span><span style="color:#e6db74">type=rpm
+</span><span style="color:#e6db74">gpgcheck=0
+</span><span style="color:#e6db74">skip_if_unavailable=False&#39; &gt; /etc/yum.repos.d/fedorafun.repo&#34;</span>
+</code></pre></div><h4 id="代理与-pinghttpswwwzhihucomquestion20053991"><a href="https://www.zhihu.com/question/20053991">代理与 ping</a><a hidden class="anchor" aria-hidden="true" href="#代理与-pinghttpswwwzhihucomquestion20053991">#</a></h4>
+<p>问题：</p>
+<p>设置了http_proxy和https_proxy在.bashrc文件里，firefox可以上网了。ping外网能够解析域名，但ping不通</p>
+<p>解答：</p>
+<p>首先提一个问题，为什么我们要用代理服务器上网？</p>
+<p>那是因为如果不用代理服务器，我们访问的website 被blocked，最简单的方式就是在一个大型防火墙上执行： deny website IP。</p>
+<p>而使用代理服务器，无非是用代理服务器的IP作为目的IP，把用户的HTTP、HTTPS封装在TCP上，这样途径防火墙时，由于目的IP不在blocked IP 之列，所以被放行，这样我们就可以浏览一些被blocked 的网页。</p>
+<p>但是一般代理服务器并不为UDP/ICMP服务，最多为TCP服务，所以你ping website 时，代理服务器并没有介入，因为Ping是ICMP报文，那就意味着你的ping包的目的IP就是被blocked IP地址，很显然无法正常通过，全被丢了。</p>
+<h3 id="questions">Questions<a hidden class="anchor" aria-hidden="true" href="#questions">#</a></h3>
+<h4 id="flatpak-cannot-install-apps---error-failed-to-read-commithttpsgithubcomflatpakflatpakissues3479"><a href="https://github.com/flatpak/flatpak/issues/3479">flatpak Cannot install apps. - Error: Failed to read commit</a><a hidden class="anchor" aria-hidden="true" href="#flatpak-cannot-install-apps---error-failed-to-read-commithttpsgithubcomflatpakflatpakissues3479">#</a></h4>
+<p>it works for me:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo flatpak repair
+</code></pre></div><h4 id="cannot-open-acess-to-console-the-root-account-is-locked">Cannot open acess to console, the root account is locked&hellip;<a hidden class="anchor" aria-hidden="true" href="#cannot-open-acess-to-console-the-root-account-is-locked">#</a></h4>
+<p>先是添加一个 LV 到 /etc/fstab，结果开机报错，原因是写错了：</p>
+<pre tabindex="0"><code>Time out ...Dependency failed for ...
+</code></pre><p>结束后就 Cannot open acess to console, the root account is locked，什么也干不了，只能强制关机。</p>
+<p>解决方案是重启进入 Fedora Live CD，挂载 root，修改 /etc/fstab。但是无法挂载，挂载的是 Fedora Live CD 的 root，我 TM 佛了，原因应该是这两个名一模一样，Live CD 覆盖了 root。最后是用 Ubntu Live CD 解决。</p>
+<p>这告诉我们，不要只有一个 Live CD。这还告诉我们，先找自己的原因才能有耐心去解决问题。</p>
+<h4 id="dmesg-x86cpu-sgx-disabled-by-bios">dmesg-x86/cpu: SGX disabled by BIOS<a hidden class="anchor" aria-hidden="true" href="#dmesg-x86cpu-sgx-disabled-by-bios">#</a></h4>
+<p><a href="http://www.jos.org.cn/html/2018/9/5594.htm#top">SGX技术的分析和研究</a></p>
+<h4 id="snd_hda_codec_hdmi-hdaudioc0d2-monitor-plugged-in-failed-to-power-up-codec-ret-13httpsbbsarchlinuxorgviewtopicphpid261225"><a href="https://bbs.archlinux.org/viewtopic.php?id=261225">snd_hda_codec_hdmi hdaudioC0D2: Monitor plugged-in, Failed to power up codec ret=[-13]</a><a hidden class="anchor" aria-hidden="true" href="#snd_hda_codec_hdmi-hdaudioc0d2-monitor-plugged-in-failed-to-power-up-codec-ret-13httpsbbsarchlinuxorgviewtopicphpid261225">#</a></h4>
+<p>set <a href="https://wiki.archlinux.org/title/Kernel_parameters_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">Kernel parameters</a>，要使改变在重启后仍生效，您可以手动编辑 /boot/grub/grub.cfg。对于初学者，建议编辑 /etc/default/grub 并将您的内核选项添加至 GRUB_CMDLINE_LINUX_DEFAULT 行：</p>
+<pre tabindex="0"><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;snd_hda_codec_hdmi.enable_silent_stream=0&quot;
+</code></pre><p>然后重新生成 grub.cfg 文件：</p>
+<pre tabindex="0"><code># grub2grub-mkconfig2 -o /boot/grub2/grub.cfg
+</code></pre><h2 id="centos">CentOS<a hidden class="anchor" aria-hidden="true" href="#centos">#</a></h2>
+<h3 id="red-hat-enterprise-linux-developer-subscriptionhttpsdevelopersredhatcomproductsrheldownload"><a href="https://developers.redhat.com/products/rhel/download">Red Hat Enterprise Linux Developer Subscription</a><a hidden class="anchor" aria-hidden="true" href="#red-hat-enterprise-linux-developer-subscriptionhttpsdevelopersredhatcomproductsrheldownload">#</a></h3>
+<p>Need to log in to download RHEL.</p>
+<p><a href="https://access.redhat.com/zh_CN/solutions/1119463">怎样使用 Red Hat Subscription Manager (RHSM) 将系统注册到红帽客户门户网站？</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># subscription-manager register --username &lt;username&gt; --password &lt;password&gt; --auto-attach</span>
+</code></pre></div><p><a href="https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/8/html-single/configuring_basic_system_settings/index">配置 Red Hat Enterprise Linux 8 中基本系统设置的指南</a></p>
+<p><a href="https://yangfeiffei.github.io/">Frey&rsquo;s Blog</a></p>
+<ul>
+<li><a href="https://yangfeiffei.github.io/all">所有文章</a></li>
+<li><a href="https://yangfeiffei.github.io/public/2019/07/06/multitheading-concept.html#">分类 </a></li>
+</ul>
+<h3 id="关于多线程httpsyangfeiffeigithubiopublic20190706multitheading-concepthtml"><a href="https://yangfeiffei.github.io/public/2019/07/06/multitheading-concept.html">关于多线程</a><a hidden class="anchor" aria-hidden="true" href="#关于多线程httpsyangfeiffeigithubiopublic20190706multitheading-concepthtml">#</a></h3>
+<h4 id="概述">概述<a hidden class="anchor" aria-hidden="true" href="#概述">#</a></h4>
+<p>每个正在系统上运行的程序都是一个进程。每个进程包含一到N个线程。进程也可能是整个程序或者是部分程序的动态执行。线程是一组指令的集合，或者是程序的特殊段，它可以在程序里独立执行。也可以把它理解为代码运行的上下文。所以线程基本上是轻量级的进程，它负责在单个程序里执行多任务。通常由操作系统负责多个线程的调度和执行。线程是程序中一个单一的顺序控制流程。在单个程序中同时运行多个线程完成不同的工作,称为多线程。</p>
+<p>线程和进程的区别在于,子进程和父进程有不同的代码和数据空间,而多个线程则共享数据空间,每个线程有自己的执行堆栈和程序计数器为其执行上下文.多线程主要是为了节约CPU时间,发挥利用,根据具体情况而定. 线程的运行中需要使用计算机的内存资源和CPU。</p>
+<p><code>同步多线程（SMT）</code>是一种在一个CPU 的时钟周期内能够执行来自多个线程的指令的硬件多线程技术。本质上，同步多线程是一种将线程级并行处理（多CPU）转化为指令级并行处理（同一CPU）的方法。 同步多线程是单个物理处理器从多个硬件线程上下文同时分派指令的能力。同步多线程用于在商用环境中及为周期/指令（CPI）计数较高的工作负载创造性能优势。 处理器采用超标量结构，最适于以并行方式读取及运行指令。同步多线程使您可在同一处理器上同时调度两个应用程序，从而利用处理器的超标量结构性质。</p>
+<p><code>超线程（HT, Hyper-Threading）</code>是英特尔研发的一种技术，于2002年发布。通过此技术，英特尔实现在一个实体CPU中，提供两个逻辑线程。</p>
+<p>其实可以将<code>SMT</code>和<code>HT</code>理解为一个技术。</p>
+<blockquote>
+<p>Hyper-threading (officially called Hyper- ThreadingTechnology or HT Technology, and abbreviated as HTT orHT) is Intel’s proprietary simultaneous multithreading (SMT) implementation used to improve parallelization ofcomputations (doing multiple tasks at once) performed onx86 microprocessors.</p>
+<p>来自 <a href="https://cn.bing.com/search?q=intel+ht&amp;go=%E6%8F%90%E4%BA%A4&amp;qs=ds&amp;form=QBLHCN">https://cn.bing.com/search?q=intel+ht&amp;go=%E6%8F%90%E4%BA%A4&amp;qs=ds&amp;form=QBLHCN</a></p>
+</blockquote>
+<h4 id="与多进程的区别">与多进程的区别<a hidden class="anchor" aria-hidden="true" href="#与多进程的区别">#</a></h4>
+<blockquote>
+<p>“进程——资源分配的最小单位，线程——程序执行的最小单位”</p>
+</blockquote>
+<p>实际应用中基本上都是“进程+线程”的结合方式，千万不要真的陷入一种非此即彼的误区。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">对比维度</th>
+<th style="text-align:center">多进程</th>
+<th style="text-align:center">多线程</th>
+<th style="text-align:center">总结</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">数据共享、同步</td>
+<td style="text-align:center">数据共享复杂，需要用IPC；数据是分开的，同步简单</td>
+<td style="text-align:center">因为共享进程数据，数据共享简单，但也是因为这个原因导致同步复杂</td>
+<td style="text-align:center">各有优势</td>
+</tr>
+<tr>
+<td style="text-align:center">内存、CPU</td>
+<td style="text-align:center">占用内存多，切换复杂，CPU利用率低</td>
+<td style="text-align:center">占用内存少，切换简单，CPU利用率高</td>
+<td style="text-align:center">线程占优</td>
+</tr>
+<tr>
+<td style="text-align:center">创建销毁、切换</td>
+<td style="text-align:center">创建销毁、切换复杂，速度慢</td>
+<td style="text-align:center">创建销毁、切换简单，速度很快</td>
+<td style="text-align:center">线程占优</td>
+</tr>
+<tr>
+<td style="text-align:center">编程、调试</td>
+<td style="text-align:center">编程简单，调试简单</td>
+<td style="text-align:center">编程复杂，调试复杂</td>
+<td style="text-align:center">进程占优</td>
+</tr>
+<tr>
+<td style="text-align:center">可靠性</td>
+<td style="text-align:center">进程间不会互相影响</td>
+<td style="text-align:center">一个线程挂掉将导致整个进程挂掉</td>
+<td style="text-align:center">进程占优</td>
+</tr>
+<tr>
+<td style="text-align:center">分布式</td>
+<td style="text-align:center">适应于多核、多机分布式；如果一台机器不够，扩展到多台机器比较简单</td>
+<td style="text-align:center">适应于多核分布式</td>
+<td style="text-align:center">进程占优</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>需要注意：</li>
+</ul>
+<blockquote>
+<p>1）需要频繁创建销毁的优先用线程</p>
+<p>2）需要进行大量计算的优先使用线程</p>
+<p>3）强相关的处理用线程，弱相关的处理用进程</p>
+<p>一般的Server需要完成如下任务：消息收发、消息处理。“消息收发”和“消息处理”就是弱相关的任务，而“消息处理”里面可能又分为“消息解码”、“业务处理”，这两个任务相对来说相关性就要强多了。因此“消息收发”和“消息处理”可以分进程设计，“消息解码”、“业务处理”可以分线程设计。当然这种划分方式不是一成不变的，也可以根据实际情况进行调整。</p>
+<p>4）可能要扩展到多机分布的用进程，多核分布的用线程</p>
+<p>5）都满足需求的情况下，用你最熟悉、最拿手的方式</p>
+<p>来自 <a href="https://blog.csdn.net/lishenglong666/article/details/8557215">https://blog.csdn.net/lishenglong666/article/details/8557215</a></p>
+</blockquote>
+<h4 id="如何使用">如何使用？<a hidden class="anchor" aria-hidden="true" href="#如何使用">#</a></h4>
+<p>需要CPU、BIOS、操作系统、应用软件都支持多线程技术才可以。</p>
+<h4 id="支持多线程的cpu">支持多线程的<code>CPU</code><a hidden class="anchor" aria-hidden="true" href="#支持多线程的cpu">#</a></h4>
+<p><code>Power CPU </code>支持的<code>SMT</code>技术：</p>
+<blockquote>
+<p>Simultaneous multithreading (SMT) is a processor technology that allows multiple instruction streams (threads) to run concurrently on the same physical processor, improving overall throughput. To the operating system, each hardware thread is treated as an independent logical processor. Single-threaded (ST) execution mode is also supported.</p>
+<p>来自 <a href="https://www.ibm.com/support/knowledgecenter/SSFHY8_6.2/reference/am5gr_f0106.html?view=embed">https://www.ibm.com/support/knowledgecenter/SSFHY8_6.2/reference/am5gr_f0106.html?view=embed</a></p>
+</blockquote>
+<p><code>Intel CPU </code>支持的<code>HT</code>技术：</p>
+<blockquote>
+<p>Intel® Hyper-Threading Technology (Intel® HT Technology) uses processor resources more efficiently, enabling multiple threads to run on each core. As a performance feature, it also increases processor throughput, improving overall performance on threaded software. Intel® HT Technology is available on the latest Intel® Core™ vPro™ processors, the Intel® Core™ processor family, the Intel® Core™ M processor family, and the Intel® Xeon® processor family. By combining one of these Intel® processors and chipsets with an operating system and BIOS supporting Intel® HT Technology.</p>
+<p>来自 <a href="https://www.intel.com/content/www/us/en/architecture-and-technology/hyper-threading/hyper-threading-technology.html">https://www.intel.com/content/www/us/en/architecture-and-technology/hyper-threading/hyper-threading-technology.html</a></p>
+</blockquote>
+<h4 id="smtht支持情况"><code>SMT/HT</code>支持情况<a hidden class="anchor" aria-hidden="true" href="#smtht支持情况">#</a></h4>
+<ul>
+<li>Intel CPU : 2 Thread/Core</li>
+<li>Power9 CPU： 8 Thread /Core</li>
+<li>Sparc: 8 Thread /Core</li>
+</ul>
+<h5 id="rhel7centos7--intel-cpu"><code>RHEL7/CentOS7 &amp; Intel CPU</code><a hidden class="anchor" aria-hidden="true" href="#rhel7centos7--intel-cpu">#</a></h5>
+<p><code>BIOS </code>中修改<code>SMT/HT</code> 的设置，使用这种方式<code>Enable</code>或者<code>Disable</code>后，将永久生效，需要重启。</p>
+<pre tabindex="0"><code>Hyper-Threading Technology BIOS Setup Options
+
+For Intel® Desktop/Server Boards setup option location is the main menu of the BIOS setup program.
+
+ • Located on the same menu screen that already had Processor Type, Processor Speed, System Bus Speed, and other related processor fields.
+
+ • Setup Option Text
+
+  ○ The field is called Hyper-Threading Technology.
+
+ • Setup Option Values
+
+  ○ The setup option values are Enabled and Disabled.
+
+ • Setup Option Help Text
+
+来自 &lt;https://www.intel.com/content/www/us/en/support/articles/000007645/boards-and-kits/desktop-boards.html&gt; 
+</code></pre><p><code>RHEL/CentOS</code>操作系统中查看多线程情况：（更多信息：https://access.redhat.com/solutions/rhel-smt）</p>
+<pre tabindex="0"><code># lscpu | grep -e Socket -e Core -e Thread
+Thread(s) per core: 2 # 线程数
+Core(s) per socket: 6 # core 数量
+Socket(s): 2
+</code></pre><p>或者</p>
+<pre tabindex="0"><code># grep -H . /sys/devices/system/cpu/cpu*/topology/thread_siblings_list | sort -n -t ':' -k 2 -u
+
+# 显示 /sys/devices/system/cpu/cpu0/topology/thread_siblings_list:0 # 表示HT关闭
+# 显示 /sys/devices/system/cpu/cpu0/topology/thread_siblings_list:0-1 # 表示 HT 启用
+</code></pre><p>操作系统层关闭多线程有几种办法：</p>
+<ul>
+<li>方法一：使用<code>nosmt</code>启动参数，需要新的<code>x86 CPU</code>，需要重启</li>
+</ul>
+<pre tabindex="0"><code># grubby --args=nosmt --update-kernel=DEFAULT
+# grub2-mkconfig -o  /boot/grub/grub.conf   # 创建新的grub.conf
+# reboot  #重启
+</code></pre><ul>
+<li>方法二：临时关闭，重启后失效</li>
+</ul>
+<pre tabindex="0"><code># echo off &gt; /sys/devices/system/cpu/smt/control
+ /sys/devices/system/cpu/smt/control:
+This file allows to read out the SMT control state and provides the
+     ability to disable or (re)enable SMT. The possible states are:
+============== ===================================================
+        on SMT is supported by the CPU and enabled. All
+                        logical CPUs can be onlined and offlined without
+                        restrictions.
+off SMT is supported by the CPU and disabled. Only
+                        the so called primary SMT threads can be onlined
+                        and offlined without restrictions. An attempt to
+                        online a non-primary sibling is rejected
+forceoff Same as 'off' but the state cannot be controlled.
+                        Attempts to write to the control file are rejected.
+notsupported The processor does not support SMT. It's therefore
+                        not affected by the SMT implications of L1TF.
+                        Attempts to write to the control file are rejected.
+        ============== ===================================================
+The possible states which can be written into this file to control SMT
+     state are:
+     - on
+     - off
+     - forceoff
+/sys/devices/system/cpu/smt/active:
+This file reports whether SMT is enabled and active, i.e. if on any
+     physical core two or more sibling threads are online.
+</code></pre><h5 id="aix--power">AIX &amp; Power<a hidden class="anchor" aria-hidden="true" href="#aix--power">#</a></h5>
+<p><code>Power9 CPU</code>默认支持8线程，使用<code>smtctl</code>命令可以查看和修改<code> smt</code>级别。更多内容查看https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.cmds5/smtctl.htm</p>
+<ul>
+<li>查看<code> SMT level</code></li>
+</ul>
+<pre tabindex="0"><code>smtctl
+</code></pre><ul>
+<li>临时修改 <code>SMT level</code>, # 可以是 <code>1, 2, 4 or 8</code>，重启后将恢复原来的<code>smt level</code></li>
+</ul>
+<pre tabindex="0"><code>smtctl -t 2 -w now
+</code></pre><ul>
+<li>修改 <code>SMT level</code>永久生效，# 可以是 <code>1, 2, 4 or 8</code>，完成后需要使用<code>bosboot</code>创建启动设备</li>
+</ul>
+<pre tabindex="0"><code> smtctl -t 4 -w boot
+ bosboot -a # Creates complete boot image and device.
+</code></pre><h5 id="rhel7--power">RHEL7 &amp; Power<a hidden class="anchor" aria-hidden="true" href="#rhel7--power">#</a></h5>
+<p><code>OpenPower CPU</code> 默认支持4线程，安装<code>RHEL</code>后可以使用开源的工具 <code>ppc64_cpu</code>进行查看和修改多线程（更多查看 <a href="https://github.com/ibm-power-utilities/powerpc-utils">https://github.com/ibm-power-utilities/powerpc-utils</a>）。</p>
+<pre tabindex="0"><code>ppc64_cpu
+---------
+
+This allows users to set the smt state, smt-snooze-delay and other settings
+
+on ppc64 processors. It also allows users to control the number of processor
+
+cores which are online (not in the sleep state).
+来自 &lt;https://github.com/ibm-power-utilities/powerpc-utils&gt; 
+</code></pre><p>1，查看 <code>SMT level</code></p>
+<pre tabindex="0"><code>ppc64_cpu --smt
+</code></pre><p>2，修改 <code>SMT </code>级别， <code># is 1, 2, 4 or on</code></p>
+<pre tabindex="0"><code>ppc64_cpu --smt=#
+</code></pre><p>3， 关闭 <code>smt</code>支持</p>
+<pre tabindex="0"><code>ppc64_cpu --smt=off
+</code></pre><h4 id="其他">其他<a hidden class="anchor" aria-hidden="true" href="#其他">#</a></h4>
+<h5 id="oracle数据库"><code>oracle</code>数据库<a hidden class="anchor" aria-hidden="true" href="#oracle数据库">#</a></h5>
+<p><code>Oracle Database</code> 在12c之前<code>windows</code>平台下支持多线程，<code>Unix</code>和<code>Linux</code>只支持多进程模式。在<code>Oracle Database 12c</code>中，<code>Oracle</code>引入了多线程模式，允许在<code>Windows</code>平台之外的<code>Unix</code>、<code>Linux</code>系统使用多线程模式，结合多进程与多线程模式，<code>Oracle</code>可以改进进程管理与性能。</p>
+<p>通过设置初始化参数<code>threaded_execution</code>，可以启用或关闭多线程模式，该参数缺省值为<code>False</code>，设置为<code>TRUE</code>启用12c的这个新特性：</p>
+<pre tabindex="0"><code>SQL&gt; show parameter threaded_exec
+
+NAME TYPE VALUE
+
+---
+
+threaded_execution boolean FALSE
+
+SQL&gt; alter system set threaded_execution=true scope=spfile;
+
+System altered.
+</code></pre><p>该参数重新启动数据库后生效，但是注意，多线程模式，不支持操作系统认证，不能直接启动数据库，需要提供<code>SYS</code>的密码认证后方能启动数据库：</p>
+<pre tabindex="0"><code>SQL&gt; shutdown immediate;
+
+SQL&gt; startup
+
+ORA-01017: invalid username/password; logon denied
+
+# 需要通过用户名和密码登录数据库。
+</code></pre><p>用<code>ps -ef</code> 检查一下进程/线程：</p>
+<pre tabindex="0"><code>[oracle@enmocoredb dbs]$ ps -ef|grep ora_
+oracle 27404 1 0 17:00 ? 00:00:00 ora_pmon_core
+oracle 27406 1 0 17:00 ? 00:00:00 ora_psp0_core
+oracle 27408 1 3 17:00 ? 00:00:05 ora_vktm_core
+oracle 27412 1 0 17:00 ? 00:00:00 ora_u004_core
+oracle 27418 1 0 17:00 ? 00:00:00 ora_u005_core
+oracle 27424 1 0 17:00 ? 00:00:00 ora_dbw0_core
+其中U&lt;NNN&gt;进程是共享线程的&quot;容器进程&quot;，每个进程可以容纳100个线程。
+来自 https://www.eygle.com/archives/2013/07/oracle_database_12c_multithreaded_model.html 
+</code></pre><h3 id="连接热点">连接热点<a hidden class="anchor" aria-hidden="true" href="#连接热点">#</a></h3>
+<ul>
+<li>
+<p>打开WIFI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ifconfig interface up 
+</code></pre></div></li>
+<li>
+<p>查看所有可用的无线网络信号</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">iw wlp2s0 scan | grep SSID
+</code></pre></div></li>
+<li>
+<p>连接无线网</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wpa_supplicant -B -i wlp2s0 -c &lt;<span style="color:#f92672">(</span>wpa_passphrase <span style="color:#e6db74">&#34;SSID&#34;</span> <span style="color:#e6db74">&#34;passwd&#34;</span><span style="color:#f92672">)</span> 
+</code></pre></div></li>
+<li>
+<p>分配IP地址</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dhclient interface
+</code></pre></div></li>
+<li>
+<p>查看无线网卡地址信息，有ip地址表示网络连接成功</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ifconfig interface
+</code></pre></div></li>
+</ul>
+<h3 id="pppoe-adsl拨号上网">PPPOE （ADSL）拨号上网<a hidden class="anchor" aria-hidden="true" href="#pppoe-adsl拨号上网">#</a></h3>
+<ul>
+<li>
+<p>安装拨号软件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dnf install  rp-pppoe* ppp*
+</code></pre></div></li>
+<li>
+<p>设定</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pppoe-setup
+</code></pre></div></li>
+<li>
+<p>拨号上网</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pppoe-stoppppoe-start
+</code></pre></div></li>
+</ul>
+<h3 id="安装中文输入法">安装中文输入法<a hidden class="anchor" aria-hidden="true" href="#安装中文输入法">#</a></h3>
+<ul>
+<li>
+<p>安装 fcitx</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dnf install fcitx-im fcitx-configtool fcitx-googlepinyin
+</code></pre></div></li>
+<li>
+<p>配置</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nano ~/.xprofile  <span style="color:#75715e"># or ~/.bashrc</span>
+export GTK_MODULE<span style="color:#f92672">=</span>fcitx
+export QT_IM_MODULE<span style="color:#f92672">=</span>fcitx
+export XMODIFIERS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@im=fcitx&#34;</span>
+</code></pre></div></li>
+<li>
+<p>fcitx  没图标：重装fcitx，在fcitx配置里关掉Kimpanel</p>
+</li>
+</ul>
+<h3 id="关闭触摸板">关闭触摸板<a hidden class="anchor" aria-hidden="true" href="#关闭触摸板">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dnf install xorg-x11-apps 
+synclient TouchpadOff<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>    <span style="color:#75715e"># 关闭</span>
+synclient TouchpadOff<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    <span style="color:#75715e"># 开启</span>
+</code></pre></div><h3 id="用-mtp-挂载手机">用 MTP 挂载手机<a hidden class="anchor" aria-hidden="true" href="#用-mtp-挂载手机">#</a></h3>
+<ul>
+<li>
+<p>安装jmtpfs</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dnf install jmtpfs
+</code></pre></div></li>
+<li>
+<p>查看手机 “busnum”和“devnum”</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jmptfs -l
+</code></pre></div></li>
+<li>
+<p>建立挂载点</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir /media/dir
+</code></pre></div></li>
+<li>
+<p>挂载手机</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jmtpfs -device<span style="color:#f92672">=</span>busnum,devnum /media/dir/
+</code></pre></div></li>
+</ul>
+<h3 id="查找依赖">查找依赖<a hidden class="anchor" aria-hidden="true" href="#查找依赖">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ yum whatprovide package
+$ dnf provides package
+</code></pre></div><h3 id="默认字体">默认字体<a hidden class="anchor" aria-hidden="true" href="#默认字体">#</a></h3>
+<p>CentOS 默认字体目录 <code>/lib/kbd/consolefonts</code></p>
+<p>纯命令行是不能使用系统之外的字体的。</p>
+<h3 id="centos-minimal--xfce">CentOS Minimal + Xfce<a hidden class="anchor" aria-hidden="true" href="#centos-minimal--xfce">#</a></h3>
+<p>base 源与 epel 源，使用用阿里镜像: <a href="https://developer.aliyun.com/mirror/">https://developer.aliyun.com/mirror/</a></p>
+<ul>
+<li>
+<p>安装Xfce4，先安装 Xfce 可以保证不安装多余的包</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dnf group listdnf groupinstall Xfce
+</code></pre></div></li>
+<li>
+<p>安装 X Window system</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dnf groupinstall <span style="color:#e6db74">&#34;X Window system&#34;</span>
+</code></pre></div></li>
+<li>
+<p>验证</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl isolate graphical.target
+</code></pre></div></li>
+<li>
+<p>设置</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 设置成命令模式systemctl set-default multi-user.target        # 设置成图形模式systemctl set-default graphical.target        </span>
+</code></pre></div></li>
+<li>
+<p>安装中文字体和中文输入法楷体字体</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dnf install cjkuni-ukai-fonts
+</code></pre></div></li>
+<li>
+<p>输入法需要安装如下包：</p>
+<ul>
+<li>ibus， 这个包里有ibus-daemon这个平台服务器程序和ibus这个配置助手。</li>
+<li>ibus-libpinyin， 这个是ibus平台下具体的拼音输入法。</li>
+<li>im-chooser,这个是输入法平台选择助手程序。</li>
+<li>执行im-chooser，选择输入法平台和输入法。重新登录系统。</li>
+</ul>
+</li>
+<li>
+<p>xfce 主题</p>
+<ul>
+<li>网站：xfce-look.org</li>
+<li>主题目录： <code>/usr/share/themes</code> 或 <code>~/.themes</code></li>
+<li>图标鼠标目录： <code>/usr/share/icons</code> 或 <code>~/.icons</code></li>
+<li>壁纸： <code>/usr/share/background</code> , <code>/usr/share/wallpapers</code></li>
+<li><a href="http://li.nux.ro/">Plank</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="epelhttpswwwjianshucomp4f4c0897075f"><a href="https://www.jianshu.com/p/4f4c0897075f">EPEL</a><a hidden class="anchor" aria-hidden="true" href="#epelhttpswwwjianshucomp4f4c0897075f">#</a></h3>
+<p>EPEL的全称叫 Extra Packages for Enterprise Linux 。EPEL是由 Fedora 社区打造，为 RHEL 及衍生发行版如 CentOS、Scientific Linux 等提供高质量软件包的项目。装上了 EPEL之后，就相当于添加了一个第三方源。</p>
+<p>如果你知道rpmfusion.org的话，拿 rpmfusion 做比较还是很恰当的，rpmfusion 主要为桌面发行版提供大量rpm包（只有开源驱动才能进官方源，想要闭源驱动装rpmfusion），而EPEL则为服务器版本提供大量的rpm包，而且大多数rpm包在官方 repository 中是找不到的。</p>
+<h2 id="linux-deploy">Linux Deploy<a hidden class="anchor" aria-hidden="true" href="#linux-deploy">#</a></h2>
+<h3 id="准备">准备<a hidden class="anchor" aria-hidden="true" href="#准备">#</a></h3>
+<p>一个 Root 了的 Android 手机</p>
+<p><a href="https://www.busybox.net/">Busy Box</a>：Linux Deploy 支撑软件。</p>
+<p><a href="https://github.com/meefik/linuxdeploy/releases">Linux deploy</a>：Linux 系统支撑软件。</p>
+<h4 id="安装-busy-box">安装 Busy Box<a hidden class="anchor" aria-hidden="true" href="#安装-busy-box">#</a></h4>
+<p>点击安装，等待程序自行运行，在界面中输出 <code>## END</code> 后退出程序。</p>
+<h4 id="linux-deploy-1">Linux deploy<a hidden class="anchor" aria-hidden="true" href="#linux-deploy-1">#</a></h4>
+<ul>
+<li>点击左图左上角部分，选择 <strong>设置</strong>，在设置界面中找到PATH变量，赋予其值 <code>/system/xbin</code>。</li>
+<li>建议开启 <strong>锁定Wifi</strong> 功能。</li>
+<li>接着退回主界面，点击右下角部分。</li>
+<li><strong>发行版</strong> 看个人喜好选择，Debian 系（Debian，Kaili，Ubuntu）较热门。</li>
+<li><strong>架构</strong> 默认。</li>
+<li><strong>源</strong> 默认。如果下的慢的话，就仿照默认的源换为国内的源，如 <a href="http://mirrors.ustc.edu.cn/">USTC MIRRORS</a>，但是不要特意去换源，官方的源用的了的话官方的源最好。</li>
+<li><strong>安装路径</strong> ：安装在手机自带的存储空间中，则在路径开头加上<code>${ENV_DIR}</code>；安装在 <strong>sdcard</strong> 中，加上<code>${EXTERNAL_STORAGE}</code>。</li>
+<li><strong>文件系统</strong> ：推荐 <code>ext4</code>。</li>
+<li><strong>用户名</strong> 和 <strong>密码</strong> 自定义。</li>
+<li><strong>DNS</strong> 默认。</li>
+<li><strong>本地化</strong> ：简体中文可以选择 <code>zh_CN.UTF-8</code>，建议选择 <code>en_US.UTF-8</code> 。</li>
+<li><strong>挂载列表</strong>：添加访问手机内容的目录，<strong>手机目录：挂载点</strong>，如 <code>/sdcard:/mnt</code>，之后会自动挂载。</li>
+<li><strong>开启<code>SSH</code></strong>。</li>
+<li><strong>图形界面功能</strong>，需要的话就选 <code>XFce</code> 为桌面，XFce`是轻量级桌面环境。</li>
+<li>退出系统设置界面，点击主界面右上角，选择安装。
+等待程序自行安装Linux系统，开始时会自动创造一个4G左右大小的img文件，这个是默认的大小，你可以根据你手机的容量自定义，创造文件需要一点时间，屏幕会很安静，再然后会安装各种东西，屏幕会输出很多信息，根据你的源的速度，等待时间不等，看到 <code>&lt;&lt;&lt;deploy</code> 则安装完毕。如果中间没有 <code>failed</code> 则安装成功。安装失败的话就需要重新安装，换个快一点的网，或者好一点的源。</li>
+<li><strong>注意：安装完毕后要先点击停止按钮，再按启动按钮</strong>。这个很重要，不然你就得重装了。</li>
+</ul>
+<h3 id="使用">使用<a hidden class="anchor" aria-hidden="true" href="#使用">#</a></h3>
+<ul>
+<li>
+<p>Andorid 端用 <a href="https://github.com/connectbot/connectbot/releases">ConnectBox</a></p>
+</li>
+<li>
+<p>Windows用  <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">putty</a> ，图形界面用 <a href="https://www.realvnc.com/en/connect/download/viewer/">VNC Viewer</a>。VNC Viewer 直接搜主机IP就行，VNC Server 在你选择安装图形界面功能时就自动安装了，不需要再安装 vnc4server。</p>
+</li>
+<li>
+<p>Linux 输入<code>ssh username@hostname</code>就行。</p>
+</li>
+</ul>
+<h3 id="其他-1">其他<a hidden class="anchor" aria-hidden="true" href="#其他-1">#</a></h3>
+<ul>
+<li>
+<p>安装后如果用 vnc viewer 只有一个点的话，可以换一个发行版，我尝试的 CentOS 有这个问题。</p>
+</li>
+<li>
+<p>Linux连的时候出现 <code>WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ssh-keygen -R + 输入服务器的IP
+</code></pre></div></li>
+<li>
+<p>altarch 架构的手机 CentOS 系统换源</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp CentOS-7-armhfp.repo CentOS-Base.repo
+mv CentOS-7-armhfp.repo CentOS-7-armhfp.repo.backup
+vi CentOS-Base.repo
+baseurl<span style="color:#f92672">=</span>https://mirrors.ustc.edu.cn/centos-altarch/7.6.1810/os/armhfp/
+yum makecache
+yum update
+</code></pre></div></li>
+<li>
+<p><strong>如果你之前没有安装VNC的话，现在又想装：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum -y install tigervnc-server
+</code></pre></div></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://sakamotokurome.github.io/tags/unix/">Unix</a></li>
+      <li><a href="https://sakamotokurome.github.io/tags/linux/">Linux</a></li>
+      <li><a href="https://sakamotokurome.github.io/tags/fedora/">Fedora</a></li>
+      <li><a href="https://sakamotokurome.github.io/tags/centos/">CentOS</a></li>
+      <li><a href="https://sakamotokurome.github.io/tags/linux-deploy/">Linux Deploy</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://sakamotokurome.github.io/posts/opensuse/">
+    <span class="title">« Prev Page</span>
+    <br>
+    <span>OpenSUSE</span>
+  </a>
+  <a class="next" href="https://sakamotokurome.github.io/posts/gentoo/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span>Gentoo</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+
+<div class="disqus-container">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    this.page.identifier = 'cb04a6';
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "sakamotokurome" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://sakamotokurome.github.io/">Sakamoto Kurome</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+</body>
+
+</html>
