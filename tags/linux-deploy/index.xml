@@ -13,7 +13,7 @@
       <pubDate>Wed, 09 Mar 2022 11:39:38 +0800</pubDate>
       
       <guid>https://sakamotokurome.github.io/posts/fedora/</guid>
-      <description>Fedora [fəˈdɔrə] 费多拉 Fedora 定制版 为什么 Linus Torvalds 用 Fedora 2008：linus对发行版的要求是&amp;quot;易安装，比较贴近上游&amp;quot;即可。 201</description>
+      <description>Fedora [fəˈdɔrə] 费多拉 Fedora 定制版 SELinux 长久以来，每当遇到授权问题或者新安装的主机，我的第一反应是通过setenforce 0命令禁用SELinu</description>
     </item>
     
   </channel>
