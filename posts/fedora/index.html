@@ -162,7 +162,7 @@ if (!doNotTrack) {
                 <li>
                     <a href="#fedora-%e5%ae%9a%e5%88%b6%e7%89%88httpsspinsfedoraprojectorgzh_hans_cn" aria-label="Fedora 定制版"><a href="https://spins.fedoraproject.org/zh_Hans_CN/">Fedora 定制版</a></a></li>
                 <li>
-                    <a href="#selinux-%e5%88%9d%e6%8e%a2httpoldlinuxvbirdorglinux_basic0440processcontrolphpselinux" aria-label="SELinux 初探"><a href="http://old.linux.vbird.org/linux_basic/0440processcontrol.php#selinux">SELinux 初探</a></a><ul>
+                    <a href="#selinux-%e5%88%9d%e6%8e%a2distributionsphpselinux" aria-label="SELinux 初探"><a href="/Distributions.php#selinux">SELinux 初探</a></a><ul>
                         
                 <li>
                     <a href="#%e4%bb%80%e9%ba%bc%e6%98%af-selinux" aria-label="什麼是 SELinux">什麼是 SELinux</a><ul>
@@ -332,7 +332,7 @@ if (!doNotTrack) {
   <div class="post-content"><h2 id="fedora">Fedora<a hidden class="anchor" aria-hidden="true" href="#fedora">#</a></h2>
 <p><code>[fəˈdɔrə]</code> <code>费多拉</code></p>
 <h3 id="fedora-定制版httpsspinsfedoraprojectorgzh_hans_cn"><a href="https://spins.fedoraproject.org/zh_Hans_CN/">Fedora 定制版</a><a hidden class="anchor" aria-hidden="true" href="#fedora-定制版httpsspinsfedoraprojectorgzh_hans_cn">#</a></h3>
-<h3 id="selinux-初探httpoldlinuxvbirdorglinux_basic0440processcontrolphpselinux"><a href="http://old.linux.vbird.org/linux_basic/0440processcontrol.php#selinux">SELinux 初探</a><a hidden class="anchor" aria-hidden="true" href="#selinux-初探httpoldlinuxvbirdorglinux_basic0440processcontrolphpselinux">#</a></h3>
+<h3 id="selinux-初探distributionsphpselinux"><a href="/Distributions.php#selinux">SELinux 初探</a><a hidden class="anchor" aria-hidden="true" href="#selinux-初探distributionsphpselinux">#</a></h3>
 <p>從進入了 CentOS 5.x 之後的 CentOS 版本中 (當然包括 CentOS 7)，SELinux 已經是個非常完備的核心模組了！尤其 CentOS 提供了很多管理 SELinux 的指令與機制， 因此在整體架構上面是單純且容易操作管理的！所以，在沒有自行開發網路服務軟體以及使用其他第三方協力軟體的情況下， 也就是全部使用 CentOS 官方提供的軟體來使用我們伺服器的情況下，建議大家不要關閉 SELinux 了喔！ 讓我們來仔細的玩玩這傢伙吧！</p>
 <h4 id="什麼是-selinux">什麼是 SELinux<a hidden class="anchor" aria-hidden="true" href="#什麼是-selinux">#</a></h4>
 <p>什麼是 SELinux 呢？其實他是『 Security Enhanced Linux 』的縮寫，字面上的意義就是安全強化的 Linux 之意！那麼所謂的『安全強化』是強化哪個部分？ 是網路資安還是權限管理？底下就讓我們來談談吧！</p>
@@ -357,7 +357,7 @@ if (!doNotTrack) {
 <p>委任式存取控制 (MAC) 有趣啦！他可以針對特定的程序與特定的檔案資源來進行權限的控管！ 也就是說，即使你是 root ，那麼在使用不同的程序時，你所能取得的權限並不一定是 root ， 而得要看當時該程序的設定而定。如此一來，我們針對控制的『主體』變成了『程序』而不是使用者喔！ 此外，這個主體程序也不能任意使用系統檔案資源，因為每個檔案資源也有針對該主體程序設定可取用的權限！ 如此一來，控制項目就細的多了！但整個系統程序那麼多、檔案那麼多，一項一項控制可就沒完沒了！ 所以 SELinux 也提供一些預設的政策 (Policy) ，並在該政策內提供多個規則 (rule) ，讓你可以選擇是否啟用該控制規則！</p>
 <p>在委任式存取控制的設定下，我們的程序能夠活動的空間就變小了！舉例來說， WWW 伺服器軟體的達成程序為 httpd 這支程式， 而預設情況下， httpd 僅能在 /var/www/ 這個目錄底下存取檔案，如果 httpd 這個程序想要到其他目錄去存取資料時， 除了規則設定要開放外，目標目錄也得要設定成 httpd 可讀取的模式 (type) 才行喔！限制非常多！ 所以，即使不小心 httpd 被 cracker 取得了控制權，他也無權瀏覽 /etc/shadow 等重要的設定檔喔！</p>
 <p>簡單的來說，針對 Apache 這個 WWW 網路服務使用 DAC 或 MAC 的結果來說，兩者間的關係可以使用下圖來說明。 底下這個圖示取自 Red Hat 訓練教材，真的是很不錯～所以被鳥哥借用來說明一下！</p>
-<p><img loading="lazy" src="http://old.linux.vbird.org/linux_basic/0440processcontrol/dac_mac.jpg" alt="使用 DAC/MAC 產生的不同結果，以 Apache 為例說明"  />
+<p><img loading="lazy" src="/Distributions/dac_mac.jpg" alt="使用 DAC/MAC 產生的不同結果，以 Apache 為例說明"  />
 </p>
 <p>左圖是沒有 SELinux 的 DAC 存取結果，apache 這隻 root 所主導的程序，可以在這三個目錄內作任何檔案的新建與修改～ 相當麻煩～右邊則是加上 SELinux 的 MAC 管理的結果，SELinux 僅會針對 Apache 這個『 process 』放行部份的目錄， 其他的非正規目錄就不會放行給 Apache 使用！因此不管你是誰，就是不能穿透 MAC 的框框！這樣有比較了解乎？</p>
 <h4 id="selinux-的運作模式">SELinux 的運作模式<a hidden class="anchor" aria-hidden="true" href="#selinux-的運作模式">#</a></h4>
@@ -387,7 +387,7 @@ SELinux 主要想要管理的就是程序，因此你可以將『主體』跟本
 </li>
 </ul>
 <p>由於 SELinux 重點在保護程序讀取檔案系統的權限，因此我們將上述的幾個說明搭配起來，繪製成底下的流程圖，比較好理解：</p>
-<p><img loading="lazy" src="http://old.linux.vbird.org/linux_basic/0440processcontrol/selinux_1.gif" alt="SELinux 運作的各元件之相關性"  />
+<p><img loading="lazy" src="/Distributions/selinux_1.gif" alt="SELinux 運作的各元件之相關性"  />
 </p>
 <p>上圖的重點在『主體』如何取得『目標』的資源存取權限！ 由上圖我們可以發現，(1)主體程序必須要通過 SELinux 政策內的規則放行後，就可以與目標資源進行安全性本文的比對， (2)若比對失敗則無法存取目標，若比對成功則可以開始存取目標。問題是，最終能否存取目標還是與檔案系統的 rwx 權限設定有關喔！如此一來，加入了 SELinux 之後，出現權限不符的情況時，你就得要一步一步的分析可能的問題了！</p>
 <h5 id="安全性本文-security-context">安全性本文 (Security Context)<a hidden class="anchor" aria-hidden="true" href="#安全性本文-security-context">#</a></h5>
@@ -495,7 +495,7 @@ drwxr-xr-x. root root system_u:object_r:system_cron_spool_t:s0 /etc/cron.d
 -rw-r--r--. root root system_u:object_r:system_cron_spool_t:s0 /etc/crontab
 -rwxr-xr-x. root root system_u:object_r:crond_exec_t:s0 /usr/sbin/crond
 </code></pre></div><p>當我們執行 /usr/sbin/crond 之後，這個程式變成的程序的 domain 類型會是 crond_t 這一個～而這個 crond_t 能夠讀取的設定檔則為 system_cron_spool_t 這種的類型。因此不論 /etc/crontab, /etc/cron.d 以及 /var/spool/cron 都會是相關的 SELinux 類型 (/var/spool/cron 為 user_cron_spool_t)。 文字看起來不太容易了解，我們使用圖示來說明這幾個東西的關係！</p>
-<p><img loading="lazy" src="http://old.linux.vbird.org/linux_basic/0440processcontrol/centos7_selinux_2.jpg" alt="主體程序取得的 domain 與目標檔案資源的 type 相互關係"  />
+<p><img loading="lazy" src="/Distributions/centos7_selinux_2.jpg" alt="主體程序取得的 domain 與目標檔案資源的 type 相互關係"  />
 </p>
 <p>上圖的意義我們可以這樣看的：</p>
 <ol>
@@ -533,7 +533,7 @@ Aug  <span style="color:#ae81ff">7</span> 18:46:01 study crond<span style="color
 <li>disabled：關閉，SELinux 並沒有實際運作。</li>
 </ul>
 <p>我們前面不是談過主體程序需要經過政策規則、安全本文比對之後，加上 rwx 的權限規範， 若一切合理才會讓程序順利的讀取檔案嗎？那麼這個 SELinux 的三種模式與上面談到的政策規則、安全本文的關係為何呢？我們還是使用圖示加上流程來讓大家理解一下：</p>
-<p><img loading="lazy" src="http://old.linux.vbird.org/linux_basic/0440processcontrol/selinux_3.jpg" alt="SELinux 的三種類型與實際運作流程圖示意"  />
+<p><img loading="lazy" src="/Distributions/selinux_3.jpg" alt="SELinux 的三種類型與實際運作流程圖示意"  />
 </p>
 <p>就如上圖所示，首先，你得要知道，並不是所有的程序都會被 SELinux 所管制，因此最左邊會出現一個所謂的『有受限的程序主體』！那如何觀察有沒有受限 (confined )呢？ 很簡單啊！就透過 ps -eZ 去擷取！舉例來說，我們來找一找 crond 與 bash 這兩隻程序是否有被限制吧？</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>root@study ~<span style="color:#f92672">]</span><span style="color:#75715e"># ps -eZ | grep -E &#39;cron|bash&#39;</span>
@@ -572,7 +572,7 @@ SELINUXTYPE<span style="color:#f92672">=</span>targeted  &lt;<span style="color:
 </code></pre></div><p>若有需要修改預設政策的話，就直接改 SELINUX=enforcing 那一行即可喔！</p>
 <h5 id="selinux-的啟動與關閉">SELinux 的啟動與關閉<a hidden class="anchor" aria-hidden="true" href="#selinux-的啟動與關閉">#</a></h5>
 <p>上面是預設的政策與啟動的模式！你要注意的是，如果改變了政策則需要重新開機；如果由 enforcing 或 permissive 改成 disabled ，或由 disabled 改成其他兩個，那也必須要重新開機。這是因為 SELinux 是整合到核心裡面去的， 你只可以在 SELinux 運作下切換成為強制 (enforcing) 或寬容 (permissive) 模式，不能夠直接關閉 SELinux 的！ 如果剛剛你發現 getenforce 出現 disabled 時，請到上述檔案修改成為 enforcing 然後重新開機吧！</p>
-<p>不過你要注意的是，如果從 disable 轉到啟動 SELinux 的模式時， 由於系統必須要針對檔案寫入安全性本文的資訊，因此開機過程會花費不少時間在等待重新寫入 SELinux 安全性本文 (有時也稱為 SELinux Label) ，而且在寫完之後還得要再次的重新開機一次喔！你必須要等待粉長一段時間！ 等到下次開機成功後，再使用 <a href="http://old.linux.vbird.org/linux_basic/0440processcontrol.php#getenforce">getenforce</a> 或 <a href="http://old.linux.vbird.org/linux_basic/0440processcontrol.php#sestatus">sestatus</a> 來觀察看看有否成功的啟動到 Enforcing 的模式囉！</p>
+<p>不過你要注意的是，如果從 disable 轉到啟動 SELinux 的模式時， 由於系統必須要針對檔案寫入安全性本文的資訊，因此開機過程會花費不少時間在等待重新寫入 SELinux 安全性本文 (有時也稱為 SELinux Label) ，而且在寫完之後還得要再次的重新開機一次喔！你必須要等待粉長一段時間！ 等到下次開機成功後，再使用 <a href="/Distributions.php#getenforce">getenforce</a> 或 <a href="/Distributions.php#sestatus">sestatus</a> 來觀察看看有否成功的啟動到 Enforcing 的模式囉！</p>
 <p>如果你已經在 Enforcing 的模式，但是可能由於一些設定的問題導致 SELinux 讓某些服務無法正常的運作， 此時你可以將 Enforcing 的模式改為寬容 (permissive) 的模式，讓 SELinux 只會警告無法順利連線的訊息， 而不是直接抵擋主體程序的讀取權限。讓 SELinux 模式在 enforcing 與 permissive 之間切換的方法為：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>root@study ~<span style="color:#f92672">]</span><span style="color:#75715e"># setenforce [0|1]</span>
 選項與參數：
