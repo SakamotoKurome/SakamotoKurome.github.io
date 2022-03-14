@@ -8572,12 +8572,12 @@ $ sudo ip link set ppp0 up
 </ul>
 <p><strong><code>-x</code>：进行反向 DNS 查询</strong></p>
 <p>我偶尔使用的另一个查询选项是 <code>-x</code>，用于进行反向 DNS 查询。下面是输出结果的样子。</p>
-<pre tabindex="0"><code>$ dig -x 172.217.13.174
-174.13.217.172.in-addr.arpa. 72888 IN PTR yul03s04-in-f14.1e100.net。
-</code></pre><p><code>-x</code> 不是魔术。<code>dig -x 172.217.13.174</code> 只是对 <code>174.13.217.172.in-addr.arpa.</code> 做了一个 <code>PTR</code> 查询。下面是如何在不使用 `-x’ 的情况下进行完全相同的反向 DNS 查询。</p>
-<pre tabindex="0"><code>$ dig ptr 174.13.217.172.in-addr.arpa.
-174.13.217.172.in-addr.arpa. 72888 IN PTR yul03s04-in-f14.1e100.net。
-</code></pre><p>我总是使用 <code>-x</code>，因为它可以减少输入。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dig -x 172.217.13.174
+174.13.217.172.in-addr.arpa. <span style="color:#ae81ff">72888</span> IN PTR yul03s04-in-f14.1e100.net。
+</code></pre></div><p><code>-x</code> 不是魔术。<code>dig -x 172.217.13.174</code> 只是对 <code>174.13.217.172.in-addr.arpa.</code> 做了一个 <code>PTR</code> 查询。下面是如何在不使用 `-x’ 的情况下进行完全相同的反向 DNS 查询。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dig ptr 174.13.217.172.in-addr.arpa.
+174.13.217.172.in-addr.arpa. <span style="color:#ae81ff">72888</span> IN PTR yul03s04-in-f14.1e100.net。
+</code></pre></div><p>我总是使用 <code>-x</code>，因为它可以减少输入。</p>
 <p><a href="https://www.cnblogs.com/mysticbinary/p/13344930.html">DNS反向查询</a>大概的一个定义就是：</p>
 <p>从 IP 地址获取 PTR 记录。也就是说，通过使用一些网络工具可以将 IP 地址转换为主机名。 实际上，PRT 代表 POINTER，在 DNS 系统有唯一性，将 IP 地址与规范化的主机名联系起来。PTR 记录其实是 NDS 系统的一部分，但是由专门的区域文件组成的，使用的是传统的 in-addr.arpa 格式。</p>
 <h4 id="格式化响应的选项">格式化响应的选项<a hidden class="anchor" aria-hidden="true" href="#格式化响应的选项">#</a></h4>
