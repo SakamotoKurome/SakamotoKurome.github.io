@@ -1724,15 +1724,15 @@ $ sudo apt install fcitx5-rime
 <li><code>symbols.yaml</code> 的定制文件名为 <code>symbols.custom.yaml</code></li>
 </ul>
 <p>规范为在文件名主体（ID）和 <code>.yaml</code> 之间增加次级扩展名 <code>.custom</code>。定制文档的书写格式为：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">patch:
-  <span style="color:#e6db74">&#34;一级设定项/二级设定项/三级设定项&#34;</span>: 新的设定值
-  <span style="color:#e6db74">&#34;另一个设定项&#34;</span>: 新的设定值
-  <span style="color:#e6db74">&#34;再一个设定项&#34;</span>: 新的设定值
-  <span style="color:#e6db74">&#34;含列表的设定项/@n&#34;</span>: 列表第n个元素新的设定值<span style="color:#960050;background-color:#1e0010">，</span>从0开始计数
-  <span style="color:#e6db74">&#34;含列表的设定项/@last&#34;</span>: 列表最后一个元素新的设定值
-  <span style="color:#e6db74">&#34;含列表的设定项/@before 0&#34;</span>: 在列表第一个元素之前插入新的设定值<span style="color:#960050;background-color:#1e0010">（</span>不建议在补丁中使用<span style="color:#960050;background-color:#1e0010">）</span>
-  <span style="color:#e6db74">&#34;含列表的设定项/@after last&#34;</span>: 在列表  <span style="color:#e6db74">&#34;一级设定项/二级设定项/三级设定项&#34;</span>: 新的设定值最后一个元素之后插入新的设定值<span style="color:#960050;background-color:#1e0010">（</span>不建议在补丁中使用<span style="color:#960050;background-color:#1e0010">）</span>
-  <span style="color:#e6db74">&#34;含列表的设定项/@next&#34;</span>: 在列表最后一个元素之后插入新的设定值<span style="color:#960050;background-color:#1e0010">（</span>不建议在补丁中使用<span style="color:#960050;background-color:#1e0010">）</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua">patch:
+  <span style="color:#e6db74">&#34;一级设定项/二级设定项/三级设定项&#34;</span>: <span style="color:#960050;background-color:#1e0010">新的设定值</span>
+  <span style="color:#e6db74">&#34;另一个设定项&#34;</span>: <span style="color:#960050;background-color:#1e0010">新的设定值</span>
+  <span style="color:#e6db74">&#34;再一个设定项&#34;</span>: <span style="color:#960050;background-color:#1e0010">新的设定值</span>
+  <span style="color:#e6db74">&#34;含列表的设定项/@n&#34;</span>: <span style="color:#960050;background-color:#1e0010">列表第</span>n个元素新的设定值<span style="color:#960050;background-color:#1e0010">，从</span><span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">开始计数</span>
+  <span style="color:#e6db74">&#34;含列表的设定项/@last&#34;</span>: <span style="color:#960050;background-color:#1e0010">列表最后一个元素新的设定值</span>
+  <span style="color:#e6db74">&#34;含列表的设定项/@before 0&#34;</span>: <span style="color:#960050;background-color:#1e0010">在列表第一个元素之前插入新的设定值（不建议在补丁中使用）</span>
+  <span style="color:#e6db74">&#34;含列表的设定项/@after last&#34;</span>: <span style="color:#960050;background-color:#1e0010">在列表</span>  <span style="color:#e6db74">&#34;一级设定项/二级设定项/三级设定项&#34;</span>: <span style="color:#960050;background-color:#1e0010">新的设定值最后一个元素之后插入新的设定值（不建议在补丁中使用）</span>
+  <span style="color:#e6db74">&#34;含列表的设定项/@next&#34;</span>: <span style="color:#960050;background-color:#1e0010">在列表最后一个元素之后插入新的设定值（不建议在补丁中使用）</span>
 </code></pre></div><p>就是这样：<code>patch</code> 定义了一组「补丁」，以源文件中的设定为基础，写入新的设定项、或以新的设定值取代现有设定项的值。</p>
 <p>每次修改配置文件，你需要重新部署来生效。</p>
 <p><strong>重新部署的操作方法</strong></p>
