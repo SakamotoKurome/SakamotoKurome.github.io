@@ -142,7 +142,7 @@ if (!doNotTrack) {
   <section class="entry-content">
     <p>TIPS BackupYourSystem Rsync 备份 #!/bin/bash set -o errexit set -o nounset set -o pipefail readonly SOURCE_DIR=/ readonly BACKUP_DIR=/home/kurome/DataBackup/Ubuntu readonly DATETIME=&#34;$(date &#39;&#43;%Y-%m-%d_%H:%M:%S&#39;)&#34; readonly BACKUP_PATH=&#34;${BACKUP_DIR}/${DATETIME}&#34; readonly LATEST_LINK=&#34;${BACKUP_DIR}/latest&#34; rsync -av \ --delete &#34;${SOURCE_DIR}/&#34; \ --link-dest &#34;${LATEST_LINK}&#34; \ --exclude={&#34;dev/*&#34;,&#34;proc/*&#34;,&#34;sys/*&#34;,&#34;tmp/*&#34;,&#34;run/*&#34;,&#34;mnt/*&#34;,&#34;media/*&#34;,&#34;lost&#43;found/*&#34;,&#34;Trash/*&#34;,&#34;DataBackup/*&#34;,&#34;DataPool/*&#34;,&#34;swapfile&#34;,&#34;.cxoffice&#34;,&#34;*.iso&#34;,&#34;*.qcow2&#34;} \ &#34;${BACKUP_PATH}&#34; rm -rf &#34;${LATEST_LINK}&#34; ln -s &#34;${BACKUP_PATH}&#34; &#34;${LATEST_LINK}&#34; 注意： ${SOURCE_DIR}/必须带反斜杠，否...</p>
   </section>
-  <footer class="entry-footer"><span title='2022-03-08 15:33:09 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;49 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <footer class="entry-footer"><span title='2022-03-08 15:33:09 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;52 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
   <a class="entry-link" aria-label="post link to Ubuntu Tips" href="https://sakamotokurome.github.io/posts/ubuntutips/"></a>
 </article>
 <footer class="page-footer">
