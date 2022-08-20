@@ -102,6 +102,22 @@ if (!doNotTrack) {
 </header>
 
 <article class="post-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://sakamotokurome.github.io/Distributions/ubuntu-logo.svg" alt="Ubuntu Logo">
+</figure>
+  <header class="entry-header">
+    <h2>Ubuntu Tips
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>TIPS Backup Your System Ubuntu Help Arch Wiki Rsync 备份 #!/bin/bash set -o errexit set -o nounset set -o pipefail readonly SOURCE_DIR=/ readonly BACKUP_DIR=&#34;$(findmnt -nr -o target -S /dev/mapper/luks-5277e33d-604f-4c1e-bc8c-40c14544614e)/ubuntu&#34; readonly DATETIME=&#34;$(date &#39;&#43;%Y-%m-%d_%H:%M:%S&#39;)&#34; readonly BACKUP_PATH=&#34;${BACKUP_DIR}/${DATETIME}&#34; readonly LATEST_LINK=&#34;${BACKUP_DIR}/latest&#34; rsync -av \ --delete &#34;${SOURCE_DIR}/&#34; \ --link-dest &#34;${LATEST_LINK}&#34; \ --exclude={&#34;dev/*&#34;,&#34;proc/*&#34;,&#34;sys/*&#34;,&#34;tmp/*&#34;,&#34;run/*&#34;,&#34;mnt/*&#34;,&#34;media/*&#34;,&#34;lost&#43;found/*&#34;,&#34;Trash/*&#34;,&#34;DataBackup/*&#34;,&#34;DataPool/*&#34;,&#34;swapfile&#34;,&#34;cxoffice&#34;,&#34;.cxoffice&#34;,&#34;*.iso&#34;,&#34;*.qcow2&#34;,&#34;.steam&#34;,&#34;Downloads/*&#34;} \ &#34;${BACKUP_PATH}&#34; rm -rf &#34;${LATEST_LINK}&#34; ln -s &#34;${BACKUP_PATH}&#34; &#34;${LATEST_LINK}&#34; 注意： ${SOURCE_DI...</p>
+  </section>
+  <footer class="entry-footer"><span title='2022-03-08 15:33:09 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;70 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <a class="entry-link" aria-label="post link to Ubuntu Tips" href="https://sakamotokurome.github.io/posts/ubuntutips/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://sakamotokurome.github.io/Distributions/Ubuntu_logo.svg" alt="Ubuntu Logo">
+</figure>
   <header class="entry-header">
     <h2>Ubuntu System
     </h2>
@@ -114,6 +130,8 @@ if (!doNotTrack) {
 </article>
 
 <article class="post-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://sakamotokurome.github.io/Distributions/Ubuntu-logo-2022.svg" alt="Ubuntu Logo">
+</figure>
   <header class="entry-header">
     <h2>Ubuntu Desktop
     </h2>
@@ -126,6 +144,8 @@ if (!doNotTrack) {
 </article>
 
 <article class="post-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://sakamotokurome.github.io/Blog/coollogo_com-630297.png" alt="Links Logo">
+</figure>
   <header class="entry-header">
     <h2>Links
     </h2>
@@ -138,6 +158,8 @@ if (!doNotTrack) {
 </article>
 
 <article class="post-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://sakamotokurome.github.io/Hexo/hexo-logo.png" alt="Hexo Logo">
+</figure>
   <header class="entry-header">
     <h2>Hexo
     </h2>
@@ -147,20 +169,6 @@ if (!doNotTrack) {
   </section>
   <footer class="entry-footer"><span title='2021-12-12 16:49:36 +0800 CST'>December 12, 2021</span>&nbsp;·&nbsp;24 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
   <a class="entry-link" aria-label="post link to Hexo" href="https://sakamotokurome.github.io/posts/hexo/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover"><img loading="lazy" src="https://sakamotokurome.github.io/Git/github0.png" alt="Git cover">
-</figure>
-  <header class="entry-header">
-    <h2>Git
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Workspace：工作区，Index / Stage：暂存区，Repository：仓库区（或本地仓库），Remote：远程仓库 远程仓库 安装，...</p>
-  </section>
-  <footer class="entry-footer"><span title='2021-12-12 16:46:08 +0800 CST'>December 12, 2021</span>&nbsp;·&nbsp;37 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
-  <a class="entry-link" aria-label="post link to Git" href="https://sakamotokurome.github.io/posts/git/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

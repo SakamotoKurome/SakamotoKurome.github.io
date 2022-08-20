@@ -6,7 +6,16 @@
     <description>Recent content in Unix on Sakamoto Kurome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 21 Mar 2022 15:39:24 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Aug 2022 09:24:53 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ArchLinux</title>
+      <link>https://sakamotokurome.github.io/posts/archlinux/</link>
+      <pubDate>Sat, 20 Aug 2022 09:24:53 +0800</pubDate>
+      
+      <guid>https://sakamotokurome.github.io/posts/archlinux/</guid>
+      <description>Installation guide Arch Linux 安装使用教程 Archlinux 简明指南 给 GNU/Linux 萌新的 Arch Linux 安装指南 了解 Archlinux 为什么使用 Linux？ 简单来说，现在世界上流行的 PC 操作系统有三个，Windows，</description>
+    </item>
+    
     <item>
       <title>Gentoo Usage</title>
       <link>https://sakamotokurome.github.io/posts/gentoousage/</link>
@@ -14,15 +23,6 @@
       
       <guid>https://sakamotokurome.github.io/posts/gentoousage/</guid>
       <description>Portage介绍 欢迎使用 Portage Portage 系统是 Gentoo 在软件管理方面最显著的创新之一。由于 Portage 的高度灵活性和数量庞大的特性，它时常被誉为 Linux 下最好的软件管理工具</description>
-    </item>
-    
-    <item>
-      <title>Gentoo Installation</title>
-      <link>https://sakamotokurome.github.io/posts/gentooinstallation/</link>
-      <pubDate>Mon, 21 Mar 2022 15:37:19 +0800</pubDate>
-      
-      <guid>https://sakamotokurome.github.io/posts/gentooinstallation/</guid>
-      <description>Gentoo-zh 群推荐安装教程： https://bitbili.net/gentoo-linux-installation-and-usage-tutorial.html https://www.yafa.moe/post/install-gentoo-on-mac/ https://litterhougelangley.life/blog/2021/05/21/gentoo/ https://blog.bugsur.xyz/gentoo-handbook-installation/ 群内如果要贴长文本，可以使用网络粘贴板： &amp;lt;输出命令&amp;gt; | curl -F &amp;#34;c=@-&amp;#34; &amp;#34;https://fars.ee/&amp;#34; 并且将输出里的 url: http://far.se/xxxx 这行贴出来。使用的时候</description>
     </item>
     
   </channel>
