@@ -87,7 +87,7 @@ if (!doNotTrack) {
 </header>
 
 <article class="post-entry tag-entry"> 
-<figure class="entry-cover"><img loading="lazy" src="https://sakamotokurome.github.io/Distributions/ubuntu-logo.svg" alt="Ubuntu Logo">
+<figure class="entry-cover"><img loading="lazy" src="https://sakamotokurome.github.io/Distributions/Ubuntu-logo-2022.svg" alt="Ubuntu Logo">
 </figure>
   <header class="entry-header">
     <h2>Ubuntu Tips
@@ -96,22 +96,50 @@ if (!doNotTrack) {
   <section class="entry-content">
     <p>Backup Your System Ubuntu Help Arch Wiki Rsync 备份 #!/bin/bash set -o errexit set -o nounset set -o pipefail readonly SOURCE_DIR=/ readonly BACKUP_DIR=&#34;$(findmnt -nr -o target -S /dev/mapper/luks-5277e33d-604f-4c1e-bc8c-40c14544614e)/Ubuntu2204&#34; readonly DATETIME=&#34;$(date &#39;&#43;%Y-%m-%d_%H:%M:%S&#39;)&#34; readonly BACKUP_PATH=&#34;${BACKUP_DIR}/${DATETIME}&#34; readonly LATEST_LINK=&#34;${BACKUP_DIR}/latest&#34; rsync -av \ --delete &#34;${SOURCE_DIR}/&#34; \ --link-dest &#34;${LATEST_LINK}&#34; \ --exclude={&#34;dev/*&#34;,&#34;proc/*&#34;,&#34;sys/*&#34;,&#34;tmp/*&#34;,&#34;run/*&#34;,&#34;mnt/*&#34;,&#34;media/*&#34;,&#34;lost&#43;found/*&#34;,&#34;Trash/*&#34;,&#34;DataBackup/*&#34;,&#34;DataPool/*&#34;,&#34;swapfile&#34;,&#34;cxoffice&#34;,&#34;.cxoffice&#34;,&#34;*.iso&#34;,&#34;*.qcow2&#34;,&#34;.steam&#34;,&#34;Downloads/*&#34;,&#34;*.exe&#34;,&#34;Ventoy&#34;,&#34;Desktop/*&#34;,&#34;Music/*&#34;,&#34;.snapshots&#34;,&#34;Games&#34;,&#34;Pictures/*&#34;,&#34;Videos/*&#34;,&#34;.cache&#34;} \ &#34;${BACKUP_PATH}&#34; rm -rf &#34;${LATEST_LINK}&#34; ln -s &#34;${BACKUP_PATH}&#34; &#34;${LATEST_LINK}&#34; 注意： ${SOURCE_DIR...</p>
   </section>
-  <footer class="entry-footer"><span title='2022-03-08 15:33:09 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;83 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
-  <a class="entry-link" aria-label="post link to Ubuntu Tips" href="https://sakamotokurome.github.io/posts/ubuntutips/"></a>
+  <footer class="entry-footer"><span title='2022-03-08 15:32:04 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;83 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <a class="entry-link" aria-label="post link to Ubuntu Tips" href="https://sakamotokurome.github.io/posts/ubuntup4tips/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
-<figure class="entry-cover"><img loading="lazy" src="https://sakamotokurome.github.io/Distributions/Ubuntu_logo.svg" alt="Ubuntu Logo">
+<figure class="entry-cover"><img loading="lazy" src="https://sakamotokurome.github.io/Distributions/Ubuntu-logo-2022.svg" alt="Ubuntu Logo">
 </figure>
   <header class="entry-header">
     <h2>Ubuntu System
     </h2>
   </header>
   <section class="entry-content">
+    <p>Package Management dpkg 管理软件包 dpkg 意即 Debian 包管理器（Debian PacKaGe manager）。dpkg 是一个可以安装、构建、删除及管理 Debian 软件包的命令行工具。 其它的一些工...</p>
+  </section>
+  <footer class="entry-footer"><span title='2022-03-08 15:32:03 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;211 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <a class="entry-link" aria-label="post link to Ubuntu System" href="https://sakamotokurome.github.io/posts/ubuntup3system/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://sakamotokurome.github.io/Distributions/Ubuntu-logo-2022.svg" alt="Ubuntu Logo">
+</figure>
+  <header class="entry-header">
+    <h2>Ubuntu Virtualization
+    </h2>
+  </header>
+  <section class="entry-content">
     <p>Wine 简介 Wine 是在x86、x86-64容许类Unix操作系统在X Window System运行Microsoft Windows程序的软件。另外，Wine也提供...</p>
   </section>
-  <footer class="entry-footer"><span title='2022-03-08 15:32:32 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;284 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
-  <a class="entry-link" aria-label="post link to Ubuntu System" href="https://sakamotokurome.github.io/posts/ubuntusystem/"></a>
+  <footer class="entry-footer"><span title='2022-03-08 15:32:02 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;73 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <a class="entry-link" aria-label="post link to Ubuntu Virtualization" href="https://sakamotokurome.github.io/posts/ubuntup2virtualization/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://sakamotokurome.github.io/Distributions/Ubuntu-logo-2022.svg" alt="Ubuntu Logo">
+</figure>
+  <header class="entry-header">
+    <h2>Ubuntu Applications
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>GUI Utilities Chrome 參照 vscode 安裝： $ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor &gt; google-chrome.gpg $ sudo install -D -o root -g root -m 644 google-chrome.gpg /etc/apt/trusted.gpg.d/google-chrome.gpg $ sudo sh -c &#39;echo &#34;deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/google-chrome.gpg] https://dl.google.com/linux/chrome/deb/ stable main&#34; &gt; /etc/apt/sources.list.d/google-chrome.list&#39; $ rm google-chrome.gpg $ sudo apt update $ sudo apt install google-chrome-stable PS：之前直接複製網上的，...</p>
+  </section>
+  <footer class="entry-footer"><span title='2022-03-08 15:32:01 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;144 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <a class="entry-link" aria-label="post link to Ubuntu Applications" href="https://sakamotokurome.github.io/posts/ubuntup1applications/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -124,8 +152,8 @@ if (!doNotTrack) {
   <section class="entry-content">
     <p>友邦拓 乌班图 During the first ten years of this HOWTO’s life, I reported that from a new user’s point of view, all Linux distributions are almost equivalent. But in 2006-2007, an actual best choice emerged: Ubuntu. While other distros have their own areas of strength, Ubuntu is far and away the most accessible to Linux newbies. Beware, though, of the hideous and nigh-unusable “Unity” desktop interface...</p>
   </section>
-  <footer class="entry-footer"><span title='2022-03-08 15:32:08 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;346 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
-  <a class="entry-link" aria-label="post link to Ubuntu Desktop" href="https://sakamotokurome.github.io/posts/ubuntudesktop/"></a>
+  <footer class="entry-footer"><span title='2022-03-08 15:32:00 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;204 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <a class="entry-link" aria-label="post link to Ubuntu Desktop" href="https://sakamotokurome.github.io/posts/ubuntup0desktop/"></a>
 </article>
     </main>
     

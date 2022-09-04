@@ -6,23 +6,23 @@
     <description>Recent content in Ubuntu on Sakamoto Kurome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 08 Mar 2022 15:33:09 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 15:32:04 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu Tips</title>
-      <link>https://sakamotokurome.github.io/posts/ubuntutips/</link>
-      <pubDate>Tue, 08 Mar 2022 15:33:09 +0800</pubDate>
+      <link>https://sakamotokurome.github.io/posts/ubuntup4tips/</link>
+      <pubDate>Tue, 08 Mar 2022 15:32:04 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/ubuntutips/</guid>
+      <guid>https://sakamotokurome.github.io/posts/ubuntup4tips/</guid>
       <description>Backup Your System Ubuntu Help Arch Wiki Rsync 备份 #!/bin/bash set -o errexit set -o nounset set -o pipefail readonly SOURCE_DIR=/ readonly BACKUP_DIR=&amp;#34;$(findmnt -nr -o target -S /dev/mapper/luks-5277e33d-604f-4c1e-bc8c-40c14544614e)/Ubuntu2204&amp;#34; readonly DATETIME=&amp;#34;$(date &amp;#39;+%Y-%m-%d_%H:%M:%S&amp;#39;)&amp;#34; readonly BACKUP_PATH=&amp;#34;${BACKUP_DIR}/${DATETIME}&amp;#34; readonly LATEST_LINK=&amp;#34;${BACKUP_DIR}/latest&amp;#34; rsync -av \ --delete &amp;#34;${SOURCE_DIR}/&amp;#34; \ --link-dest &amp;#34;${LATEST_LINK}&amp;#34; \ --exclude={&amp;#34;dev/*&amp;#34;,&amp;#34;proc/*&amp;#34;,&amp;#34;sys/*&amp;#34;,&amp;#34;tmp/*&amp;#34;,&amp;#34;run/*&amp;#34;,&amp;#34;mnt/*&amp;#34;,&amp;#34;media/*&amp;#34;,&amp;#34;lost+found/*&amp;#34;,&amp;#34;Trash/*&amp;#34;,&amp;#34;DataBackup/*&amp;#34;,&amp;#34;DataPool/*&amp;#34;,&amp;#34;swapfile&amp;#34;,&amp;#34;cxoffice&amp;#34;,&amp;#34;.cxoffice&amp;#34;,&amp;#34;*.iso&amp;#34;,&amp;#34;*.qcow2&amp;#34;,&amp;#34;.steam&amp;#34;,&amp;#34;Downloads/*&amp;#34;,&amp;#34;*.exe&amp;#34;,&amp;#34;Ventoy&amp;#34;,&amp;#34;Desktop/*&amp;#34;,&amp;#34;Music/*&amp;#34;,&amp;#34;.snapshots&amp;#34;,&amp;#34;Games&amp;#34;,&amp;#34;Pictures/*&amp;#34;,&amp;#34;Videos/*&amp;#34;,&amp;#34;.cache&amp;#34;} \ &amp;#34;${BACKUP_PATH}&amp;#34; rm -rf &amp;#34;${LATEST_LINK}&amp;#34; ln -s &amp;#34;${BACKUP_PATH}&amp;#34; &amp;#34;${LATEST_LINK}&amp;#34; 注意： ${SOURCE_DIR</description>
     </item>
     
     <item>
       <title>Ubuntu System</title>
-      <link>https://sakamotokurome.github.io/posts/ubuntusystem/</link>
-      <pubDate>Tue, 08 Mar 2022 15:32:32 +0800</pubDate>
+      <link>https://sakamotokurome.github.io/posts/ubuntup3system/</link>
+      <pubDate>Tue, 08 Mar 2022 15:32:03 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/ubuntusystem/</guid>
-      <description>Wine 简介 Wine 是在x86、x86-64容许类Unix操作系统在X Window System运行Microsoft Windows程序的软件。另外，Wine也提供</description>
+      <guid>https://sakamotokurome.github.io/posts/ubuntup3system/</guid>
+      <description>Package Management dpkg 管理软件包 dpkg 意即 Debian 包管理器（Debian PacKaGe manager）。dpkg 是一个可以安装、构建、删除及管理 Debian 软件包的命令行工具。 其它的一些工</description>
     </item>
     
   </channel>
