@@ -136,7 +136,7 @@ if (!doNotTrack) {
     </h2>
   </header>
   <section class="entry-content">
-    <p>GUI Utilities Chrome 參照 vscode 安裝： $ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor &gt; google-chrome.gpg $ sudo install -D -o root -g root -m 644 google-chrome.gpg /etc/apt/trusted.gpg.d/google-chrome.gpg $ sudo sh -c &#39;echo &#34;deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/google-chrome.gpg] https://dl.google.com/linux/chrome/deb/ stable main&#34; &gt; /etc/apt/sources.list.d/google-chrome.list&#39; $ rm google-chrome.gpg $ sudo apt update $ sudo apt install google-chrome-stable PS：之前直接複製網上的，...</p>
+    <p>GUI Utilities Chrome 因为 Chrome 安装包的时候会自动添加 gpg，因此可以参考 Bypass GPG signature checks only for a single repository 执行如下操作 $ sudo sh -c &#39;echo &#34;deb [arch=amd64 trusted=yes] https://dl.google.com/linux/chrome/deb/ stable main&#34; &gt; /etc/apt/sources.list.d/google-chrome.list&#39; $ sudo apt update $ sudo apt install google-chrome-stable PS：之前直...</p>
   </section>
   <footer class="entry-footer"><span title='2022-03-08 15:32:01 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;145 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
   <a class="entry-link" aria-label="post link to Ubuntu Applications" href="https://sakamotokurome.github.io/posts/ubuntup1applications/"></a>
