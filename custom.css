@@ -1,22 +1,21 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: "Zpix";
+    font-family: "LanaPixel";
     font-weight: normal;
     font-style: normal;
-    src: url("fonts/zpix.woff2") format('woff2');
+    src: url("fonts/LanaPixel.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Press Start 2P";
+    font-family: "Determination Mono Web";
     font-weight: normal;
     font-style: normal;
-    /* https://example.com/fonts/PressStart2P-Regular.ttf */
-    src: url("fonts/PressStart2P-Regular.ttf") format("truetype");
+    src: url("fonts/DeterminationMonoWebRegular-Z5oq.ttf") format('truetype');
 }
 
 @font-face {
-    font-family: "Cat";
+    font-family: "Cat Font";
     font-weight: normal;
     font-style: normal;
     src: url("fonts/Cat font by Peter Vasvari.ttf") format('truetype');
@@ -24,18 +23,18 @@
 
 body {
     /* set font */
-    font-family: "Zpix", "Press Start 2P";
+    font-family: "LanaPixel", "sans";
 }
 
-body code {
+code {
     /* set code font */
-    font-family: "Zpix", "Press Start 2P";
+    font-family: "Determination Mono Web", "LanaPixel", "monospace";
     /* set the code block to wrap automatically  */
     white-space: pre-wrap;
 }
 
 .cat-font {
-    font-family: "Cat";
+    font-family: "Cat Font", "LanaPixel", "sans";
 }
 
 /* reset default css, align code blocks in the list */
