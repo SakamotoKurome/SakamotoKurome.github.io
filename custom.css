@@ -15,6 +15,12 @@
     src: url("fonts/PressStart2P-Regular.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Cat";
+    font-weight: normal;
+    font-style: normal;
+    src: url("fonts/Cat font by Peter Vasvari.ttf") format('truetype');
+}
 
 body {
     /* set font */
@@ -26,6 +32,10 @@ body code {
     font-family: "Zpix", "Press Start 2P";
     /* set the code block to wrap automatically  */
     white-space: pre-wrap;
+}
+
+.cat {
+    font-family: "Cat";
 }
 
 /* reset default css, align code blocks in the list */
