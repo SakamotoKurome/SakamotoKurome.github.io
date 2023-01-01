@@ -4,21 +4,21 @@
     font-family: "LanaPixel";
     font-weight: normal;
     font-style: normal;
-    src: url("fonts/LanaPixel_NoKorean.ttf") format("truetype");
+    src: url("/fonts/LanaPixel_NoKorean.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Determination Mono Web";
+    font-family: "Monogram";
     font-weight: normal;
     font-style: normal;
-    src: url("fonts/DeterminationMonoWebRegular-Z5oq.ttf") format('truetype');
+    src: url("/fonts/monogram.ttf") format('truetype');
 }
 
 @font-face {
     font-family: "Cat Font";
     font-weight: normal;
     font-style: normal;
-    src: url("fonts/Cat font by Peter Vasvari.ttf") format('truetype');
+    src: url("/fonts/Cat font by Peter Vasvari.ttf") format('truetype');
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 
 code {
     /* set code font */
-    font-family: "Determination Mono Web", "LanaPixel", "monospace";
+    font-family: "Monogram", "LanaPixel", "monospace";
     /* set the code block to wrap automatically  */
     white-space: pre-wrap;
 }
