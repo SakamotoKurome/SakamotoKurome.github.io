@@ -22,15 +22,11 @@
 }
 
 body {
-    /* set font */
     font-family: "LanaPixel", "sans";
 }
 
-code {
-    /* set code font */
+.post-content code {
     font-family: "Monogram", "LanaPixel", "monospace";
-    /* set the code block to wrap automatically  */
-    white-space: pre-wrap;
 }
 
 .cat-font {
