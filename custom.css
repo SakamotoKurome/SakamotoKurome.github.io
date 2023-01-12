@@ -64,7 +64,7 @@ body {
 }
 
 a:hover {
-    cursor: url("/cursor/cursor-pointer.png"), pointer !important;
+    cursor: url("/cursor/cursor-pointer.png") 6 0, pointer !important;
 }
 
 .highlight pre {
@@ -72,5 +72,5 @@ a:hover {
     white-space: pre-wrap;
     word-break: normal;
     overflow: hidden;
-    cursor: url("/cursor/cursor-text.png"), text;
+    cursor: url("/cursor/cursor-text.png") 11 11, text;
 }
