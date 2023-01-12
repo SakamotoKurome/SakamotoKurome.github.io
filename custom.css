@@ -1,19 +1,44 @@
 @charset "UTF-8";
 
+/* Sans */
 @font-face {
-    font-family: "LanaPixel";
+    font-family: "Ark Pixel";
     font-weight: normal;
     font-style: normal;
-    src: url("/fonts/LanaPixel_NoKorean.ttf") format("truetype");
+    src: url("/fonts/ark-pixel-12px-proportional-latin.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "Monogram";
+    font-family: "Ark Pixel CN";
     font-weight: normal;
     font-style: normal;
-    src: url("/fonts/monogram.ttf") format('truetype');
+    src: url("/fonts/ark-pixel-12px-proportional-zh_cn.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: "Ark Pixel TW";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/ark-pixel-12px-proportional-zh_tw.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Ark Pixel JA";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/ark-pixel-12px-proportional-ja.woff2") format("woff2");
+}
+
+/* Mono */
+@font-face {
+    font-family: "Ark Pixel Mono";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/ark-pixel-12px-monospaced-latin.woff2") format("woff2");
+}
+
+
+/* Special */
 @font-face {
     font-family: "Cat Font";
     font-weight: normal;
@@ -21,19 +46,31 @@
     src: url("/fonts/Cat font by Peter Vasvari.ttf") format('truetype');
 }
 
+:root {
+    --cjk-fonts: "Ark Pixel", "Ark Pixel CN", "Ark Pixel TW", "Ark Pixel JA";
+}
+
 body {
-    font-family: "LanaPixel", "sans";
+    font-family: var(--cjk-fonts), "sans";
+    cursor: url("/cursor/cursor-default.png"), default;
 }
 
 .post-content code {
-    font-family: "Monogram", "LanaPixel", "monospace";
+    font-family: "Ark Pixel Mono", var(--cjk-fonts), "monospace";
 }
 
 .cat-font {
-    font-family: "Cat Font", "LanaPixel", "sans";
+    font-family: "Cat Font", var(--cjk-fonts), "sans";
 }
 
-/* reset default css, align code blocks in the list */
-.post-content ul pre {
-    margin-inline-start: inherit;
+a:hover {
+    cursor: url("/cursor/cursor-pointer.png"), pointer !important;
+}
+
+.highlight pre {
+    /* 代码块过长的话，不会显示滚动条 */
+    white-space: pre-wrap;
+    word-break: normal;
+    overflow: hidden;
+    cursor: url("/cursor/cursor-text.png"), text;
 }
