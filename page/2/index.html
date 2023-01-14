@@ -105,9 +105,9 @@ if (!doNotTrack) {
     </h2>
   </header>
   <section class="entry-content">
-    <p>New Ubuntu #!/usr/bin/bash # Restore backup cp .bashrc .bashrc.orig rsync -av /media/kurome/DataBackup/Backup/Home/latest/ /home/kurome/ # Update system sudo sed -i &#39;s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g&#39; /etc/apt/sources.list sudo apt update sudo apt upgrade -y # Enable custom systemd service sudo cp .opt/clash/clash.service /usr/lib/systemd/system sudo cp .opt/aria2/aria2.service /usr/lib/systemd/system sudo systemctl enable --now clash.service sudo systemctl enable --now aria2.service # Install apps sudo sh -c &#39;echo &#34;deb [arch=amd64 trusted=yes] https://dl.google.com/linux/chrome/deb/ stable main&#34; &gt; /etc/apt/sources.list.d/google-chrome.list&#39; sudo apt update sudo...</p>
+    <p>New Ubuntu #!/usr/bin/bash # Restore backup cp .bashrc .bashrc.orig rsync -av /media/kurome/DataBackup/Backup/Home/latest/ /home/kurome/ # Update system # sudo sed -i &#39;s@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g&#39; /etc/apt/sources.list # will list in &#34;Other Software&#34; sudo apt update sudo apt upgrade -y # Enable custom systemd service sudo cp ~/.opt/clash/clash.service /usr/lib/systemd/system sudo cp ~/.opt/aria2/aria2.service /usr/lib/systemd/system sudo systemctl enable --now clash.service sudo systemctl enable --now aria2.service sudo sed -e &#39;s/^socks/#socks/g&#39; -e &#39;$a socks4 127.0.0.1 7890&#39; -i /etc/proxychains.conf #...</p>
   </section>
-  <footer class="entry-footer"><span title='2022-03-08 15:32:04 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;85 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <footer class="entry-footer"><span title='2022-03-08 15:32:04 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;86 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
   <a class="entry-link" aria-label="post link to Ubuntu Tips" href="https://sakamotokurome.github.io/posts/ubuntup4tips/"></a>
 </article>
 
@@ -163,7 +163,7 @@ if (!doNotTrack) {
   <section class="entry-content">
     <p>友邦拓 乌班图 During the first ten years of this HOWTO’s life, I reported that from a new user’s point of view, all Linux distributions are almost equivalent. But in 2006-2007, an actual best choice emerged: Ubuntu. While other distros have their own areas of strength, Ubuntu is far and away the most accessible to Linux newbies. Beware, though, of the hideous and nigh-unusable “Unity” desktop interface...</p>
   </section>
-  <footer class="entry-footer"><span title='2022-03-08 15:32:00 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;202 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
+  <footer class="entry-footer"><span title='2022-03-08 15:32:00 +0800 CST'>March 8, 2022</span>&nbsp;·&nbsp;203 min&nbsp;·&nbsp;Sakamoto Kurome</footer>
   <a class="entry-link" aria-label="post link to Ubuntu Desktop" href="https://sakamotokurome.github.io/posts/ubuntup0desktop/"></a>
 </article>
 <footer class="page-footer">
