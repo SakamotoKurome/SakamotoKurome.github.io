@@ -6,23 +6,23 @@
     <description>Recent content in Posts on Sakamoto Kurome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 20 Aug 2022 09:24:53 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Feb 2023 01:15:17 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ArchLinux</title>
-      <link>https://sakamotokurome.github.io/posts/archlinux/</link>
-      <pubDate>Sat, 20 Aug 2022 09:24:53 +0800</pubDate>
+      <title>CSS教程</title>
+      <link>https://sakamotokurome.github.io/posts/css/</link>
+      <pubDate>Mon, 20 Feb 2023 01:15:17 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/archlinux/</guid>
-      <description>Installation guide Arch Linux 安装使用教程 Archlinux 简明指南 给 GNU/Linux 萌新的 Arch Linux 安装指南 了解 Archlinux 为什么使用 Linux？ 简单来说，现在世界上流行的 PC 操作系统有三个，Windows，</description>
+      <guid>https://sakamotokurome.github.io/posts/css/</guid>
+      <description>Cascading Style Sheet。 概述 简介 CSS 用于定义网页的样式，比如每个网页元素的位置、大小、颜色等等。 CSS 随着网页的诞生而诞生。1996年12月，CSS 1.0 标准</description>
     </item>
     
     <item>
-      <title>Gentoo Usage</title>
-      <link>https://sakamotokurome.github.io/posts/gentoousage/</link>
-      <pubDate>Mon, 21 Mar 2022 15:39:24 +0800</pubDate>
+      <title>HTML 教程</title>
+      <link>https://sakamotokurome.github.io/posts/html/</link>
+      <pubDate>Mon, 20 Feb 2023 00:39:55 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/gentoousage/</guid>
-      <description>Portage介绍 欢迎使用 Portage Portage 系统是 Gentoo 在软件管理方面最显著的创新之一。由于 Portage 的高度灵活性和数量庞大的特性，它时常被誉为 Linux 下最好的软件管理工具</description>
+      <guid>https://sakamotokurome.github.io/posts/html/</guid>
+      <description>Template: HTML 教程 HTML 语言是互联网开发的基础。 HTML 语言简介s 概述 HTML 是网页使用的语言，定义了网页的结构和内容。浏览器访问网站，其实就是从服务器下载 HTML 代码，然</description>
     </item>
     
   </channel>
