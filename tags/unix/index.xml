@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Unix on Sakamoto Kurome</title>
-    <link>https://sakamotokurome.github.io/tags/unix/</link>
+    <link>https://blog.g7n3.me/tags/unix/</link>
     <description>Recent content in Unix on Sakamoto Kurome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 20 Aug 2022 09:24:53 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Aug 2022 09:24:53 +0800</lastBuildDate><atom:link href="https://blog.g7n3.me/tags/unix/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ArchLinux</title>
-      <link>https://sakamotokurome.github.io/posts/archlinux/</link>
+      <link>https://blog.g7n3.me/posts/archlinux/</link>
       <pubDate>Sat, 20 Aug 2022 09:24:53 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/archlinux/</guid>
+      <guid>https://blog.g7n3.me/posts/archlinux/</guid>
       <description>Installation guide Arch Linux 安装使用教程 Archlinux 简明指南 给 GNU/Linux 萌新的 Arch Linux 安装指南 了解 Archlinux 为什么使用 Linux？ 简单来说，现在世界上流行的 PC 操作系统有三个，Windows，</description>
     </item>
     
     <item>
       <title>Gentoo Usage</title>
-      <link>https://sakamotokurome.github.io/posts/gentoousage/</link>
+      <link>https://blog.g7n3.me/posts/gentoousage/</link>
       <pubDate>Mon, 21 Mar 2022 15:39:24 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/gentoousage/</guid>
+      <guid>https://blog.g7n3.me/posts/gentoousage/</guid>
       <description>Portage介绍 欢迎使用 Portage Portage 系统是 Gentoo 在软件管理方面最显著的创新之一。由于 Portage 的高度灵活性和数量庞大的特性，它时常被誉为 Linux 下最好的软件管理工具</description>
     </item>
     

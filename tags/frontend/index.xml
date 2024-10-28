@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Frontend on Sakamoto Kurome</title>
-    <link>https://sakamotokurome.github.io/tags/frontend/</link>
+    <link>https://blog.g7n3.me/tags/frontend/</link>
     <description>Recent content in Frontend on Sakamoto Kurome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 20 Feb 2023 01:15:17 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Feb 2023 01:15:17 +0800</lastBuildDate><atom:link href="https://blog.g7n3.me/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CSS教程</title>
-      <link>https://sakamotokurome.github.io/posts/css/</link>
+      <link>https://blog.g7n3.me/posts/css/</link>
       <pubDate>Mon, 20 Feb 2023 01:15:17 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/css/</guid>
+      <guid>https://blog.g7n3.me/posts/css/</guid>
       <description>Cascading Style Sheet。 概述 简介 CSS 用于定义网页的样式，比如每个网页元素的位置、大小、颜色等等。 CSS 随着网页的诞生而诞生。1996年12月，CSS 1.0 标准</description>
     </item>
     
     <item>
       <title>HTML 教程</title>
-      <link>https://sakamotokurome.github.io/posts/html/</link>
+      <link>https://blog.g7n3.me/posts/html/</link>
       <pubDate>Mon, 20 Feb 2023 00:39:55 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/html/</guid>
+      <guid>https://blog.g7n3.me/posts/html/</guid>
       <description>Template: HTML 教程 HTML 语言是互联网开发的基础。 HTML 语言简介s 概述 HTML 是网页使用的语言，定义了网页的结构和内容。浏览器访问网站，其实就是从服务器下载 HTML 代码，然</description>
     </item>
     

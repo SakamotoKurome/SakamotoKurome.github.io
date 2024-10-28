@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Sakamoto Kurome</title>
-    <link>https://sakamotokurome.github.io/</link>
+    <link>https://blog.g7n3.me/</link>
     <description>Recent content on Sakamoto Kurome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 24 Aug 2023 14:33:34 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Aug 2023 14:33:34 +0800</lastBuildDate><atom:link href="https://blog.g7n3.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Di Shi Zhi Hui</title>
-      <link>https://sakamotokurome.github.io/posts/dishizhihui/</link>
+      <link>https://blog.g7n3.me/posts/dishizhihui/</link>
       <pubDate>Thu, 24 Aug 2023 14:33:34 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/dishizhihui/</guid>
+      <guid>https://blog.g7n3.me/posts/dishizhihui/</guid>
       <description>23030816 需求：备份一个 repo 到另一个 github 账号的 repo，首先需要同步所有分支，然后更改 remote url，最后推送所有分支到新仓库。 How do I fetch all Git branches? How do I change the URI (URL) for</description>
     </item>
     
     <item>
       <title>CSS教程</title>
-      <link>https://sakamotokurome.github.io/posts/css/</link>
+      <link>https://blog.g7n3.me/posts/css/</link>
       <pubDate>Mon, 20 Feb 2023 01:15:17 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/css/</guid>
+      <guid>https://blog.g7n3.me/posts/css/</guid>
       <description>Cascading Style Sheet。 概述 简介 CSS 用于定义网页的样式，比如每个网页元素的位置、大小、颜色等等。 CSS 随着网页的诞生而诞生。1996年12月，CSS 1.0 标准</description>
     </item>
     

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Git on Sakamoto Kurome</title>
-    <link>https://sakamotokurome.github.io/tags/git/</link>
+    <link>https://blog.g7n3.me/tags/git/</link>
     <description>Recent content in Git on Sakamoto Kurome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 12 Dec 2021 16:46:08 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Dec 2021 16:46:08 +0800</lastBuildDate><atom:link href="https://blog.g7n3.me/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git</title>
-      <link>https://sakamotokurome.github.io/posts/git/</link>
+      <link>https://blog.g7n3.me/posts/git/</link>
       <pubDate>Sun, 12 Dec 2021 16:46:08 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/git/</guid>
+      <guid>https://blog.g7n3.me/posts/git/</guid>
       <description>Workspace：工作区，Index / Stage：暂存区，Repository：仓库区（或本地仓库），Remote：远程仓库 远程仓库 安装，</description>
     </item>
     

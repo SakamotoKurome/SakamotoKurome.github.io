@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ArchLinux on Sakamoto Kurome</title>
-    <link>https://sakamotokurome.github.io/tags/archlinux/</link>
+    <link>https://blog.g7n3.me/tags/archlinux/</link>
     <description>Recent content in ArchLinux on Sakamoto Kurome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 20 Aug 2022 09:24:53 +0800</lastBuildDate><atom:link href="https://sakamotokurome.github.io/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Aug 2022 09:24:53 +0800</lastBuildDate><atom:link href="https://blog.g7n3.me/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ArchLinux</title>
-      <link>https://sakamotokurome.github.io/posts/archlinux/</link>
+      <link>https://blog.g7n3.me/posts/archlinux/</link>
       <pubDate>Sat, 20 Aug 2022 09:24:53 +0800</pubDate>
       
-      <guid>https://sakamotokurome.github.io/posts/archlinux/</guid>
+      <guid>https://blog.g7n3.me/posts/archlinux/</guid>
       <description>Installation guide Arch Linux 安装使用教程 Archlinux 简明指南 给 GNU/Linux 萌新的 Arch Linux 安装指南 了解 Archlinux 为什么使用 Linux？ 简单来说，现在世界上流行的 PC 操作系统有三个，Windows，</description>
     </item>
     
