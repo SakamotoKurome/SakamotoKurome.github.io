@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>openSUSE on Sakamoto Kurome</title>
+    <title>OpenSUSE on Sakamoto Kurome</title>
     <link>https://blog.g7n3.me/tags/opensuse/</link>
-    <description>Recent content in openSUSE on Sakamoto Kurome</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Wed, 09 Mar 2022 11:42:26 +0800</lastBuildDate><atom:link href="https://blog.g7n3.me/tags/opensuse/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in OpenSUSE on Sakamoto Kurome</description>
+    <generator>Hugo -- 0.139.3</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 09 Mar 2022 11:42:26 +0800</lastBuildDate>
+    <atom:link href="https://blog.g7n3.me/tags/opensuse/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>openSUSE</title>
       <link>https://blog.g7n3.me/posts/opensuse/</link>
       <pubDate>Wed, 09 Mar 2022 11:42:26 +0800</pubDate>
-      
       <guid>https://blog.g7n3.me/posts/opensuse/</guid>
-      <description>/ˌoʊpənˈsuːzə/ Desktop Installation DVD 方式安装 安装系统方式选择 DVD 方式安装。使用其他方式安装系统需要耗费比其他安装方式更多的时间和精力，除非必要，</description>
+      <description>&lt;p&gt;&lt;code&gt;/ˌoʊpənˈsuːzə/&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;desktop-installation&#34;&gt;Desktop Installation&lt;/h2&gt;
+&lt;h3 id=&#34;dvd-方式安装httpszhopensuseorgsdbdvd_e5ae89e8a385e696b9e5bc8f&#34;&gt;&lt;a href=&#34;https://zh.opensuse.org/SDB:DVD_%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F&#34;&gt;DVD 方式安装&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;安装系统方式选择 DVD 方式安装。使用其他方式安装系统需要耗费比其他安装方式更多的时间和精力，除非必要，建议优先使用离线的 DVD 镜像进行系统安装。这里推荐滚动更新的 openSUSE Tumbleweed。&lt;/li&gt;
+&lt;li&gt;最好是到&lt;a href=&#34;https://get.opensuse.org/tumbleweed&#34;&gt;官网下载&lt;/a&gt; openSUSE 风滚草的 ISO 文件。因为 openSUSE 官网才会第一时间提供最新版风滚草 ISO 映像文件，国内的很多镜像站一般不会第一时间就同步过来，这样就免除在安装好后还需要更新系统的步骤。&lt;/li&gt;
+&lt;li&gt;语言选择 English，因为 Linux 需要经常使用 Terminal，中文家目录是很不方便的。&lt;/li&gt;
+&lt;li&gt;Network 可以设置 static hostname。&lt;/li&gt;
+&lt;li&gt;System Role 选择 Desktop with KDE Plasma，openSUSE 的 KDE 是最好的。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.opensuse.org/documentation/leap/startup/html/book-startup/cha-install.html#sec-yast-install-partitioning-suggested&#34;&gt;分区&lt;/a&gt; 选择默认的 btrfs 文件系统，可通过 Guided setup 进行多样化设置，比如 root 用 btrfs，home 用 ext4，单独为 swap 建立一个分区之类的。&lt;/li&gt;
+&lt;li&gt;Clock and time zone 记得使用 UTC 和 NTP。&lt;/li&gt;
+&lt;li&gt;在最后的部分，可以点击 Software，取消安装 Office Software、Games、KDE PIM 模组。&lt;/li&gt;
+&lt;li&gt;在安装好后，先进桌面进行初始化，如果不进直接在 TTY 中恢复备份，就不会创建 Desktop、Download 等目录其他配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;镜像源&#34;&gt;镜像源&lt;/h3&gt;
+&lt;h4 id=&#34;国内镜像httpsforumsuseorgcntopensuse1759&#34;&gt;&lt;a href=&#34;https://forum.suse.org.cn/t/opensuse/1759&#34;&gt;国内镜像&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;我们官方的态度是不鼓励直接使用镜像的。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

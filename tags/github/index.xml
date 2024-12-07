@@ -4,17 +4,28 @@
     <title>GitHub on Sakamoto Kurome</title>
     <link>https://blog.g7n3.me/tags/github/</link>
     <description>Recent content in GitHub on Sakamoto Kurome</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Sun, 12 Dec 2021 16:46:08 +0800</lastBuildDate><atom:link href="https://blog.g7n3.me/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.139.3</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 12 Dec 2021 16:46:08 +0800</lastBuildDate>
+    <atom:link href="https://blog.g7n3.me/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git</title>
       <link>https://blog.g7n3.me/posts/git/</link>
       <pubDate>Sun, 12 Dec 2021 16:46:08 +0800</pubDate>
-      
       <guid>https://blog.g7n3.me/posts/git/</guid>
-      <description>Workspace：工作区，Index / Stage：暂存区，Repository：仓库区（或本地仓库），Remote：远程仓库 远程仓库 安装，</description>
+      <description>&lt;p&gt;Workspace：工作区，Index / Stage：暂存区，Repository：仓库区（或本地仓库），Remote：远程仓库&lt;/p&gt;
+&lt;h2 id=&#34;远程仓库&#34;&gt;远程仓库&lt;/h2&gt;
+&lt;h3 id=&#34;安装windows需要处理换行符&#34;&gt;安装，windows需要处理换行符&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo yum install git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;设置姓名和邮箱地址&#34;&gt;设置姓名和邮箱地址&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global user.name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Vane Hsiung&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global user.email &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1664548605@qq.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;提高输出可读性&#34;&gt;提高输出可读性&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global color.ui auto
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;设置文件&#34;&gt;设置文件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;显示当前的 Git 配置&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,17 +4,24 @@
     <title>ArchLinux on Sakamoto Kurome</title>
     <link>https://blog.g7n3.me/tags/archlinux/</link>
     <description>Recent content in ArchLinux on Sakamoto Kurome</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Sat, 20 Aug 2022 09:24:53 +0800</lastBuildDate><atom:link href="https://blog.g7n3.me/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.139.3</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 20 Aug 2022 09:24:53 +0800</lastBuildDate>
+    <atom:link href="https://blog.g7n3.me/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ArchLinux</title>
       <link>https://blog.g7n3.me/posts/archlinux/</link>
       <pubDate>Sat, 20 Aug 2022 09:24:53 +0800</pubDate>
-      
       <guid>https://blog.g7n3.me/posts/archlinux/</guid>
-      <description>Installation guide Arch Linux 安装使用教程 Archlinux 简明指南 给 GNU/Linux 萌新的 Arch Linux 安装指南 了解 Archlinux 为什么使用 Linux？ 简单来说，现在世界上流行的 PC 操作系统有三个，Windows，</description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/installation_guide&#34;&gt;Installation guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ArchLinuxStudio/ArchLinuxTutorial&#34;&gt;Arch Linux 安装使用教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arch.icekylin.online/&#34;&gt;Archlinux 简明指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.yoitsu.moe/arch-linux/installing_arch_linux_for_complete_newbies.html&#34;&gt;给 GNU/Linux 萌新的 Arch Linux 安装指南&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;了解-archlinux&#34;&gt;了解 Archlinux&lt;/h2&gt;
+&lt;h3 id=&#34;为什么使用-linux&#34;&gt;为什么使用 Linux？&lt;/h3&gt;
+&lt;p&gt;简单来说，现在世界上流行的 PC 操作系统有三个，Windows，Linux 与 macOS。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,17 +4,27 @@
     <title>Linux Deploy on Sakamoto Kurome</title>
     <link>https://blog.g7n3.me/tags/linux-deploy/</link>
     <description>Recent content in Linux Deploy on Sakamoto Kurome</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Wed, 09 Mar 2022 11:39:38 +0800</lastBuildDate><atom:link href="https://blog.g7n3.me/tags/linux-deploy/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.139.3</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 09 Mar 2022 11:39:38 +0800</lastBuildDate>
+    <atom:link href="https://blog.g7n3.me/tags/linux-deploy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fedora</title>
       <link>https://blog.g7n3.me/posts/fedora/</link>
       <pubDate>Wed, 09 Mar 2022 11:39:38 +0800</pubDate>
-      
       <guid>https://blog.g7n3.me/posts/fedora/</guid>
-      <description>[fəˈdɔrə] 费多拉 Fedora Linux 版本 Fedora 官方版本 Fedora 工作站是可以安装在笔记本电脑和台式电脑上的 Linux。 此版本附带 GNOME 作为默认桌面环境和各种标准应用</description>
+      <description>&lt;p&gt;&lt;code&gt;[fəˈdɔrə]&lt;/code&gt; &lt;code&gt;费多拉&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;fedora-linux-版本httpsadatiyacompost71854html&#34;&gt;&lt;a href=&#34;https://adatiya.com/post/71854.html&#34;&gt;Fedora Linux 版本&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;fedora-官方版本httpsgetfedoraorg&#34;&gt;&lt;a href=&#34;https://getfedora.org/&#34;&gt;Fedora 官方版本&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fedora 工作站是可以安装在笔记本电脑和台式电脑上的 Linux。 此版本附带 GNOME 作为默认桌面环境和各种标准应用程序，以便 Fedora Linux 已准备好用于日常使用。&lt;/li&gt;
+&lt;li&gt;Fedora 服务器专门用于服务器计算机用途，提供邮件服务器、DNS 等的安装。&lt;/li&gt;
+&lt;li&gt;Fedora 物联网，用于物联网和设备边缘生态系统。&lt;/li&gt;
+&lt;li&gt;Fedora CoreOS 是一种自动更新的操作系统，旨在安全、大规模地运行容器化工作负载。&lt;/li&gt;
+&lt;li&gt;Fedora Silverblue 是一个不可变的桌面操作系统，旨在支持以容器为中心的工作流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fedora-spinshttpsspinsfedoraprojectorg&#34;&gt;&lt;a href=&#34;https://spins.fedoraproject.org/&#34;&gt;Fedora Spins&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Fedora 的默认桌面环境是 GNOME，但是如果您喜欢其他的桌面环境，比如 KDE Plasma Desktop 或 Xfce，您可以下载一个您喜欢的桌面环境的 spin，然后用它来安装 Fedora，为您选择的桌面环境进行预配置。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

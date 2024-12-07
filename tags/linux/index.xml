@@ -4,26 +4,34 @@
     <title>Linux on Sakamoto Kurome</title>
     <link>https://blog.g7n3.me/tags/linux/</link>
     <description>Recent content in Linux on Sakamoto Kurome</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Sat, 20 Aug 2022 09:24:53 +0800</lastBuildDate><atom:link href="https://blog.g7n3.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.139.3</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 20 Aug 2022 09:24:53 +0800</lastBuildDate>
+    <atom:link href="https://blog.g7n3.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ArchLinux</title>
       <link>https://blog.g7n3.me/posts/archlinux/</link>
       <pubDate>Sat, 20 Aug 2022 09:24:53 +0800</pubDate>
-      
       <guid>https://blog.g7n3.me/posts/archlinux/</guid>
-      <description>Installation guide Arch Linux 安装使用教程 Archlinux 简明指南 给 GNU/Linux 萌新的 Arch Linux 安装指南 了解 Archlinux 为什么使用 Linux？ 简单来说，现在世界上流行的 PC 操作系统有三个，Windows，</description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/installation_guide&#34;&gt;Installation guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ArchLinuxStudio/ArchLinuxTutorial&#34;&gt;Arch Linux 安装使用教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arch.icekylin.online/&#34;&gt;Archlinux 简明指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.yoitsu.moe/arch-linux/installing_arch_linux_for_complete_newbies.html&#34;&gt;给 GNU/Linux 萌新的 Arch Linux 安装指南&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;了解-archlinux&#34;&gt;了解 Archlinux&lt;/h2&gt;
+&lt;h3 id=&#34;为什么使用-linux&#34;&gt;为什么使用 Linux？&lt;/h3&gt;
+&lt;p&gt;简单来说，现在世界上流行的 PC 操作系统有三个，Windows，Linux 与 macOS。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Gentoo Usage</title>
       <link>https://blog.g7n3.me/posts/gentoousage/</link>
       <pubDate>Mon, 21 Mar 2022 15:39:24 +0800</pubDate>
-      
       <guid>https://blog.g7n3.me/posts/gentoousage/</guid>
-      <description>Portage介绍 欢迎使用 Portage Portage 系统是 Gentoo 在软件管理方面最显著的创新之一。由于 Portage 的高度灵活性和数量庞大的特性，它时常被誉为 Linux 下最好的软件管理工具</description>
+      <description>&lt;h2 id=&#34;portage介绍httpswikigentooorgwikihandbookamd64workingportage&#34;&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/Portage&#34;&gt;Portage介绍&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;欢迎使用-portage&#34;&gt;欢迎使用 Portage&lt;/h3&gt;
+&lt;p&gt;Portage 系统是 Gentoo 在软件管理方面最显著的创新之一。由于 Portage 的高度灵活性和数量庞大的特性，它时常被誉为 Linux 下最好的软件管理工具。&lt;/p&gt;
+&lt;p&gt;Portage 是用 &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt; 和 &lt;a href=&#34;https://www.gnu.org/software/bash&#34;&gt;Bash&lt;/a&gt; 两种语言编写的。因为它们都是脚本语言所以用户可以直接阅读它的代码。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

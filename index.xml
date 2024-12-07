@@ -4,26 +4,50 @@
     <title>Sakamoto Kurome</title>
     <link>https://blog.g7n3.me/</link>
     <description>Recent content on Sakamoto Kurome</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Thu, 24 Aug 2023 14:33:34 +0800</lastBuildDate><atom:link href="https://blog.g7n3.me/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.139.3</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 24 Aug 2023 14:33:34 +0800</lastBuildDate>
+    <atom:link href="https://blog.g7n3.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Di Shi Zhi Hui</title>
       <link>https://blog.g7n3.me/posts/dishizhihui/</link>
       <pubDate>Thu, 24 Aug 2023 14:33:34 +0800</pubDate>
-      
       <guid>https://blog.g7n3.me/posts/dishizhihui/</guid>
-      <description>23030816 需求：备份一个 repo 到另一个 github 账号的 repo，首先需要同步所有分支，然后更改 remote url，最后推送所有分支到新仓库。 How do I fetch all Git branches? How do I change the URI (URL) for</description>
+      <description>&lt;h2 id=&#34;23030816&#34;&gt;23030816&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;需求：备份一个 repo 到另一个 github 账号的 repo，首先需要同步所有分支，然后更改 remote url，最后推送所有分支到新仓库。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/a/10312587&#34;&gt;How do I fetch all Git branches?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/a/2432799&#34;&gt;How do I change the URI (URL) for a remote Git repository?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/a/10479068&#34;&gt;Set up git to pull and push all branches&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch -r | grep -v &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\-&amp;gt;&amp;#39;&lt;/span&gt; | sed &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;s,\x1B\[[0-9;]*[a-zA-Z],,g&amp;#34;&lt;/span&gt; | &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; read remote; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; git branch --track &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;remote#origin/&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$remote&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git fetch --all
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git pull --all
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# change the URLs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote set-url origin new.git.url/here
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# push tags and branches.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push --all origin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;20230812&#34;&gt;20230812&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Web 调试&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>CSS教程</title>
       <link>https://blog.g7n3.me/posts/css/</link>
       <pubDate>Mon, 20 Feb 2023 01:15:17 +0800</pubDate>
-      
       <guid>https://blog.g7n3.me/posts/css/</guid>
-      <description>Cascading Style Sheet。 概述 简介 CSS 用于定义网页的样式，比如每个网页元素的位置、大小、颜色等等。 CSS 随着网页的诞生而诞生。1996年12月，CSS 1.0 标准</description>
+      <description>&lt;p&gt;Cascading Style Sheet。&lt;/p&gt;
+&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;h3 id=&#34;简介&#34;&gt;简介&lt;/h3&gt;
+&lt;p&gt;CSS 用于定义网页的样式，比如每个网页元素的位置、大小、颜色等等。&lt;/p&gt;
+&lt;p&gt;CSS 随着网页的诞生而诞生。1996年12月，CSS 1.0 标准问世，目前广泛使用的是2000年4月发布的 CSS 3 标准。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
