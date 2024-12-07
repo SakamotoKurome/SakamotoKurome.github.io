@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Dairy on Sakamoto Kurome</title>
-    <link>https://blog.g7n3.me/tags/dairy/</link>
-    <description>Recent content in Dairy on Sakamoto Kurome</description>
+    <title>Diary on Sakamoto Kurome</title>
+    <link>https://blog.g7n3.me/tags/diary/</link>
+    <description>Recent content in Diary on Sakamoto Kurome</description>
     <generator>Hugo -- 0.139.3</generator>
     <language>en</language>
     <lastBuildDate>Thu, 24 Aug 2023 14:33:34 +0800</lastBuildDate>
-    <atom:link href="https://blog.g7n3.me/tags/dairy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.g7n3.me/tags/diary/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Di Shi Zhi Hui</title>
       <link>https://blog.g7n3.me/posts/dishizhihui/</link>
