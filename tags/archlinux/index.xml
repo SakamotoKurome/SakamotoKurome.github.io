@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ArchLinux on Sakamoto Kurome</title>
-    <link>https://blog.g7n3.me/tags/archlinux/</link>
+    <link>https://blog.xn-xw.com/tags/archlinux/</link>
     <description>Recent content in ArchLinux on Sakamoto Kurome</description>
     <generator>Hugo -- 0.139.3</generator>
     <language>en</language>
     <lastBuildDate>Sat, 20 Aug 2022 09:24:53 +0800</lastBuildDate>
-    <atom:link href="https://blog.g7n3.me/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.xn-xw.com/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ArchLinux</title>
-      <link>https://blog.g7n3.me/posts/archlinux/</link>
+      <link>https://blog.xn-xw.com/posts/archlinux/</link>
       <pubDate>Sat, 20 Aug 2022 09:24:53 +0800</pubDate>
-      <guid>https://blog.g7n3.me/posts/archlinux/</guid>
+      <guid>https://blog.xn-xw.com/posts/archlinux/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/installation_guide&#34;&gt;Installation guide&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/ArchLinuxStudio/ArchLinuxTutorial&#34;&gt;Arch Linux 安装使用教程&lt;/a&gt;&lt;/li&gt;

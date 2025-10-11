@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ubuntu on Sakamoto Kurome</title>
-    <link>https://blog.g7n3.me/tags/ubuntu/</link>
+    <link>https://blog.xn-xw.com/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on Sakamoto Kurome</description>
     <generator>Hugo -- 0.139.3</generator>
     <language>en</language>
     <lastBuildDate>Tue, 08 Mar 2022 15:32:04 +0800</lastBuildDate>
-    <atom:link href="https://blog.g7n3.me/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.xn-xw.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu Tips</title>
-      <link>https://blog.g7n3.me/posts/ubuntup4tips/</link>
+      <link>https://blog.xn-xw.com/posts/ubuntup4tips/</link>
       <pubDate>Tue, 08 Mar 2022 15:32:04 +0800</pubDate>
-      <guid>https://blog.g7n3.me/posts/ubuntup4tips/</guid>
+      <guid>https://blog.xn-xw.com/posts/ubuntup4tips/</guid>
       <description>&lt;h2 id=&#34;new-ubuntu&#34;&gt;New Ubuntu&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/usr/bin/bash
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
@@ -86,9 +86,9 @@
     </item>
     <item>
       <title>Ubuntu System</title>
-      <link>https://blog.g7n3.me/posts/ubuntup3system/</link>
+      <link>https://blog.xn-xw.com/posts/ubuntup3system/</link>
       <pubDate>Tue, 08 Mar 2022 15:32:03 +0800</pubDate>
-      <guid>https://blog.g7n3.me/posts/ubuntup3system/</guid>
+      <guid>https://blog.xn-xw.com/posts/ubuntup3system/</guid>
       <description>&lt;h2 id=&#34;package-management&#34;&gt;Package Management&lt;/h2&gt;
 &lt;h3 id=&#34;dpkg&#34;&gt;dpkg&lt;/h3&gt;
 &lt;h4 id=&#34;管理软件包httpslinuxcnarticle-7953-1html&#34;&gt;&lt;a href=&#34;https://linux.cn/article-7953-1.html&#34;&gt;管理软件包&lt;/a&gt;&lt;/h4&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>OpenSUSE on Sakamoto Kurome</title>
-    <link>https://blog.g7n3.me/tags/opensuse/</link>
+    <link>https://blog.xn-xw.com/tags/opensuse/</link>
     <description>Recent content in OpenSUSE on Sakamoto Kurome</description>
     <generator>Hugo -- 0.139.3</generator>
     <language>en</language>
     <lastBuildDate>Wed, 09 Mar 2022 11:42:26 +0800</lastBuildDate>
-    <atom:link href="https://blog.g7n3.me/tags/opensuse/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.xn-xw.com/tags/opensuse/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>openSUSE</title>
-      <link>https://blog.g7n3.me/posts/opensuse/</link>
+      <link>https://blog.xn-xw.com/posts/opensuse/</link>
       <pubDate>Wed, 09 Mar 2022 11:42:26 +0800</pubDate>
-      <guid>https://blog.g7n3.me/posts/opensuse/</guid>
+      <guid>https://blog.xn-xw.com/posts/opensuse/</guid>
       <description>&lt;p&gt;&lt;code&gt;/ˌoʊpənˈsuːzə/&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;desktop-installation&#34;&gt;Desktop Installation&lt;/h2&gt;
 &lt;h3 id=&#34;dvd-方式安装httpszhopensuseorgsdbdvd_e5ae89e8a385e696b9e5bc8f&#34;&gt;&lt;a href=&#34;https://zh.opensuse.org/SDB:DVD_%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F&#34;&gt;DVD 方式安装&lt;/a&gt;&lt;/h3&gt;

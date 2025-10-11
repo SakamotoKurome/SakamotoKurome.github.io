@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Fedora on Sakamoto Kurome</title>
-    <link>https://blog.g7n3.me/tags/fedora/</link>
+    <link>https://blog.xn-xw.com/tags/fedora/</link>
     <description>Recent content in Fedora on Sakamoto Kurome</description>
     <generator>Hugo -- 0.139.3</generator>
     <language>en</language>
     <lastBuildDate>Wed, 09 Mar 2022 11:39:38 +0800</lastBuildDate>
-    <atom:link href="https://blog.g7n3.me/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.xn-xw.com/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fedora</title>
-      <link>https://blog.g7n3.me/posts/fedora/</link>
+      <link>https://blog.xn-xw.com/posts/fedora/</link>
       <pubDate>Wed, 09 Mar 2022 11:39:38 +0800</pubDate>
-      <guid>https://blog.g7n3.me/posts/fedora/</guid>
+      <guid>https://blog.xn-xw.com/posts/fedora/</guid>
       <description>&lt;p&gt;&lt;code&gt;[fəˈdɔrə]&lt;/code&gt; &lt;code&gt;费多拉&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;fedora-linux-版本httpsadatiyacompost71854html&#34;&gt;&lt;a href=&#34;https://adatiya.com/post/71854.html&#34;&gt;Fedora Linux 版本&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;fedora-官方版本httpsgetfedoraorg&#34;&gt;&lt;a href=&#34;https://getfedora.org/&#34;&gt;Fedora 官方版本&lt;/a&gt;&lt;/h3&gt;
